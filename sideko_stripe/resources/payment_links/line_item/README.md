@@ -1,0 +1,35 @@
+
+### list <a name="list"></a>
+Retrieve a payment link's line items
+
+<p>When retrieving a payment link, there is an includable <strong>line_items</strong> property containing the first handful of those items. There is also a URL where you can retrieve the full (paginated) list of line items.</p>
+
+**API Endpoint**: `GET /v1/payment_links/{payment_link}/line_items`
+
+#### Synchronous Client
+
+```python
+from os import getenv
+from sideko_stripe import Stripe
+
+client = Stripe(
+    username=getenv("API_USERNAME"),
+    password=getenv("API_PASSWORD"),
+    token=getenv("API_TOKEN"),
+)
+res = client.payment_links.line_item.list(payment_link="string")
+```
+
+#### Asynchronous Client
+
+```python
+from os import getenv
+from sideko_stripe import AsyncStripe
+
+client = AsyncStripe(
+    username=getenv("API_USERNAME"),
+    password=getenv("API_PASSWORD"),
+    token=getenv("API_TOKEN"),
+)
+res = await client.payment_links.line_item.list(payment_link="string")
+```

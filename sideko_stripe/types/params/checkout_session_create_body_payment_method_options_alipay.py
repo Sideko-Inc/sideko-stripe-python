@@ -1,0 +1,28 @@
+import pydantic
+import typing
+import typing_extensions
+
+
+class CheckoutSessionCreateBodyPaymentMethodOptionsAlipay(typing_extensions.TypedDict):
+    """
+    CheckoutSessionCreateBodyPaymentMethodOptionsAlipay
+    """
+
+    setup_future_usage: typing_extensions.NotRequired[typing_extensions.Literal["none"]]
+
+
+class _SerializerCheckoutSessionCreateBodyPaymentMethodOptionsAlipay(
+    pydantic.BaseModel
+):
+    """
+    Serializer for CheckoutSessionCreateBodyPaymentMethodOptionsAlipay handling case conversions
+    and file omissions as dictated by the API
+    """
+
+    model_config = pydantic.ConfigDict(
+        populate_by_name=True,
+    )
+
+    setup_future_usage: typing.Optional[typing_extensions.Literal["none"]] = (
+        pydantic.Field(alias="setup_future_usage", default=None)
+    )

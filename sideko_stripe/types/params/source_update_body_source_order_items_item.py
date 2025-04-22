@@ -1,0 +1,45 @@
+import pydantic
+import typing
+import typing_extensions
+
+
+class SourceUpdateBodySourceOrderItemsItem(typing_extensions.TypedDict):
+    """
+    SourceUpdateBodySourceOrderItemsItem
+    """
+
+    amount: typing_extensions.NotRequired[int]
+
+    currency: typing_extensions.NotRequired[str]
+
+    description: typing_extensions.NotRequired[str]
+
+    parent: typing_extensions.NotRequired[str]
+
+    quantity: typing_extensions.NotRequired[int]
+
+    type_: typing_extensions.NotRequired[
+        typing_extensions.Literal["discount", "shipping", "sku", "tax"]
+    ]
+
+
+class _SerializerSourceUpdateBodySourceOrderItemsItem(pydantic.BaseModel):
+    """
+    Serializer for SourceUpdateBodySourceOrderItemsItem handling case conversions
+    and file omissions as dictated by the API
+    """
+
+    model_config = pydantic.ConfigDict(
+        populate_by_name=True,
+    )
+
+    amount: typing.Optional[int] = pydantic.Field(alias="amount", default=None)
+    currency: typing.Optional[str] = pydantic.Field(alias="currency", default=None)
+    description: typing.Optional[str] = pydantic.Field(
+        alias="description", default=None
+    )
+    parent: typing.Optional[str] = pydantic.Field(alias="parent", default=None)
+    quantity: typing.Optional[int] = pydantic.Field(alias="quantity", default=None)
+    type_: typing.Optional[
+        typing_extensions.Literal["discount", "shipping", "sku", "tax"]
+    ] = pydantic.Field(alias="type", default=None)

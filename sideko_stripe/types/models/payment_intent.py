@@ -1,0 +1,292 @@
+import pydantic
+import typing
+import typing_extensions
+
+from .application import Application
+from .deleted_customer import DeletedCustomer
+from .payment_flows_amount_details import PaymentFlowsAmountDetails
+from .payment_flows_amount_details_client import PaymentFlowsAmountDetailsClient
+from .payment_flows_automatic_payment_methods_payment_intent import (
+    PaymentFlowsAutomaticPaymentMethodsPaymentIntent,
+)
+from .payment_flows_payment_intent_presentment_details import (
+    PaymentFlowsPaymentIntentPresentmentDetails,
+)
+from .payment_intent_metadata import PaymentIntentMetadata
+from .payment_intent_next_action import PaymentIntentNextAction
+from .payment_intent_payment_method_options import PaymentIntentPaymentMethodOptions
+from .payment_intent_processing import PaymentIntentProcessing
+from .payment_method_config_biz_payment_method_configuration_details import (
+    PaymentMethodConfigBizPaymentMethodConfigurationDetails,
+)
+from .shipping import Shipping
+
+if typing_extensions.TYPE_CHECKING:
+    from .account import Account
+    from .api_errors import ApiErrors
+    from .charge import Charge
+    from .customer import Customer
+    from .payment_method import PaymentMethod
+    from .review import Review
+    from .transfer_data import TransferData
+
+
+class PaymentIntent(pydantic.BaseModel):
+    """
+    A PaymentIntent guides you through the process of collecting a payment from your customer.
+    We recommend that you create exactly one PaymentIntent for each order or
+    customer session in your system. You can reference the PaymentIntent later to
+    see the history of payment attempts for a particular session.
+
+    A PaymentIntent transitions through
+    [multiple statuses](https://stripe.com/docs/payments/intents#intent-statuses)
+    throughout its lifetime as it interfaces with Stripe.js to perform
+    authentication flows and ultimately creates at most one successful charge.
+
+    Related guide: [Payment Intents API](https://stripe.com/docs/payments/payment-intents)
+    """
+
+    model_config = pydantic.ConfigDict(
+        arbitrary_types_allowed=True,
+        populate_by_name=True,
+    )
+
+    amount: int = pydantic.Field(
+        alias="amount",
+    )
+    """
+    Amount intended to be collected by this PaymentIntent. A positive integer representing how much to charge in the [smallest currency unit](https://stripe.com/docs/currencies#zero-decimal) (e.g., 100 cents to charge $1.00 or 100 to charge ¥100, a zero-decimal currency). The minimum amount is $0.50 US or [equivalent in charge currency](https://stripe.com/docs/currencies#minimum-and-maximum-charge-amounts). The amount value supports up to eight digits (e.g., a value of 99999999 for a USD charge of $999,999.99).
+    """
+    amount_capturable: typing.Optional[int] = pydantic.Field(
+        alias="amount_capturable", default=None
+    )
+    """
+    Amount that can be captured from this PaymentIntent.
+    """
+    amount_details: typing.Optional[
+        typing.Union[PaymentFlowsAmountDetails, PaymentFlowsAmountDetailsClient]
+    ] = pydantic.Field(alias="amount_details", default=None)
+    amount_received: typing.Optional[int] = pydantic.Field(
+        alias="amount_received", default=None
+    )
+    """
+    Amount that this PaymentIntent collects.
+    """
+    application: typing.Optional[typing.Union[str, Application]] = pydantic.Field(
+        alias="application", default=None
+    )
+    """
+    ID of the Connect application that created the PaymentIntent.
+    """
+    application_fee_amount: typing.Optional[int] = pydantic.Field(
+        alias="application_fee_amount", default=None
+    )
+    """
+    The amount of the application fee (if any) that will be requested to be applied to the payment and transferred to the application owner's Stripe account. The amount of the application fee collected will be capped at the total amount captured. For more information, see the PaymentIntents [use case for connected accounts](https://stripe.com/docs/payments/connected-accounts).
+    """
+    automatic_payment_methods: typing.Optional[
+        PaymentFlowsAutomaticPaymentMethodsPaymentIntent
+    ] = pydantic.Field(alias="automatic_payment_methods", default=None)
+    canceled_at: typing.Optional[int] = pydantic.Field(
+        alias="canceled_at", default=None
+    )
+    """
+    Populated when `status` is `canceled`, this is the time at which the PaymentIntent was canceled. Measured in seconds since the Unix epoch.
+    """
+    cancellation_reason: typing.Optional[
+        typing_extensions.Literal[
+            "abandoned",
+            "automatic",
+            "duplicate",
+            "expired",
+            "failed_invoice",
+            "fraudulent",
+            "requested_by_customer",
+            "void_invoice",
+        ]
+    ] = pydantic.Field(alias="cancellation_reason", default=None)
+    """
+    Reason for cancellation of this PaymentIntent, either user-provided (`duplicate`, `fraudulent`, `requested_by_customer`, or `abandoned`) or generated by Stripe internally (`failed_invoice`, `void_invoice`, `automatic`, or `expired`).
+    """
+    capture_method: typing_extensions.Literal[
+        "automatic", "automatic_async", "manual"
+    ] = pydantic.Field(
+        alias="capture_method",
+    )
+    """
+    Controls when the funds will be captured from the customer's account.
+    """
+    client_secret: typing.Optional[str] = pydantic.Field(
+        alias="client_secret", default=None
+    )
+    """
+    The client secret of this PaymentIntent. Used for client-side retrieval using a publishable key. 
+    
+    The client secret can be used to complete a payment from your frontend. It should not be stored, logged, or exposed to anyone other than the customer. Make sure that you have TLS enabled on any page that includes the client secret.
+    
+    Refer to our docs to [accept a payment](https://stripe.com/docs/payments/accept-a-payment?ui=elements) and learn about how `client_secret` should be handled.
+    """
+    confirmation_method: typing_extensions.Literal["automatic", "manual"] = (
+        pydantic.Field(
+            alias="confirmation_method",
+        )
+    )
+    """
+    Describes whether we can confirm this PaymentIntent automatically, or if it requires customer action to confirm the payment.
+    """
+    created: int = pydantic.Field(
+        alias="created",
+    )
+    """
+    Time at which the object was created. Measured in seconds since the Unix epoch.
+    """
+    currency: str = pydantic.Field(
+        alias="currency",
+    )
+    """
+    Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).
+    """
+    customer: typing.Optional[typing.Union[str, "Customer", DeletedCustomer]] = (
+        pydantic.Field(alias="customer", default=None)
+    )
+    """
+    ID of the Customer this PaymentIntent belongs to, if one exists.
+    
+    Payment methods attached to other Customers cannot be used with this PaymentIntent.
+    
+    If [setup_future_usage](https://stripe.com/docs/api#payment_intent_object-setup_future_usage) is set and this PaymentIntent's payment method is not `card_present`, then the payment method attaches to the Customer after the PaymentIntent has been confirmed and any required actions from the user are complete. If the payment method is `card_present` and isn't a digital wallet, then a [generated_card](https://docs.stripe.com/api/charges/object#charge_object-payment_method_details-card_present-generated_card) payment method representing the card is created and attached to the Customer instead.
+    """
+    description: typing.Optional[str] = pydantic.Field(
+        alias="description", default=None
+    )
+    """
+    An arbitrary string attached to the object. Often useful for displaying to users.
+    """
+    id: str = pydantic.Field(
+        alias="id",
+    )
+    """
+    Unique identifier for the object.
+    """
+    last_payment_error: typing.Optional["ApiErrors"] = pydantic.Field(
+        alias="last_payment_error", default=None
+    )
+    latest_charge: typing.Optional[typing.Union[str, "Charge"]] = pydantic.Field(
+        alias="latest_charge", default=None
+    )
+    """
+    ID of the latest [Charge object](https://stripe.com/docs/api/charges) created by this PaymentIntent. This property is `null` until PaymentIntent confirmation is attempted.
+    """
+    livemode: bool = pydantic.Field(
+        alias="livemode",
+    )
+    """
+    Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.
+    """
+    metadata: typing.Optional[PaymentIntentMetadata] = pydantic.Field(
+        alias="metadata", default=None
+    )
+    """
+    Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Learn more about [storing information in metadata](https://stripe.com/docs/payments/payment-intents/creating-payment-intents#storing-information-in-metadata).
+    """
+    next_action: typing.Optional[PaymentIntentNextAction] = pydantic.Field(
+        alias="next_action", default=None
+    )
+    object: typing_extensions.Literal["payment_intent"] = pydantic.Field(
+        alias="object",
+    )
+    """
+    String representing the object's type. Objects of the same type share the same value.
+    """
+    on_behalf_of: typing.Optional[typing.Union[str, "Account"]] = pydantic.Field(
+        alias="on_behalf_of", default=None
+    )
+    """
+    The account (if any) for which the funds of the PaymentIntent are intended. See the PaymentIntents [use case for connected accounts](https://stripe.com/docs/payments/connected-accounts) for details.
+    """
+    payment_method: typing.Optional[typing.Union[str, "PaymentMethod"]] = (
+        pydantic.Field(alias="payment_method", default=None)
+    )
+    """
+    ID of the payment method used in this PaymentIntent.
+    """
+    payment_method_configuration_details: typing.Optional[
+        PaymentMethodConfigBizPaymentMethodConfigurationDetails
+    ] = pydantic.Field(alias="payment_method_configuration_details", default=None)
+    payment_method_options: typing.Optional[PaymentIntentPaymentMethodOptions] = (
+        pydantic.Field(alias="payment_method_options", default=None)
+    )
+    payment_method_types: typing.List[str] = pydantic.Field(
+        alias="payment_method_types",
+    )
+    """
+    The list of payment method types (e.g. card) that this PaymentIntent is allowed to use. A comprehensive list of valid payment method types can be found [here](https://docs.stripe.com/api/payment_methods/object#payment_method_object-type).
+    """
+    presentment_details: typing.Optional[
+        PaymentFlowsPaymentIntentPresentmentDetails
+    ] = pydantic.Field(alias="presentment_details", default=None)
+    processing: typing.Optional[PaymentIntentProcessing] = pydantic.Field(
+        alias="processing", default=None
+    )
+    receipt_email: typing.Optional[str] = pydantic.Field(
+        alias="receipt_email", default=None
+    )
+    """
+    Email address that the receipt for the resulting payment will be sent to. If `receipt_email` is specified for a payment in live mode, a receipt will be sent regardless of your [email settings](https://dashboard.stripe.com/account/emails).
+    """
+    review: typing.Optional[typing.Union[str, "Review"]] = pydantic.Field(
+        alias="review", default=None
+    )
+    """
+    ID of the review associated with this PaymentIntent, if any.
+    """
+    setup_future_usage: typing.Optional[
+        typing_extensions.Literal["off_session", "on_session"]
+    ] = pydantic.Field(alias="setup_future_usage", default=None)
+    """
+    Indicates that you intend to make future payments with this PaymentIntent's payment method.
+    
+    If you provide a Customer with the PaymentIntent, you can use this parameter to [attach the payment method](/payments/save-during-payment) to the Customer after the PaymentIntent is confirmed and the customer completes any required actions. If you don't provide a Customer, you can still [attach](/api/payment_methods/attach) the payment method to a Customer after the transaction completes.
+    
+    If the payment method is `card_present` and isn't a digital wallet, Stripe creates and attaches a [generated_card](/api/charges/object#charge_object-payment_method_details-card_present-generated_card) payment method representing the card to the Customer instead.
+    
+    When processing card payments, Stripe uses `setup_future_usage` to help you comply with regional legislation and network rules, such as [SCA](/strong-customer-authentication).
+    """
+    shipping: typing.Optional[Shipping] = pydantic.Field(alias="shipping", default=None)
+    statement_descriptor: typing.Optional[str] = pydantic.Field(
+        alias="statement_descriptor", default=None
+    )
+    """
+    Text that appears on the customer's statement as the statement descriptor for a non-card charge. This value overrides the account's default statement descriptor. For information about requirements, including the 22-character limit, see [the Statement Descriptor docs](https://docs.stripe.com/get-started/account/statement-descriptors).
+    
+    Setting this value for a card charge returns an error. For card charges, set the [statement_descriptor_suffix](https://docs.stripe.com/get-started/account/statement-descriptors#dynamic) instead.
+    """
+    statement_descriptor_suffix: typing.Optional[str] = pydantic.Field(
+        alias="statement_descriptor_suffix", default=None
+    )
+    """
+    Provides information about a card charge. Concatenated to the account's [statement descriptor prefix](https://docs.stripe.com/get-started/account/statement-descriptors#static) to form the complete statement descriptor that appears on the customer's statement.
+    """
+    status: typing_extensions.Literal[
+        "canceled",
+        "processing",
+        "requires_action",
+        "requires_capture",
+        "requires_confirmation",
+        "requires_payment_method",
+        "succeeded",
+    ] = pydantic.Field(
+        alias="status",
+    )
+    """
+    Status of this PaymentIntent, one of `requires_payment_method`, `requires_confirmation`, `requires_action`, `processing`, `requires_capture`, `canceled`, or `succeeded`. Read more about each PaymentIntent [status](https://stripe.com/docs/payments/intents#intent-statuses).
+    """
+    transfer_data: typing.Optional["TransferData"] = pydantic.Field(
+        alias="transfer_data", default=None
+    )
+    transfer_group: typing.Optional[str] = pydantic.Field(
+        alias="transfer_group", default=None
+    )
+    """
+    A string that identifies the resulting payment as part of a group. Learn more about the [use case for connected accounts](https://stripe.com/docs/connect/separate-charges-and-transfers).
+    """

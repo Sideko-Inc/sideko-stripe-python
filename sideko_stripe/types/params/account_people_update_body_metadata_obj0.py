@@ -1,0 +1,22 @@
+import pydantic
+import typing
+import typing_extensions
+
+
+class AccountPeopleUpdateBodyMetadataObj0(typing_extensions.TypedDict, total=False):
+    """
+    AccountPeopleUpdateBodyMetadataObj0
+    """
+
+
+class _SerializerAccountPeopleUpdateBodyMetadataObj0(pydantic.BaseModel):
+    """
+    Serializer for AccountPeopleUpdateBodyMetadataObj0 handling case conversions
+    and file omissions as dictated by the API
+    """
+
+    model_config = pydantic.ConfigDict(
+        populate_by_name=True,
+        extra="allow",
+    )
+    __pydantic_extra__: typing.Dict[str, str]
