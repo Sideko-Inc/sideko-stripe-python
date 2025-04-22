@@ -1,0 +1,1465 @@
+api: stripe
+languages:
+  python:
+    sdk_name: sideko_stripe
+    client_name: Stripe
+servers:
+  - url: https://api.stripe.com
+    name: production
+    default: true
+auths:
+  - id: basicAuth
+    username_param: username
+    password_param: password
+  - id: bearerAuth
+    param: token
+modules:
+  - path: account_link
+    operations:
+      - id: PostAccountLinks
+        function_name: create
+  - path: account_sessions
+    operations:
+      - id: PostAccountSessions
+        function_name: create
+  - path: account
+    operations:
+      - id: GetAccount
+        function_name: details
+      - id: DeleteAccountsAccount
+        function_name: delete
+      - id: GetAccounts
+        function_name: list
+      - id: GetAccountsAccount
+        function_name: get
+      - id: PostAccounts
+        function_name: create
+      - id: PostAccountsAccount
+        function_name: update
+      - id: PostAccountsAccountLoginLinks
+        function_name: create_login_link
+      - id: PostAccountsAccountReject
+        function_name: reject
+  - path: account.bank_account
+    operations:
+      - id: DeleteAccountsAccountBankAccountsId
+        function_name: delete
+      - id: GetAccountsAccountBankAccountsId
+        function_name: get
+      - id: PostAccountsAccountBankAccounts
+        function_name: create
+      - id: PostAccountsAccountBankAccountsId
+        function_name: update
+  - path: account.capability
+    operations:
+      - id: GetAccountsAccountCapabilities
+        function_name: list
+      - id: GetAccountsAccountCapabilitiesCapability
+        function_name: get
+      - id: PostAccountsAccountCapabilitiesCapability
+        function_name: create
+  - path: account.external_account
+    operations:
+      - id: DeleteAccountsAccountExternalAccountsId
+        function_name: delete
+      - id: GetAccountsAccountExternalAccounts
+        function_name: list
+      - id: GetAccountsAccountExternalAccountsId
+        function_name: get
+      - id: PostAccountsAccountExternalAccounts
+        function_name: create
+      - id: PostAccountsAccountExternalAccountsId
+        function_name: update
+  - path: account.people
+    operations:
+      - id: DeleteAccountsAccountPeoplePerson
+        function_name: delete
+      - id: GetAccountsAccountPeople
+        function_name: list
+      - id: GetAccountsAccountPeoplePerson
+        function_name: get
+      - id: PostAccountsAccountPeople
+        function_name: create
+      - id: PostAccountsAccountPeoplePerson
+        function_name: update
+  - path: account.person
+    operations:
+      - id: DeleteAccountsAccountPersonsPerson
+        function_name: delete
+      - id: GetAccountsAccountPersons
+        function_name: list
+      - id: GetAccountsAccountPersonsPerson
+        function_name: get
+      - id: PostAccountsAccountPersons
+        function_name: create
+      - id: PostAccountsAccountPersonsPerson
+        function_name: update
+  - path: apple_pay.domain
+    operations:
+      - id: DeleteApplePayDomainsDomain
+        function_name: delete
+      - id: GetApplePayDomains
+        function_name: list
+      - id: GetApplePayDomainsDomain
+        function_name: get
+      - id: PostApplePayDomains
+        function_name: create
+  - path: application_fee
+    operations:
+      - id: GetApplicationFees
+        function_name: list
+      - id: GetApplicationFeesId
+        function_name: get
+  - path: application_fee.refund
+    operations:
+      - id: GetApplicationFeesFeeRefundsId
+        function_name: get
+      - id: GetApplicationFeesIdRefunds
+        function_name: list
+      - id: PostApplicationFeesFeeRefundsId
+        function_name: update
+      - id: PostApplicationFeesIdRefunds
+        function_name: create_many
+      - id: PostApplicationFeesIdRefund # seems to be a duplicate, not in their docs
+        function_name: create
+  - path: apps.secret
+    operations:
+      - id: GetAppsSecrets
+        function_name: list
+      - id: PostAppsSecrets
+        function_name: create
+      - id: PostAppsSecretsDelete
+        function_name: delete
+      - id: GetAppsSecretsFind
+        function_name: find
+  - path: balance
+    operations:
+      - id: GetBalance
+        function_name: list
+  - path: balance.history
+    operations:
+      - id: GetBalanceHistory
+        function_name: list # not in their docs
+      - id: GetBalanceHistoryId
+        function_name: get # not in their docs
+  - path: balance_transaction
+    operations:
+      - id: GetBalanceTransactions
+        function_name: list
+      - id: GetBalanceTransactionsId
+        function_name: get
+  - path: billing.alert
+    operations:
+      - id: GetBillingAlerts
+        function_name: list
+      - id: GetBillingAlertsId
+        function_name: get
+      - id: PostBillingAlerts
+        function_name: create
+      - id: PostBillingAlertsIdActivate
+        function_name: activate
+      - id: PostBillingAlertsIdArchive
+        function_name: archive
+      - id: PostBillingAlertsIdDeactivate
+        function_name: deactivate
+  - path: billing.credit_balance_summary
+    operations:
+      - id: GetBillingCreditBalanceSummary
+        function_name: get
+  - path: billing.credit_balance_transaction
+    operations:
+      - id: GetBillingCreditBalanceTransactions
+        function_name: list
+      - id: GetBillingCreditBalanceTransactionsId
+        function_name: get
+  - path: billing.credit_grant
+    operations:
+      - id: GetBillingCreditGrants
+        function_name: list
+      - id: GetBillingCreditGrantsId
+        function_name: get
+      - id: PostBillingCreditGrants
+        function_name: create
+      - id: PostBillingCreditGrantsId
+        function_name: update
+      - id: PostBillingCreditGrantsIdExpire
+        function_name: expire
+      - id: PostBillingCreditGrantsIdVoid
+        function_name: void
+  - path: billing.meter_event_adjustment
+    operations:
+      - id: PostBillingMeterEventAdjustments
+        function_name: create
+  - path: billing.meter_event
+    operations:
+      - id: PostBillingMeterEvents
+        function_name: create
+  - path: billing.meter
+    operations:
+      - id: GetBillingMeters
+        function_name: list
+      - id: GetBillingMetersId
+        function_name: get
+      - id: PostBillingMeters
+        function_name: create
+      - id: PostBillingMetersId
+        function_name: update
+      - id: PostBillingMetersIdDeactivate
+        function_name: deactivate
+      - id: PostBillingMetersIdReactivate
+        function_name: reactivate
+  - path: billing.meter.event_summaries
+    operations:
+      - id: GetBillingMetersIdEventSummaries
+        function_name: list
+  - path: billing_portal.configuration
+    operations:
+      - id: GetBillingPortalConfigurations
+        function_name: list
+      - id: GetBillingPortalConfigurationsConfiguration
+        function_name: get
+      - id: PostBillingPortalConfigurations
+        function_name: create
+      - id: PostBillingPortalConfigurationsConfiguration
+        function_name: update
+  - path: billing_portal.session
+    operations:
+      - id: PostBillingPortalSessions
+        function_name: create
+  - path: charge
+    operations:
+      - id: GetCharges
+        function_name: list
+      - id: GetChargesCharge
+        function_name: get
+      - id: PostCharges
+        function_name: create
+      - id: PostChargesCharge
+        function_name: update
+      - id: PostChargesChargeCapture
+        function_name: capture
+      - id: GetChargesSearch
+        function_name: search
+  - path: charge.dispute
+    operations:
+      - id: GetChargesChargeDispute # not in docs
+        function_name: get
+      - id: PostChargesChargeDispute # not in docs
+        function_name: create
+      - id: PostChargesChargeDisputeClose
+        function_name: close # not in docs
+  - path: charge.refund
+    operations:
+      - id: PostChargesChargeRefund
+        function_name: create # not in docs
+      - id: GetChargesChargeRefunds
+        function_name: list # not in docs
+      - id: GetChargesChargeRefundsRefund
+        function_name: get # not in docs
+      - id: PostChargesChargeRefunds
+        function_name: create # not in docs
+      - id: PostChargesChargeRefundsRefund
+        function_name: update # not in docs
+  - path: checkout.session
+    operations:
+      - id: GetCheckoutSessions
+        function_name: list
+      - id: GetCheckoutSessionsSession
+        function_name: get
+      - id: PostCheckoutSessions
+        function_name: create
+      - id: PostCheckoutSessionsSession
+        function_name: update
+      - id: PostCheckoutSessionsSessionExpire
+        function_name: expire
+  - path: checkout.session.line_items
+    operations:
+      - id: GetCheckoutSessionsSessionLineItems
+        function_name: list
+  - path: climate.order
+    operations:
+      - id: GetClimateOrders
+        function_name: list
+      - id: GetClimateOrdersOrder
+        function_name: get
+      - id: PostClimateOrders
+        function_name: create
+      - id: PostClimateOrdersOrder
+        function_name: update
+      - id: PostClimateOrdersOrderCancel
+        function_name: cancel
+  - path: climate.product
+    operations:
+      - id: GetClimateProducts
+        function_name: list
+      - id: GetClimateProductsProduct
+        function_name: get
+  - path: climate.suppliers
+    operations:
+      - id: GetClimateSupplier
+        function_name: list
+      - id: GetClimateSuppliersSupplier
+        function_name: get
+  - path: confirmation_token
+    operations:
+      - id: GetConfirmationTokensConfirmationToken
+        function_name: get
+  - path: country_spec
+    operations:
+      - id: GetCountrySpecs
+        function_name: list
+      - id: GetCountrySpecsCountry
+        function_name: get
+  - path: coupon
+    operations:
+      - id: DeleteCouponsCoupon
+        function_name: delete
+      - id: GetCoupons
+        function_name: list
+      - id: GetCouponsCoupon
+        function_name: get
+      - id: PostCoupons
+        function_name: create
+      - id: PostCouponsCoupon
+        function_name: update
+  - path: credit_note
+    operations:
+      - id: GetCreditNotes
+        function_name: list
+      - id: GetCreditNotesId
+        function_name: get
+      - id: PostCreditNotes
+        function_name: create
+      - id: PostCreditNotesId
+        function_name: update
+      - id: GetCreditNotesPreviewLines
+        function_name: preview_lines
+      - id: GetCreditNotesPreview
+        function_name: preview
+      - id: GetCreditNotesCreditNoteLines
+        function_name: lines
+      - id: PostCreditNotesIdVoid
+        function_name: void
+  - path: customer_session
+    operations:
+      - id: PostCustomerSessions
+        function_name: create
+  - path: customer
+    operations:
+      - id: DeleteCustomersCustomer
+        function_name: delete
+      - id: GetCustomers
+        function_name: list
+      - id: GetCustomersCustomer
+        function_name: get
+      - id: PostCustomers
+        function_name: create
+      - id: PostCustomersCustomer
+        function_name: update
+      - id: GetCustomersSearch
+        function_name: search
+  - path: customer.balance_transaction
+    operations:
+      - id: GetCustomersCustomerBalanceTransactions
+        function_name: list
+      - id: GetCustomersCustomerBalanceTransactionsTransaction
+        function_name: get
+      - id: PostCustomersCustomerBalanceTransactions
+        function_name: create
+      - id: PostCustomersCustomerBalanceTransactionsTransaction
+        function_name: update
+  - path: customer.bank_account
+    operations:
+      - id: DeleteCustomersCustomerBankAccountsId
+        function_name: delete
+      - id: GetCustomersCustomerBankAccounts
+        function_name: list
+      - id: GetCustomersCustomerBankAccountsId
+        function_name: get
+      - id: PostCustomersCustomerBankAccounts
+        function_name: create
+      - id: PostCustomersCustomerBankAccountsId
+        function_name: update
+      - id: PostCustomersCustomerBankAccountsIdVerify
+        function_name: verify
+  - path: customer.card
+    operations:
+      - id: DeleteCustomersCustomerCardsId
+        function_name: delete
+      - id: GetCustomersCustomerCards
+        function_name: list
+      - id: GetCustomersCustomerCardsId
+        function_name: get
+      - id: PostCustomersCustomerCards
+        function_name: create
+      - id: PostCustomersCustomerCardsId
+        function_name: update
+  - path: customer.cash_balance
+    operations:
+      - id: GetCustomersCustomerCashBalance
+        function_name: get
+      - id: PostCustomersCustomerCashBalance
+        function_name: modify
+  - path: customer.cash_balance_transaction
+    operations:
+      - id: GetCustomersCustomerCashBalanceTransactions
+        function_name: list
+      - id: GetCustomersCustomerCashBalanceTransactionsTransaction
+        function_name: get
+  - path: customer.discount
+    operations:
+      - id: DeleteCustomersCustomerDiscount
+        function_name: delete
+      - id: GetCustomersCustomerDiscount
+        function_name: list
+  - path: customer.funding_instruction
+    operations:
+      - id: PostCustomersCustomerFundingInstructions
+        function_name: create
+  - path: customer.payment_method
+    operations:
+      - id: GetCustomersCustomerPaymentMethods
+        function_name: list
+      - id: GetCustomersCustomerPaymentMethodsPaymentMethod
+        function_name: get
+  - path: customer.source
+    operations:
+      - id: DeleteCustomersCustomerSourcesId
+        function_name: delete
+      - id: GetCustomersCustomerSources
+        function_name: list
+      - id: GetCustomersCustomerSourcesId
+        function_name: get
+      - id: PostCustomersCustomerSources
+        function_name: create
+      - id: PostCustomersCustomerSourcesId
+        function_name: update
+      - id: PostCustomersCustomerSourcesIdVerify
+        function_name: verify
+  - path: customer.subscription
+    operations:
+      - id: DeleteCustomersCustomerSubscriptionsSubscriptionExposedId
+        function_name: delete
+      - id: GetCustomersCustomerSubscriptions
+        function_name: list
+      - id: GetCustomersCustomerSubscriptionsSubscriptionExposedId
+        function_name: get
+      - id: PostCustomersCustomerSubscriptions
+        function_name: create
+      - id: PostCustomersCustomerSubscriptionsSubscriptionExposedId
+        function_name: modify
+  - path: customer.subscription.discount
+    operations:
+      - id: DeleteCustomersCustomerSubscriptionsSubscriptionExposedIdDiscount
+        function_name: delete
+      - id: GetCustomersCustomerSubscriptionsSubscriptionExposedIdDiscount
+        function_name: list
+  - path: customer.tax_id
+    operations:
+      - id: DeleteCustomersCustomerTaxIdsId
+        function_name: delete
+      - id: GetCustomersCustomerTaxIds
+        function_name: list
+      - id: GetCustomersCustomerTaxIdsId
+        function_name: get
+      - id: PostCustomersCustomerTaxIds
+        function_name: create
+  - path: dispute
+    operations:
+      - id: GetDisputes
+        function_name: list
+      - id: GetDisputesDispute
+        function_name: get
+      - id: PostDisputesDispute
+        function_name: update
+      - id: PostDisputesDisputeClose
+        function_name: close
+  - path: entitlement.active_entitlement
+    operations:
+      - id: GetEntitlementsActiveEntitlements
+        function_name: list
+      - id: GetEntitlementsActiveEntitlementsId
+        function_name: get
+  - path: entitlement.feature
+    operations:
+      - id: GetEntitlementsFeatures
+        function_name: list
+      - id: GetEntitlementsFeaturesId
+        function_name: get
+      - id: PostEntitlementsFeatures
+        function_name: create
+      - id: PostEntitlementsFeaturesId
+        function_name: update
+  - path: ephemeral_key
+    operations:
+      - id: DeleteEphemeralKeysKey
+        function_name: delete
+      - id: PostEphemeralKeys
+        function_name: create
+  - path: event
+    operations:
+      - id: GetEvents
+        function_name: list
+      - id: GetEventsId
+        function_name: get
+  - path: exchange_rate
+    operations:
+      - id: GetExchangeRates
+        function_name: list
+      - id: GetExchangeRatesRateId
+        function_name: get
+  - path: external_account
+    operations:
+      - id: PostExternalAccountsId
+        function_name: create
+  - path: file_link
+    operations:
+      - id: GetFileLinks
+        function_name: list
+      - id: GetFileLinksLink
+        function_name: get
+      - id: PostFileLinks
+        function_name: create
+      - id: PostFileLinksLink
+        function_name: update
+  - path: file
+    operations:
+      - id: GetFiles
+        function_name: list
+      - id: GetFilesFile
+        function_name: get
+      - id: PostFiles
+        function_name: create
+  - path: financial_connections.account
+    operations:
+      - id: GetFinancialConnectionsAccounts
+        function_name: list
+      - id: GetFinancialConnectionsAccountsAccount
+        function_name: get
+      - id: PostFinancialConnectionsAccountsAccountDisconnect
+        function_name: disconnect
+      - id: PostFinancialConnectionsAccountsAccountRefresh
+        function_name: refresh
+      - id: PostFinancialConnectionsAccountsAccountSubscribe
+        function_name: subscribe
+      - id: PostFinancialConnectionsAccountsAccountUnsubscribe
+        function_name: unsubscribe
+  - path: financial_connections.account.owners
+    operations:
+      - id: GetFinancialConnectionsAccountsAccountOwners
+        function_name: list
+  - path: financial_connections.session
+    operations:
+      - id: GetFinancialConnectionsSessionsSession
+        function_name: get
+      - id: PostFinancialConnectionsSessions
+        function_name: create
+  - path: financial_connections.transaction
+    operations:
+      - id: GetFinancialConnectionsTransactions
+        function_name: list
+      - id: GetFinancialConnectionsTransactionsTransaction
+        function_name: get
+  - path: forwarding.request
+    operations:
+      - id: GetForwardingRequests
+        function_name: list
+      - id: GetForwardingRequestsId
+        function_name: get
+      - id: PostForwardingRequests
+        function_name: create
+  - path: identity.verification_report
+    operations:
+      - id: GetIdentityVerificationReports
+        function_name: list
+      - id: GetIdentityVerificationReportsReport
+        function_name: get
+  - path: identity.verification_session
+    operations:
+      - id: GetIdentityVerificationSessions
+        function_name: list
+      - id: GetIdentityVerificationSessionsSession
+        function_name: get
+      - id: PostIdentityVerificationSessions
+        function_name: create
+      - id: PostIdentityVerificationSessionsSession
+        function_name: update
+      - id: PostIdentityVerificationSessionsSessionCancel
+        function_name: cancel
+      - id: PostIdentityVerificationSessionsSessionRedact
+        function_name: redact
+  - path: invoice_payment
+    operations:
+      - id: GetInvoicePayments
+        function_name: list
+      - id: GetInvoicePaymentsInvoicePayment
+        function_name: get
+  - path: invoice_rendering_template
+    operations:
+      - id: GetInvoiceRenderingTemplates
+        function_name: list
+      - id: GetInvoiceRenderingTemplatesTemplate
+        function_name: get
+      - id: PostInvoiceRenderingTemplatesTemplateArchive
+        function_name: archive
+      - id: PostInvoiceRenderingTemplatesTemplateUnarchive
+        function_name: unarchive
+  - path: invoice_item
+    operations:
+      - id: DeleteInvoiceitemsInvoiceitem
+        function_name: delete
+      - id: GetInvoiceitems
+        function_name: list
+      - id: GetInvoiceitemsInvoiceitem
+        function_name: get
+      - id: PostInvoiceitems
+        function_name: create
+      - id: PostInvoiceitemsInvoiceitem
+        function_name: update
+  - path: invoice
+    operations:
+      - id: DeleteInvoicesInvoice
+        function_name: delete
+      - id: GetInvoices
+        function_name: list
+      - id: GetInvoicesInvoice
+        function_name: get
+      - id: PostInvoices
+        function_name: create
+      - id: PostInvoicesInvoice
+        function_name: update
+      - id: PostInvoicesCreatePreview
+        function_name: preview
+      - id: PostInvoicesInvoiceFinalize
+        function_name: finalize
+      - id: PostInvoicesInvoiceMarkUncollectible
+        function_name: mark_uncollectible
+      - id: PostInvoicesInvoicePay
+        function_name: pay
+      - id: GetInvoicesSearch
+        function_name: search
+      - id: PostInvoicesInvoiceSend
+        function_name: send
+      - id: PostInvoicesInvoiceVoid
+        function_name: void
+  - path: invoice.line
+    operations:
+      - id: PostInvoicesInvoiceAddLines
+        function_name: create_many
+      - id: GetInvoicesInvoiceLines
+        function_name: list
+      - id: PostInvoicesInvoiceLinesLineItemId
+        function_name: update
+      - id: PostInvoicesInvoiceRemoveLines
+        function_name: remove_many
+      - id: PostInvoicesInvoiceUpdateLines
+        function_name: update_many
+  - path: issuing.authorization
+    operations:
+      - id: GetIssuingAuthorizations
+        function_name: list
+      - id: GetIssuingAuthorizationsAuthorization
+        function_name: get
+      - id: PostIssuingAuthorizationsAuthorization
+        function_name: update
+      - id: PostIssuingAuthorizationsAuthorizationApprove
+        function_name: approve
+      - id: PostIssuingAuthorizationsAuthorizationDecline
+        function_name: decline
+  - path: issuing.cardholder
+    operations:
+      - id: GetIssuingCardholders
+        function_name: list
+      - id: GetIssuingCardholdersCardholder
+        function_name: get
+      - id: PostIssuingCardholders
+        function_name: create
+      - id: PostIssuingCardholdersCardholder
+        function_name: update
+  - path: issuing.card
+    operations:
+      - id: GetIssuingCards
+        function_name: list
+      - id: GetIssuingCardsCard
+        function_name: get
+      - id: PostIssuingCards
+        function_name: create
+      - id: PostIssuingCardsCard
+        function_name: update
+  - path: issuing.dispute
+    operations:
+      - id: GetIssuingDisputes
+        function_name: list
+      - id: GetIssuingDisputesDispute
+        function_name: get
+      - id: PostIssuingDisputes
+        function_name: create
+      - id: PostIssuingDisputesDispute
+        function_name: update
+      - id: PostIssuingDisputesDisputeSubmit
+        function_name: submit
+  - path: issuing.personalization_design
+    operations:
+      - id: GetIssuingPersonalizationDesigns
+        function_name: list
+      - id: GetIssuingPersonalizationDesignsPersonalizationDesign
+        function_name: get
+      - id: PostIssuingPersonalizationDesigns
+        function_name: create
+      - id: PostIssuingPersonalizationDesignsPersonalizationDesign
+        function_name: update
+  - path: issuing.physical_bundle
+    operations:
+      - id: GetIssuingPhysicalBundles
+        function_name: list
+      - id: GetIssuingPhysicalBundlesPhysicalBundle
+        function_name: get
+  - path: issuing.settlement
+    operations:
+      - id: GetIssuingSettlementsSettlement
+        function_name: get
+      - id: PostIssuingSettlementsSettlement
+        function_name: update
+  - path: issuing.token
+    operations:
+      - id: GetIssuingTokens
+        function_name: list
+      - id: GetIssuingTokensToken
+        function_name: get
+      - id: PostIssuingTokensToken
+        function_name: update
+  - path: issuing.transaction
+    operations:
+      - id: GetIssuingTransactions
+        function_name: list
+      - id: GetIssuingTransactionsTransaction
+        function_name: get
+      - id: PostIssuingTransactionsTransaction
+        function_name: update
+  - path: link_account_session
+    operations:
+      - id: GetLinkAccountSessionsSession
+        function_name: get
+      - id: PostLinkAccountSessions
+        function_name: create
+  - path: linked_account
+    operations:
+      - id: GetLinkedAccounts
+        function_name: list
+      - id: GetLinkedAccountsAccount
+        function_name: get
+      - id: PostLinkedAccountsAccountDisconnect
+        function_name: disconnect
+      - id: PostLinkedAccountsAccountRefresh
+        function_name: refresh
+  - path: linked_account.owners
+    operations:
+      - id: GetLinkedAccountsAccountOwners
+        function_name: list
+  - path: mandates
+    operations:
+      - id: GetMandatesMandate
+        function_name: get
+  - path: payment_intent
+    operations:
+      - id: GetPaymentIntents
+        function_name: list
+      - id: GetPaymentIntentsIntent
+        function_name: get
+      - id: PostPaymentIntents
+        function_name: create
+      - id: PostPaymentIntentsIntent
+        function_name: update
+      - id: PostPaymentIntentsIntentApplyCustomerBalance
+        function_name: apply_customer_balance
+      - id: PostPaymentIntentsIntentCancel
+        function_name: cancel
+      - id: PostPaymentIntentsIntentCapture
+        function_name: capture
+      - id: PostPaymentIntentsIntentConfirm
+        function_name: confirm
+      - id: PostPaymentIntentsIntentIncrementAuthorization
+        function_name: increment_authorization
+      - id: GetPaymentIntentsSearch
+        function_name: search
+      - id: PostPaymentIntentsIntentVerifyMicrodeposits
+        function_name: verify_microdeposits
+  - path: payment_link
+    operations:
+      - id: GetPaymentLinks
+        function_name: list
+      - id: GetPaymentLinksPaymentLink
+        function_name: get
+      - id: PostPaymentLinks
+        function_name: create
+      - id: PostPaymentLinksPaymentLink
+        function_name: update
+  - path: payment_links.line_item
+    operations:
+      - id: GetPaymentLinksPaymentLinkLineItems
+        function_name: list
+  - path: payment_method_configuration
+    operations:
+      - id: GetPaymentMethodConfigurations
+        function_name: list
+      - id: GetPaymentMethodConfigurationsConfiguration
+        function_name: get
+      - id: PostPaymentMethodConfigurations
+        function_name: create
+      - id: PostPaymentMethodConfigurationsConfiguration
+        function_name: update
+  - path: payment_method_domain
+    operations:
+      - id: GetPaymentMethodDomains
+        function_name: list
+      - id: GetPaymentMethodDomainsPaymentMethodDomain
+        function_name: get
+      - id: PostPaymentMethodDomains
+        function_name: create
+      - id: PostPaymentMethodDomainsPaymentMethodDomain
+        function_name: update
+      - id: PostPaymentMethodDomainsPaymentMethodDomainValidate
+        function_name: validate
+  - path: payment_method
+    operations:
+      - id: GetPaymentMethods
+        function_name: list
+      - id: GetPaymentMethodsPaymentMethod
+        function_name: get
+      - id: PostPaymentMethods
+        function_name: create
+      - id: PostPaymentMethodsPaymentMethod
+        function_name: update
+      - id: PostPaymentMethodsPaymentMethodAttach
+        function_name: attach
+      - id: PostPaymentMethodsPaymentMethodDetach
+        function_name: detach
+  - path: payout
+    operations:
+      - id: GetPayouts
+        function_name: list
+      - id: GetPayoutsPayout
+        function_name: get
+      - id: PostPayouts
+        function_name: create
+      - id: PostPayoutsPayout
+        function_name: update
+      - id: PostPayoutsPayoutCancel
+        function_name: cancel
+      - id: PostPayoutsPayoutReverse
+        function_name: reverse
+  - path: plan
+    operations:
+      - id: DeletePlansPlan
+        function_name: delete
+      - id: GetPlans
+        function_name: list
+      - id: GetPlansPlan
+        function_name: get
+      - id: PostPlans
+        function_name: create
+      - id: PostPlansPlan
+        function_name: update
+  - path: price
+    operations:
+      - id: GetPrices
+        function_name: list
+      - id: GetPricesPrice
+        function_name: get
+      - id: PostPrices
+        function_name: create
+      - id: PostPricesPrice
+        function_name: update
+      - id: GetPricesSearch
+        function_name: search
+  - path: product
+    operations:
+      - id: DeleteProductsId
+        function_name: delete
+      - id: GetProducts
+        function_name: list
+      - id: GetProductsId
+        function_name: get
+      - id: PostProducts
+        function_name: create
+      - id: PostProductsId
+        function_name: update
+      - id: GetProductsSearch
+        function_name: search
+  - path: product.feature
+    operations:
+      - id: DeleteProductsProductFeaturesId
+        function_name: delete
+      - id: GetProductsProductFeatures
+        function_name: list
+      - id: GetProductsProductFeaturesId
+        function_name: get
+      - id: PostProductsProductFeatures
+        function_name: create
+  - path: promotion_code
+    operations:
+      - id: GetPromotionCodes
+        function_name: list
+      - id: GetPromotionCodesPromotionCode
+        function_name: get
+      - id: PostPromotionCodes
+        function_name: create
+      - id: PostPromotionCodesPromotionCode
+        function_name: update
+  - path: quote
+    operations:
+      - id: GetQuotes
+        function_name: list
+      - id: GetQuotesQuote
+        function_name: get
+      - id: PostQuotes
+        function_name: create
+      - id: PostQuotesQuote
+        function_name: update
+      - id: PostQuotesQuoteAccept
+        function_name: accept
+      - id: PostQuotesQuoteCancel
+        function_name: cancel
+      - id: GetQuotesQuoteComputedUpfrontLineItems
+        function_name: computed_upfront_line_items
+      - id: PostQuotesQuoteFinalize
+        function_name: finalize
+      - id: GetQuotesQuotePdf
+        function_name: pdf
+  - path: quotes.line_item
+    operations:
+      - id: GetQuotesQuoteLineItems
+        function_name: list
+  - path: radar.early_fraud_warning
+    operations:
+      - id: GetRadarEarlyFraudWarnings
+        function_name: list
+      - id: GetRadarEarlyFraudWarningsEarlyFraudWarning
+        function_name: get
+  - path: radar.value_list_item
+    operations:
+      - id: DeleteRadarValueListItemsItem
+        function_name: delete
+      - id: GetRadarValueListItems
+        function_name: list
+      - id: GetRadarValueListItemsItem
+        function_name: get
+      - id: PostRadarValueListItems
+        function_name: create
+  - path: radar.value_list
+    operations:
+      - id: DeleteRadarValueListsValueList
+        function_name: delete
+      - id: GetRadarValueLists
+        function_name: list
+      - id: GetRadarValueListsValueList
+        function_name: get
+      - id: PostRadarValueLists
+        function_name: create
+      - id: PostRadarValueListsValueList
+        function_name: update
+  - path: refund
+    operations:
+      - id: GetRefunds
+        function_name: list
+      - id: GetRefundsRefund
+        function_name: get
+      - id: PostRefunds
+        function_name: create
+      - id: PostRefundsRefund
+        function_name: update
+      - id: PostRefundsRefundCancel
+        function_name: cancel
+  - path: reporting.report_run
+    operations:
+      - id: GetReportingReportRuns
+        function_name: list
+      - id: GetReportingReportRunsReportRun
+        function_name: get
+      - id: PostReportingReportRuns
+        function_name: create
+  - path: reporting.report_type
+    operations:
+      - id: GetReportingReportTypes
+        function_name: list
+      - id: GetReportingReportTypesReportType
+        function_name: get
+  - path: review
+    operations:
+      - id: GetReviews
+        function_name: list
+      - id: GetReviewsReview
+        function_name: get
+      - id: PostReviewsReviewApprove
+        function_name: approve
+  - path: setup_attempt
+    operations:
+      - id: GetSetupAttempts
+        function_name: list
+  - path: setup_intent
+    operations:
+      - id: GetSetupIntents
+        function_name: list
+      - id: GetSetupIntentsIntent
+        function_name: get
+      - id: PostSetupIntents
+        function_name: create
+      - id: PostSetupIntentsIntent
+        function_name: update
+      - id: PostSetupIntentsIntentCancel
+        function_name: cancel
+      - id: PostSetupIntentsIntentConfirm
+        function_name: confirm
+      - id: PostSetupIntentsIntentVerifyMicrodeposits
+        function_name: verify_microdeposits
+  - path: shipping_rate
+    operations:
+      - id: GetShippingRates
+        function_name: list
+      - id: GetShippingRatesShippingRateToken
+        function_name: get
+      - id: PostShippingRates
+        function_name: create
+      - id: PostShippingRatesShippingRateToken
+        function_name: update
+  - path: sigma.scheduled_query_run
+    operations:
+      - id: GetSigmaScheduledQueryRuns
+        function_name: list
+      - id: GetSigmaScheduledQueryRunsScheduledQueryRun
+        function_name: get
+  - path: source
+    operations:
+      - id: GetSourcesSource
+        function_name: get
+      - id: PostSources
+        function_name: create
+      - id: PostSourcesSource
+        function_name: update
+      - id: PostSourcesSourceVerify
+        function_name: verify
+  - path: source.mandate_notifications
+    operations:
+      - id: GetSourcesSourceMandateNotificationsMandateNotification
+        function_name: get
+  - path: source.source_transactions
+    operations:
+      - id: GetSourcesSourceSourceTransactions
+        function_name: list
+      - id: GetSourcesSourceSourceTransactionsSourceTransaction
+        function_name: get
+  - path: subscription_item
+    operations:
+      - id: DeleteSubscriptionItemsItem
+        function_name: delete
+      - id: GetSubscriptionItems
+        function_name: list
+      - id: GetSubscriptionItemsItem
+        function_name: get
+      - id: PostSubscriptionItems
+        function_name: create
+      - id: PostSubscriptionItemsItem
+        function_name: update
+  - path: subscription_schedule
+    operations:
+      - id: GetSubscriptionSchedules
+        function_name: list
+      - id: GetSubscriptionSchedulesSchedule
+        function_name: get
+      - id: PostSubscriptionSchedules
+        function_name: create
+      - id: PostSubscriptionSchedulesSchedule
+        function_name: update
+      - id: PostSubscriptionSchedulesScheduleCancel
+        function_name: cancel
+      - id: PostSubscriptionSchedulesScheduleRelease
+        function_name: release
+  - path: subscription
+    operations:
+      - id: DeleteSubscriptionsSubscriptionExposedId
+        function_name: delete
+      - id: GetSubscriptions
+        function_name: list
+      - id: GetSubscriptionsSubscriptionExposedId
+        function_name: get
+      - id: PostSubscriptions
+        function_name: create
+      - id: PostSubscriptionsSubscriptionExposedId
+        function_name: update
+      - id: PostSubscriptionsSubscriptionResume
+        function_name: resume
+      - id: GetSubscriptionsSearch
+        function_name: search
+  - path: subscriptions.discount
+    operations:
+      - id: DeleteSubscriptionsSubscriptionExposedIdDiscount
+        function_name: delete
+  - path: tax.calculation
+    operations:
+      - id: GetTaxCalculationsCalculation
+        function_name: get
+      - id: PostTaxCalculations
+        function_name: create
+  - path: tax.calculations.line_item
+    operations:
+      - id: GetTaxCalculationsCalculationLineItems
+        function_name: list
+  - path: tax.registration
+    operations:
+      - id: GetTaxRegistrations
+        function_name: list
+      - id: GetTaxRegistrationsId
+        function_name: get
+      - id: PostTaxRegistrations
+        function_name: create
+      - id: PostTaxRegistrationsId
+        function_name: update
+  - path: tax.setting
+    operations:
+      - id: GetTaxSettings
+        function_name: list
+      - id: PostTaxSettings
+        function_name: update
+  - path: tax.transaction
+    operations:
+      - id: GetTaxTransactionsTransaction
+        function_name: get
+      - id: PostTaxTransactionsCreateFromCalculation
+        function_name: create_from_calculation
+      - id: PostTaxTransactionsCreateReversal
+        function_name: create_reversal
+  - path: tax.transaction.line_items
+    operations:
+      - id: GetTaxTransactionsTransactionLineItems
+        function_name: list
+  - path: tax_code
+    operations:
+      - id: GetTaxCodes
+        function_name: list
+      - id: GetTaxCodesId
+        function_name: get
+  - path: tax_id
+    operations:
+      - id: DeleteTaxIdsId
+        function_name: delete
+      - id: GetTaxIds
+        function_name: list
+      - id: GetTaxIdsId
+        function_name: get
+      - id: PostTaxIds
+        function_name: create
+  - path: tax_rate
+    operations:
+      - id: GetTaxRates
+        function_name: list
+      - id: GetTaxRatesTaxRate
+        function_name: get
+      - id: PostTaxRates
+        function_name: create
+      - id: PostTaxRatesTaxRate
+        function_name: update
+  - path: terminal.configuration
+    operations:
+      - id: DeleteTerminalConfigurationsConfiguration
+        function_name: delete
+      - id: GetTerminalConfigurations
+        function_name: list
+      - id: GetTerminalConfigurationsConfiguration
+        function_name: get
+      - id: PostTerminalConfigurations
+        function_name: create
+      - id: PostTerminalConfigurationsConfiguration
+        function_name: update
+  - path: terminal.connection_token
+    operations:
+      - id: PostTerminalConnectionTokens
+        function_name: create
+  - path: terminal.location
+    operations:
+      - id: DeleteTerminalLocationsLocation
+        function_name: delete
+      - id: GetTerminalLocations
+        function_name: list
+      - id: GetTerminalLocationsLocation
+        function_name: get
+      - id: PostTerminalLocations
+        function_name: create
+      - id: PostTerminalLocationsLocation
+        function_name: update
+  - path: terminal.reader
+    operations:
+      - id: DeleteTerminalReadersReader
+        function_name: delete
+      - id: GetTerminalReaders
+        function_name: list
+      - id: GetTerminalReadersReader
+        function_name: get
+      - id: PostTerminalReaders
+        function_name: create
+      - id: PostTerminalReadersReader
+        function_name: update
+      - id: PostTerminalReadersReaderCancelAction
+        function_name: cancel_action
+      - id: PostTerminalReadersReaderProcessPaymentIntent
+        function_name: process_payment_intent
+      - id: PostTerminalReadersReaderProcessSetupIntent
+        function_name: process_setup_intent
+      - id: PostTerminalReadersReaderRefundPayment
+        function_name: refund_payment
+      - id: PostTerminalReadersReaderSetReaderDisplay
+        function_name: set_reader_display
+  - path: test_helper.confirmation_token
+    operations:
+      - id: PostTestHelpersConfirmationTokens
+        function_name: create
+  - path: test_helper.customer
+    operations:
+      - id: PostTestHelpersCustomersCustomerFundCashBalance
+        function_name: fund_cash_balance
+  - path: test_helper.issuing.authorization
+    operations:
+      - id: PostTestHelpersIssuingAuthorizations
+        function_name: create
+      - id: PostTestHelpersIssuingAuthorizationsAuthorizationCapture
+        function_name: capture
+      - id: PostTestHelpersIssuingAuthorizationsAuthorizationExpire
+        function_name: expire
+      - id: PostTestHelpersIssuingAuthorizationsAuthorizationFinalizeAmount
+        function_name: finalize_amount
+      - id: PostTestHelpersIssuingAuthorizationsAuthorizationIncrement
+        function_name: increment
+      - id: PostTestHelpersIssuingAuthorizationsAuthorizationReverse
+        function_name: reverse
+  - path: test_helper.issuing.authorization.fraud_challenges
+    operations:
+      - id: PostTestHelpersIssuingAuthorizationsAuthorizationFraudChallengesRespond
+        function_name: respond
+  - path: test_helper.issuing.card.shipping
+    operations:
+      - id: PostTestHelpersIssuingCardsCardShippingDeliver
+        function_name: deliver
+      - id: PostTestHelpersIssuingCardsCardShippingFail
+        function_name: fail
+      - id: PostTestHelpersIssuingCardsCardShippingReturn
+        function_name: returned
+      - id: PostTestHelpersIssuingCardsCardShippingShip
+        function_name: ship
+      - id: PostTestHelpersIssuingCardsCardShippingSubmit
+        function_name: submit
+  - path: test_helper.issuing.personalization_design
+    operations:
+      - id: PostTestHelpersIssuingPersonalizationDesignsPersonalizationDesignActivate
+        function_name: activate
+      - id: PostTestHelpersIssuingPersonalizationDesignsPersonalizationDesignDeactivate
+        function_name: deactivate
+      - id: PostTestHelpersIssuingPersonalizationDesignsPersonalizationDesignReject
+        function_name: reject
+  - path: test_helper.issuing.settlement
+    operations:
+      - id: PostTestHelpersIssuingSettlements
+        function_name: create
+      - id: PostTestHelpersIssuingSettlementsSettlementComplete
+        function_name: complete
+  - path: test_helper.issuing.transaction
+    operations:
+      - id: PostTestHelpersIssuingTransactionsCreateForceCapture
+        function_name: create_force_capture
+      - id: PostTestHelpersIssuingTransactionsCreateUnlinkedRefund
+        function_name: create_unlinked_refund
+      - id: PostTestHelpersIssuingTransactionsTransactionRefund
+        function_name: refund
+  - path: test_helper.refund
+    operations:
+      - id: PostTestHelpersRefundsRefundExpire
+        function_name: expire
+  - path: test_helper.terminal.reader
+    operations:
+      - id: PostTestHelpersTerminalReadersReaderPresentPaymentMethod
+        function_name: present_payment_method
+  - path: test_helper.test_clock
+    operations:
+      - id: DeleteTestHelpersTestClocksTestClock
+        function_name: delete
+      - id: GetTestHelpersTestClocks
+        function_name: list
+      - id: GetTestHelpersTestClocksTestClock
+        function_name: get
+      - id: PostTestHelpersTestClocks
+        function_name: create
+      - id: PostTestHelpersTestClocksTestClockAdvance
+        function_name: advance
+  - path: test_helper.treasury.inbound_transfers
+    operations:
+      - id: PostTestHelpersTreasuryInboundTransfersIdFail
+        function_name: fail
+      - id: PostTestHelpersTreasuryInboundTransfersIdReturn
+        function_name: returned
+      - id: PostTestHelpersTreasuryInboundTransfersIdSucceed
+        function_name: succeed
+  - path: test_helper.treasury.outbound_payment
+    operations:
+      - id: PostTestHelpersTreasuryOutboundPaymentsId
+        function_name: update
+      - id: PostTestHelpersTreasuryOutboundPaymentsIdFail
+        function_name: fail
+      - id: PostTestHelpersTreasuryOutboundPaymentsIdPost
+        function_name: post
+      - id: PostTestHelpersTreasuryOutboundPaymentsIdReturn
+        function_name: returned
+  - path: test_helper.treasury.outbound_transfer
+    operations:
+      - id: PostTestHelpersTreasuryOutboundTransfersOutboundTransfer
+        function_name: update
+      - id: PostTestHelpersTreasuryOutboundTransfersOutboundTransferFail
+        function_name: fail
+      - id: PostTestHelpersTreasuryOutboundTransfersOutboundTransferPost
+        function_name: post
+      - id: PostTestHelpersTreasuryOutboundTransfersOutboundTransferReturn
+        function_name: returned
+  - path: test_helper.treasury.received_credit
+    operations:
+      - id: PostTestHelpersTreasuryReceivedCredits
+        function_name: create
+  - path: test_helper.treasury.received_debit
+    operations:
+      - id: PostTestHelpersTreasuryReceivedDebits
+        function_name: create
+  - path: token
+    operations:
+      - id: GetTokensToken
+        function_name: get
+      - id: PostTokens
+        function_name: create
+  - path: topups
+    operations:
+      - id: GetTopups
+        function_name: list
+      - id: GetTopupsTopup
+        function_name: get
+      - id: PostTopups
+        function_name: create
+      - id: PostTopupsTopup
+        function_name: update
+      - id: PostTopupsTopupCancel
+        function_name: cancel
+  - path: transfer
+    operations:
+      - id: GetTransfers
+        function_name: list
+      - id: GetTransfersTransfer
+        function_name: get
+      - id: PostTransfers
+        function_name: create
+      - id: PostTransfersTransfer
+        function_name: update
+  - path: transfers.reversal
+    operations:
+      - id: GetTransfersIdReversals
+        function_name: list
+      - id: GetTransfersTransferReversalsId
+        function_name: get
+      - id: PostTransfersIdReversals
+        function_name: create
+      - id: PostTransfersTransferReversalsId
+        function_name: update
+  - path: treasury.credit_reversal
+    operations:
+      - id: GetTreasuryCreditReversals
+        function_name: list
+      - id: GetTreasuryCreditReversalsCreditReversal
+        function_name: get
+      - id: PostTreasuryCreditReversals
+        function_name: create
+  - path: treasury.debit_reversal
+    operations:
+      - id: GetTreasuryDebitReversals
+        function_name: list
+      - id: GetTreasuryDebitReversalsDebitReversal
+        function_name: get
+      - id: PostTreasuryDebitReversals
+        function_name: create
+  - path: treasury.financial_account
+    operations:
+      - id: GetTreasuryFinancialAccounts
+        function_name: list
+      - id: GetTreasuryFinancialAccountsFinancialAccount
+        function_name: get
+      - id: PostTreasuryFinancialAccounts
+        function_name: create
+      - id: PostTreasuryFinancialAccountsFinancialAccount
+        function_name: update
+      - id: PostTreasuryFinancialAccountsFinancialAccountClose
+        function_name: close
+  - path: treasury.financial_accounts.feature
+    operations:
+      - id: GetTreasuryFinancialAccountsFinancialAccountFeatures
+        function_name: list
+      - id: PostTreasuryFinancialAccountsFinancialAccountFeatures
+        function_name: create
+  - path: treasury.inbound_transfer
+    operations:
+      - id: GetTreasuryInboundTransfers
+        function_name: list
+      - id: GetTreasuryInboundTransfersId
+        function_name: get
+      - id: PostTreasuryInboundTransfers
+        function_name: create
+      - id: PostTreasuryInboundTransfersInboundTransferCancel
+        function_name: cance
+  - path: treasury.outbound_payment
+    operations:
+      - id: GetTreasuryOutboundPayments
+        function_name: list
+      - id: GetTreasuryOutboundPaymentsId
+        function_name: get
+      - id: PostTreasuryOutboundPayments
+        function_name: create
+      - id: PostTreasuryOutboundPaymentsIdCancel
+        function_name: cancel
+  - path: treasury.outbound_transfer
+    operations:
+      - id: GetTreasuryOutboundTransfers
+        function_name: list
+      - id: GetTreasuryOutboundTransfersOutboundTransfer
+        function_name: get
+      - id: PostTreasuryOutboundTransfers
+        function_name: create
+      - id: PostTreasuryOutboundTransfersOutboundTransferCancel
+        function_name: cancel
+  - path: treasury.received_credit
+    operations:
+      - id: GetTreasuryReceivedCredits
+        function_name: list
+      - id: GetTreasuryReceivedCreditsId
+        function_name: get
+  - path: treasury.received_debit
+    operations:
+      - id: GetTreasuryReceivedDebits
+        function_name: list
+      - id: GetTreasuryReceivedDebitsId
+        function_name: get
+  - path: treasury.transaction_entry
+    operations:
+      - id: GetTreasuryTransactionEntries
+        function_name: list
+      - id: GetTreasuryTransactionEntriesId
+        function_name: get
+  - path: treasury.transaction
+    operations:
+      - id: GetTreasuryTransactions
+        function_name: list
+      - id: GetTreasuryTransactionsId
+        function_name: get
+  - path: webhook_endpoints
+    operations:
+      - id: DeleteWebhookEndpointsWebhookEndpoint
+        function_name: delete
+      - id: GetWebhookEndpoints
+        function_name: list
+      - id: GetWebhookEndpointsWebhookEndpoint
+        function_name: get
+      - id: PostWebhookEndpoints
+        function_name: create
+      - id: PostWebhookEndpointsWebhookEndpoint
+        function_name: update
+
