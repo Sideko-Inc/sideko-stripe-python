@@ -7,7 +7,7 @@ if typing_extensions.TYPE_CHECKING:
     from .credit_note_line_item import CreditNoteLineItem
 
 
-class CreditNotePreviewResponse(pydantic.BaseModel):
+class CreditNotePreviewLinesResponse(pydantic.BaseModel):
     model_config = pydantic.ConfigDict(
         arbitrary_types_allowed=True,
         populate_by_name=True,

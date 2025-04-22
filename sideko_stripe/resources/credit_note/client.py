@@ -149,7 +149,7 @@ class CreditNoteClient:
             request_options=request_options or default_request_options(),
         )
 
-    def preview_1(
+    def preview(
         self,
         *,
         invoice: str,
@@ -170,14 +170,14 @@ class CreditNoteClient:
             typing.Optional[typing.List[str]], type_utils.NotGiven
         ] = type_utils.NOT_GIVEN,
         lines: typing.Union[
-            typing.Optional[typing.List[params.CreditNotePreview1LinesItem]],
+            typing.Optional[typing.List[params.CreditNotePreviewLinesItem]],
             type_utils.NotGiven,
         ] = type_utils.NOT_GIVEN,
         memo: typing.Union[
             typing.Optional[str], type_utils.NotGiven
         ] = type_utils.NOT_GIVEN,
         metadata: typing.Union[
-            typing.Optional[params.CreditNotePreview1Metadata], type_utils.NotGiven
+            typing.Optional[params.CreditNotePreviewMetadata], type_utils.NotGiven
         ] = type_utils.NOT_GIVEN,
         out_of_band_amount: typing.Union[
             typing.Optional[int], type_utils.NotGiven
@@ -194,11 +194,11 @@ class CreditNoteClient:
             typing.Optional[int], type_utils.NotGiven
         ] = type_utils.NOT_GIVEN,
         refunds: typing.Union[
-            typing.Optional[typing.List[params.CreditNotePreview1RefundsItem]],
+            typing.Optional[typing.List[params.CreditNotePreviewRefundsItem]],
             type_utils.NotGiven,
         ] = type_utils.NOT_GIVEN,
         shipping_cost: typing.Union[
-            typing.Optional[params.CreditNotePreview1ShippingCost], type_utils.NotGiven
+            typing.Optional[params.CreditNotePreviewShippingCost], type_utils.NotGiven
         ] = type_utils.NOT_GIVEN,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> models.CreditNote:
@@ -235,7 +235,7 @@ class CreditNoteClient:
 
         Examples:
         ```py
-        client.credit_note.preview_1(invoice="string")
+        client.credit_note.preview(invoice="string")
         ```
         """
         models.CreditNote.model_rebuild(_types_namespace=models._types_namespace)
@@ -288,274 +288,6 @@ class CreditNoteClient:
                 "expand",
                 to_encodable(item=expand, dump_with=typing.List[str]),
                 style="deepObject",
-                explode=True,
-            )
-        if not isinstance(lines, type_utils.NotGiven):
-            encode_query_param(
-                _query,
-                "lines",
-                to_encodable(
-                    item=lines,
-                    dump_with=typing.List[
-                        params._SerializerCreditNotePreview1LinesItem
-                    ],
-                ),
-                style="deepObject",
-                explode=True,
-            )
-        if not isinstance(memo, type_utils.NotGiven):
-            encode_query_param(
-                _query,
-                "memo",
-                to_encodable(item=memo, dump_with=str),
-                style="form",
-                explode=True,
-            )
-        if not isinstance(metadata, type_utils.NotGiven):
-            encode_query_param(
-                _query,
-                "metadata",
-                to_encodable(
-                    item=metadata,
-                    dump_with=params._SerializerCreditNotePreview1Metadata,
-                ),
-                style="deepObject",
-                explode=True,
-            )
-        if not isinstance(out_of_band_amount, type_utils.NotGiven):
-            encode_query_param(
-                _query,
-                "out_of_band_amount",
-                to_encodable(item=out_of_band_amount, dump_with=int),
-                style="form",
-                explode=True,
-            )
-        if not isinstance(reason, type_utils.NotGiven):
-            encode_query_param(
-                _query,
-                "reason",
-                to_encodable(
-                    item=reason,
-                    dump_with=typing_extensions.Literal[
-                        "duplicate",
-                        "fraudulent",
-                        "order_change",
-                        "product_unsatisfactory",
-                    ],
-                ),
-                style="form",
-                explode=True,
-            )
-        if not isinstance(refund_amount, type_utils.NotGiven):
-            encode_query_param(
-                _query,
-                "refund_amount",
-                to_encodable(item=refund_amount, dump_with=int),
-                style="form",
-                explode=True,
-            )
-        if not isinstance(refunds, type_utils.NotGiven):
-            encode_query_param(
-                _query,
-                "refunds",
-                to_encodable(
-                    item=refunds,
-                    dump_with=typing.List[
-                        params._SerializerCreditNotePreview1RefundsItem
-                    ],
-                ),
-                style="deepObject",
-                explode=True,
-            )
-        if not isinstance(shipping_cost, type_utils.NotGiven):
-            encode_query_param(
-                _query,
-                "shipping_cost",
-                to_encodable(
-                    item=shipping_cost,
-                    dump_with=params._SerializerCreditNotePreview1ShippingCost,
-                ),
-                style="deepObject",
-                explode=True,
-            )
-        return self._base_client.request(
-            method="GET",
-            path="/v1/credit_notes/preview",
-            auth_names=["basicAuth", "bearerAuth"],
-            query_params=_query,
-            cast_to=models.CreditNote,
-            request_options=request_options or default_request_options(),
-        )
-
-    def preview(
-        self,
-        *,
-        invoice: str,
-        amount: typing.Union[
-            typing.Optional[int], type_utils.NotGiven
-        ] = type_utils.NOT_GIVEN,
-        credit_amount: typing.Union[
-            typing.Optional[int], type_utils.NotGiven
-        ] = type_utils.NOT_GIVEN,
-        effective_at: typing.Union[
-            typing.Optional[int], type_utils.NotGiven
-        ] = type_utils.NOT_GIVEN,
-        email_type: typing.Union[
-            typing.Optional[typing_extensions.Literal["credit_note", "none"]],
-            type_utils.NotGiven,
-        ] = type_utils.NOT_GIVEN,
-        ending_before: typing.Union[
-            typing.Optional[str], type_utils.NotGiven
-        ] = type_utils.NOT_GIVEN,
-        expand: typing.Union[
-            typing.Optional[typing.List[str]], type_utils.NotGiven
-        ] = type_utils.NOT_GIVEN,
-        limit: typing.Union[
-            typing.Optional[int], type_utils.NotGiven
-        ] = type_utils.NOT_GIVEN,
-        lines: typing.Union[
-            typing.Optional[typing.List[params.CreditNotePreviewLinesItem]],
-            type_utils.NotGiven,
-        ] = type_utils.NOT_GIVEN,
-        memo: typing.Union[
-            typing.Optional[str], type_utils.NotGiven
-        ] = type_utils.NOT_GIVEN,
-        metadata: typing.Union[
-            typing.Optional[params.CreditNotePreviewMetadata], type_utils.NotGiven
-        ] = type_utils.NOT_GIVEN,
-        out_of_band_amount: typing.Union[
-            typing.Optional[int], type_utils.NotGiven
-        ] = type_utils.NOT_GIVEN,
-        reason: typing.Union[
-            typing.Optional[
-                typing_extensions.Literal[
-                    "duplicate", "fraudulent", "order_change", "product_unsatisfactory"
-                ]
-            ],
-            type_utils.NotGiven,
-        ] = type_utils.NOT_GIVEN,
-        refund_amount: typing.Union[
-            typing.Optional[int], type_utils.NotGiven
-        ] = type_utils.NOT_GIVEN,
-        refunds: typing.Union[
-            typing.Optional[typing.List[params.CreditNotePreviewRefundsItem]],
-            type_utils.NotGiven,
-        ] = type_utils.NOT_GIVEN,
-        shipping_cost: typing.Union[
-            typing.Optional[params.CreditNotePreviewShippingCost], type_utils.NotGiven
-        ] = type_utils.NOT_GIVEN,
-        starting_after: typing.Union[
-            typing.Optional[str], type_utils.NotGiven
-        ] = type_utils.NOT_GIVEN,
-        request_options: typing.Optional[RequestOptions] = None,
-    ) -> models.CreditNotePreviewResponse:
-        """
-        Retrieve a credit note preview's line items
-
-        <p>When retrieving a credit note preview, you’ll get a <strong>lines</strong> property containing the first handful of those items. This URL you can retrieve the full (paginated) list of line items.</p>
-
-        GET /v1/credit_notes/preview/lines
-
-        Args:
-            amount: The integer amount in cents (or local equivalent) representing the total amount of the credit note.
-            credit_amount: The integer amount in cents (or local equivalent) representing the amount to credit the customer's balance, which will be automatically applied to their next invoice.
-            effective_at: The date when this credit note is in effect. Same as `created` unless overwritten. When defined, this value replaces the system-generated 'Date of issue' printed on the credit note PDF.
-            email_type: Type of email to send to the customer, one of `credit_note` or `none` and the default is `credit_note`.
-            ending_before: A cursor for use in pagination. `ending_before` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, starting with `obj_bar`, your subsequent call can include `ending_before=obj_bar` in order to fetch the previous page of the list.
-            expand: Specifies which fields in the response should be expanded.
-            limit: A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 10.
-            lines: Line items that make up the credit note.
-            memo: The credit note's memo appears on the credit note PDF.
-            metadata: Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.
-            out_of_band_amount: The integer amount in cents (or local equivalent) representing the amount that is credited outside of Stripe.
-            reason: Reason for issuing this credit note, one of `duplicate`, `fraudulent`, `order_change`, or `product_unsatisfactory`
-            refund_amount: The integer amount in cents (or local equivalent) representing the amount to refund. If set, a refund will be created for the charge associated with the invoice.
-            refunds: Refunds to link to this credit note.
-            shipping_cost: When shipping_cost contains the shipping_rate from the invoice, the shipping_cost is included in the credit note.
-            starting_after: A cursor for use in pagination. `starting_after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with `obj_foo`, your subsequent call can include `starting_after=obj_foo` in order to fetch the next page of the list.
-            invoice: ID of the invoice.
-            request_options: Additional options to customize the HTTP request
-
-        Returns:
-            Successful response.
-
-        Raises:
-            ApiError: A custom exception class that provides additional context
-                for API errors, including the HTTP status code and response body.
-
-        Examples:
-        ```py
-        client.credit_note.preview(invoice="string")
-        ```
-        """
-        models.CreditNotePreviewResponse.model_rebuild(
-            _types_namespace=models._types_namespace
-        )
-        _query: QueryParams = {}
-        encode_query_param(
-            _query,
-            "invoice",
-            to_encodable(item=invoice, dump_with=str),
-            style="form",
-            explode=True,
-        )
-        if not isinstance(amount, type_utils.NotGiven):
-            encode_query_param(
-                _query,
-                "amount",
-                to_encodable(item=amount, dump_with=int),
-                style="form",
-                explode=True,
-            )
-        if not isinstance(credit_amount, type_utils.NotGiven):
-            encode_query_param(
-                _query,
-                "credit_amount",
-                to_encodable(item=credit_amount, dump_with=int),
-                style="form",
-                explode=True,
-            )
-        if not isinstance(effective_at, type_utils.NotGiven):
-            encode_query_param(
-                _query,
-                "effective_at",
-                to_encodable(item=effective_at, dump_with=int),
-                style="form",
-                explode=True,
-            )
-        if not isinstance(email_type, type_utils.NotGiven):
-            encode_query_param(
-                _query,
-                "email_type",
-                to_encodable(
-                    item=email_type,
-                    dump_with=typing_extensions.Literal["credit_note", "none"],
-                ),
-                style="form",
-                explode=True,
-            )
-        if not isinstance(ending_before, type_utils.NotGiven):
-            encode_query_param(
-                _query,
-                "ending_before",
-                to_encodable(item=ending_before, dump_with=str),
-                style="form",
-                explode=True,
-            )
-        if not isinstance(expand, type_utils.NotGiven):
-            encode_query_param(
-                _query,
-                "expand",
-                to_encodable(item=expand, dump_with=typing.List[str]),
-                style="deepObject",
-                explode=True,
-            )
-        if not isinstance(limit, type_utils.NotGiven):
-            encode_query_param(
-                _query,
-                "limit",
-                to_encodable(item=limit, dump_with=int),
-                style="form",
                 explode=True,
             )
         if not isinstance(lines, type_utils.NotGiven):
@@ -643,6 +375,275 @@ class CreditNoteClient:
                 style="deepObject",
                 explode=True,
             )
+        return self._base_client.request(
+            method="GET",
+            path="/v1/credit_notes/preview",
+            auth_names=["basicAuth", "bearerAuth"],
+            query_params=_query,
+            cast_to=models.CreditNote,
+            request_options=request_options or default_request_options(),
+        )
+
+    def preview_lines(
+        self,
+        *,
+        invoice: str,
+        amount: typing.Union[
+            typing.Optional[int], type_utils.NotGiven
+        ] = type_utils.NOT_GIVEN,
+        credit_amount: typing.Union[
+            typing.Optional[int], type_utils.NotGiven
+        ] = type_utils.NOT_GIVEN,
+        effective_at: typing.Union[
+            typing.Optional[int], type_utils.NotGiven
+        ] = type_utils.NOT_GIVEN,
+        email_type: typing.Union[
+            typing.Optional[typing_extensions.Literal["credit_note", "none"]],
+            type_utils.NotGiven,
+        ] = type_utils.NOT_GIVEN,
+        ending_before: typing.Union[
+            typing.Optional[str], type_utils.NotGiven
+        ] = type_utils.NOT_GIVEN,
+        expand: typing.Union[
+            typing.Optional[typing.List[str]], type_utils.NotGiven
+        ] = type_utils.NOT_GIVEN,
+        limit: typing.Union[
+            typing.Optional[int], type_utils.NotGiven
+        ] = type_utils.NOT_GIVEN,
+        lines: typing.Union[
+            typing.Optional[typing.List[params.CreditNotePreviewLinesLinesItem]],
+            type_utils.NotGiven,
+        ] = type_utils.NOT_GIVEN,
+        memo: typing.Union[
+            typing.Optional[str], type_utils.NotGiven
+        ] = type_utils.NOT_GIVEN,
+        metadata: typing.Union[
+            typing.Optional[params.CreditNotePreviewLinesMetadata], type_utils.NotGiven
+        ] = type_utils.NOT_GIVEN,
+        out_of_band_amount: typing.Union[
+            typing.Optional[int], type_utils.NotGiven
+        ] = type_utils.NOT_GIVEN,
+        reason: typing.Union[
+            typing.Optional[
+                typing_extensions.Literal[
+                    "duplicate", "fraudulent", "order_change", "product_unsatisfactory"
+                ]
+            ],
+            type_utils.NotGiven,
+        ] = type_utils.NOT_GIVEN,
+        refund_amount: typing.Union[
+            typing.Optional[int], type_utils.NotGiven
+        ] = type_utils.NOT_GIVEN,
+        refunds: typing.Union[
+            typing.Optional[typing.List[params.CreditNotePreviewLinesRefundsItem]],
+            type_utils.NotGiven,
+        ] = type_utils.NOT_GIVEN,
+        shipping_cost: typing.Union[
+            typing.Optional[params.CreditNotePreviewLinesShippingCost],
+            type_utils.NotGiven,
+        ] = type_utils.NOT_GIVEN,
+        starting_after: typing.Union[
+            typing.Optional[str], type_utils.NotGiven
+        ] = type_utils.NOT_GIVEN,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> models.CreditNotePreviewLinesResponse:
+        """
+        Retrieve a credit note preview's line items
+
+        <p>When retrieving a credit note preview, you’ll get a <strong>lines</strong> property containing the first handful of those items. This URL you can retrieve the full (paginated) list of line items.</p>
+
+        GET /v1/credit_notes/preview/lines
+
+        Args:
+            amount: The integer amount in cents (or local equivalent) representing the total amount of the credit note.
+            credit_amount: The integer amount in cents (or local equivalent) representing the amount to credit the customer's balance, which will be automatically applied to their next invoice.
+            effective_at: The date when this credit note is in effect. Same as `created` unless overwritten. When defined, this value replaces the system-generated 'Date of issue' printed on the credit note PDF.
+            email_type: Type of email to send to the customer, one of `credit_note` or `none` and the default is `credit_note`.
+            ending_before: A cursor for use in pagination. `ending_before` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, starting with `obj_bar`, your subsequent call can include `ending_before=obj_bar` in order to fetch the previous page of the list.
+            expand: Specifies which fields in the response should be expanded.
+            limit: A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 10.
+            lines: Line items that make up the credit note.
+            memo: The credit note's memo appears on the credit note PDF.
+            metadata: Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.
+            out_of_band_amount: The integer amount in cents (or local equivalent) representing the amount that is credited outside of Stripe.
+            reason: Reason for issuing this credit note, one of `duplicate`, `fraudulent`, `order_change`, or `product_unsatisfactory`
+            refund_amount: The integer amount in cents (or local equivalent) representing the amount to refund. If set, a refund will be created for the charge associated with the invoice.
+            refunds: Refunds to link to this credit note.
+            shipping_cost: When shipping_cost contains the shipping_rate from the invoice, the shipping_cost is included in the credit note.
+            starting_after: A cursor for use in pagination. `starting_after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with `obj_foo`, your subsequent call can include `starting_after=obj_foo` in order to fetch the next page of the list.
+            invoice: ID of the invoice.
+            request_options: Additional options to customize the HTTP request
+
+        Returns:
+            Successful response.
+
+        Raises:
+            ApiError: A custom exception class that provides additional context
+                for API errors, including the HTTP status code and response body.
+
+        Examples:
+        ```py
+        client.credit_note.preview_lines(invoice="string")
+        ```
+        """
+        models.CreditNotePreviewLinesResponse.model_rebuild(
+            _types_namespace=models._types_namespace
+        )
+        _query: QueryParams = {}
+        encode_query_param(
+            _query,
+            "invoice",
+            to_encodable(item=invoice, dump_with=str),
+            style="form",
+            explode=True,
+        )
+        if not isinstance(amount, type_utils.NotGiven):
+            encode_query_param(
+                _query,
+                "amount",
+                to_encodable(item=amount, dump_with=int),
+                style="form",
+                explode=True,
+            )
+        if not isinstance(credit_amount, type_utils.NotGiven):
+            encode_query_param(
+                _query,
+                "credit_amount",
+                to_encodable(item=credit_amount, dump_with=int),
+                style="form",
+                explode=True,
+            )
+        if not isinstance(effective_at, type_utils.NotGiven):
+            encode_query_param(
+                _query,
+                "effective_at",
+                to_encodable(item=effective_at, dump_with=int),
+                style="form",
+                explode=True,
+            )
+        if not isinstance(email_type, type_utils.NotGiven):
+            encode_query_param(
+                _query,
+                "email_type",
+                to_encodable(
+                    item=email_type,
+                    dump_with=typing_extensions.Literal["credit_note", "none"],
+                ),
+                style="form",
+                explode=True,
+            )
+        if not isinstance(ending_before, type_utils.NotGiven):
+            encode_query_param(
+                _query,
+                "ending_before",
+                to_encodable(item=ending_before, dump_with=str),
+                style="form",
+                explode=True,
+            )
+        if not isinstance(expand, type_utils.NotGiven):
+            encode_query_param(
+                _query,
+                "expand",
+                to_encodable(item=expand, dump_with=typing.List[str]),
+                style="deepObject",
+                explode=True,
+            )
+        if not isinstance(limit, type_utils.NotGiven):
+            encode_query_param(
+                _query,
+                "limit",
+                to_encodable(item=limit, dump_with=int),
+                style="form",
+                explode=True,
+            )
+        if not isinstance(lines, type_utils.NotGiven):
+            encode_query_param(
+                _query,
+                "lines",
+                to_encodable(
+                    item=lines,
+                    dump_with=typing.List[
+                        params._SerializerCreditNotePreviewLinesLinesItem
+                    ],
+                ),
+                style="deepObject",
+                explode=True,
+            )
+        if not isinstance(memo, type_utils.NotGiven):
+            encode_query_param(
+                _query,
+                "memo",
+                to_encodable(item=memo, dump_with=str),
+                style="form",
+                explode=True,
+            )
+        if not isinstance(metadata, type_utils.NotGiven):
+            encode_query_param(
+                _query,
+                "metadata",
+                to_encodable(
+                    item=metadata,
+                    dump_with=params._SerializerCreditNotePreviewLinesMetadata,
+                ),
+                style="deepObject",
+                explode=True,
+            )
+        if not isinstance(out_of_band_amount, type_utils.NotGiven):
+            encode_query_param(
+                _query,
+                "out_of_band_amount",
+                to_encodable(item=out_of_band_amount, dump_with=int),
+                style="form",
+                explode=True,
+            )
+        if not isinstance(reason, type_utils.NotGiven):
+            encode_query_param(
+                _query,
+                "reason",
+                to_encodable(
+                    item=reason,
+                    dump_with=typing_extensions.Literal[
+                        "duplicate",
+                        "fraudulent",
+                        "order_change",
+                        "product_unsatisfactory",
+                    ],
+                ),
+                style="form",
+                explode=True,
+            )
+        if not isinstance(refund_amount, type_utils.NotGiven):
+            encode_query_param(
+                _query,
+                "refund_amount",
+                to_encodable(item=refund_amount, dump_with=int),
+                style="form",
+                explode=True,
+            )
+        if not isinstance(refunds, type_utils.NotGiven):
+            encode_query_param(
+                _query,
+                "refunds",
+                to_encodable(
+                    item=refunds,
+                    dump_with=typing.List[
+                        params._SerializerCreditNotePreviewLinesRefundsItem
+                    ],
+                ),
+                style="deepObject",
+                explode=True,
+            )
+        if not isinstance(shipping_cost, type_utils.NotGiven):
+            encode_query_param(
+                _query,
+                "shipping_cost",
+                to_encodable(
+                    item=shipping_cost,
+                    dump_with=params._SerializerCreditNotePreviewLinesShippingCost,
+                ),
+                style="deepObject",
+                explode=True,
+            )
         if not isinstance(starting_after, type_utils.NotGiven):
             encode_query_param(
                 _query,
@@ -656,7 +657,7 @@ class CreditNoteClient:
             path="/v1/credit_notes/preview/lines",
             auth_names=["basicAuth", "bearerAuth"],
             query_params=_query,
-            cast_to=models.CreditNotePreviewResponse,
+            cast_to=models.CreditNotePreviewLinesResponse,
             request_options=request_options or default_request_options(),
         )
 
@@ -1211,7 +1212,7 @@ class AsyncCreditNoteClient:
             request_options=request_options or default_request_options(),
         )
 
-    async def preview_1(
+    async def preview(
         self,
         *,
         invoice: str,
@@ -1232,14 +1233,14 @@ class AsyncCreditNoteClient:
             typing.Optional[typing.List[str]], type_utils.NotGiven
         ] = type_utils.NOT_GIVEN,
         lines: typing.Union[
-            typing.Optional[typing.List[params.CreditNotePreview1LinesItem]],
+            typing.Optional[typing.List[params.CreditNotePreviewLinesItem]],
             type_utils.NotGiven,
         ] = type_utils.NOT_GIVEN,
         memo: typing.Union[
             typing.Optional[str], type_utils.NotGiven
         ] = type_utils.NOT_GIVEN,
         metadata: typing.Union[
-            typing.Optional[params.CreditNotePreview1Metadata], type_utils.NotGiven
+            typing.Optional[params.CreditNotePreviewMetadata], type_utils.NotGiven
         ] = type_utils.NOT_GIVEN,
         out_of_band_amount: typing.Union[
             typing.Optional[int], type_utils.NotGiven
@@ -1256,11 +1257,11 @@ class AsyncCreditNoteClient:
             typing.Optional[int], type_utils.NotGiven
         ] = type_utils.NOT_GIVEN,
         refunds: typing.Union[
-            typing.Optional[typing.List[params.CreditNotePreview1RefundsItem]],
+            typing.Optional[typing.List[params.CreditNotePreviewRefundsItem]],
             type_utils.NotGiven,
         ] = type_utils.NOT_GIVEN,
         shipping_cost: typing.Union[
-            typing.Optional[params.CreditNotePreview1ShippingCost], type_utils.NotGiven
+            typing.Optional[params.CreditNotePreviewShippingCost], type_utils.NotGiven
         ] = type_utils.NOT_GIVEN,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> models.CreditNote:
@@ -1297,7 +1298,7 @@ class AsyncCreditNoteClient:
 
         Examples:
         ```py
-        await client.credit_note.preview_1(invoice="string")
+        await client.credit_note.preview(invoice="string")
         ```
         """
         models.CreditNote.model_rebuild(_types_namespace=models._types_namespace)
@@ -1350,274 +1351,6 @@ class AsyncCreditNoteClient:
                 "expand",
                 to_encodable(item=expand, dump_with=typing.List[str]),
                 style="deepObject",
-                explode=True,
-            )
-        if not isinstance(lines, type_utils.NotGiven):
-            encode_query_param(
-                _query,
-                "lines",
-                to_encodable(
-                    item=lines,
-                    dump_with=typing.List[
-                        params._SerializerCreditNotePreview1LinesItem
-                    ],
-                ),
-                style="deepObject",
-                explode=True,
-            )
-        if not isinstance(memo, type_utils.NotGiven):
-            encode_query_param(
-                _query,
-                "memo",
-                to_encodable(item=memo, dump_with=str),
-                style="form",
-                explode=True,
-            )
-        if not isinstance(metadata, type_utils.NotGiven):
-            encode_query_param(
-                _query,
-                "metadata",
-                to_encodable(
-                    item=metadata,
-                    dump_with=params._SerializerCreditNotePreview1Metadata,
-                ),
-                style="deepObject",
-                explode=True,
-            )
-        if not isinstance(out_of_band_amount, type_utils.NotGiven):
-            encode_query_param(
-                _query,
-                "out_of_band_amount",
-                to_encodable(item=out_of_band_amount, dump_with=int),
-                style="form",
-                explode=True,
-            )
-        if not isinstance(reason, type_utils.NotGiven):
-            encode_query_param(
-                _query,
-                "reason",
-                to_encodable(
-                    item=reason,
-                    dump_with=typing_extensions.Literal[
-                        "duplicate",
-                        "fraudulent",
-                        "order_change",
-                        "product_unsatisfactory",
-                    ],
-                ),
-                style="form",
-                explode=True,
-            )
-        if not isinstance(refund_amount, type_utils.NotGiven):
-            encode_query_param(
-                _query,
-                "refund_amount",
-                to_encodable(item=refund_amount, dump_with=int),
-                style="form",
-                explode=True,
-            )
-        if not isinstance(refunds, type_utils.NotGiven):
-            encode_query_param(
-                _query,
-                "refunds",
-                to_encodable(
-                    item=refunds,
-                    dump_with=typing.List[
-                        params._SerializerCreditNotePreview1RefundsItem
-                    ],
-                ),
-                style="deepObject",
-                explode=True,
-            )
-        if not isinstance(shipping_cost, type_utils.NotGiven):
-            encode_query_param(
-                _query,
-                "shipping_cost",
-                to_encodable(
-                    item=shipping_cost,
-                    dump_with=params._SerializerCreditNotePreview1ShippingCost,
-                ),
-                style="deepObject",
-                explode=True,
-            )
-        return await self._base_client.request(
-            method="GET",
-            path="/v1/credit_notes/preview",
-            auth_names=["basicAuth", "bearerAuth"],
-            query_params=_query,
-            cast_to=models.CreditNote,
-            request_options=request_options or default_request_options(),
-        )
-
-    async def preview(
-        self,
-        *,
-        invoice: str,
-        amount: typing.Union[
-            typing.Optional[int], type_utils.NotGiven
-        ] = type_utils.NOT_GIVEN,
-        credit_amount: typing.Union[
-            typing.Optional[int], type_utils.NotGiven
-        ] = type_utils.NOT_GIVEN,
-        effective_at: typing.Union[
-            typing.Optional[int], type_utils.NotGiven
-        ] = type_utils.NOT_GIVEN,
-        email_type: typing.Union[
-            typing.Optional[typing_extensions.Literal["credit_note", "none"]],
-            type_utils.NotGiven,
-        ] = type_utils.NOT_GIVEN,
-        ending_before: typing.Union[
-            typing.Optional[str], type_utils.NotGiven
-        ] = type_utils.NOT_GIVEN,
-        expand: typing.Union[
-            typing.Optional[typing.List[str]], type_utils.NotGiven
-        ] = type_utils.NOT_GIVEN,
-        limit: typing.Union[
-            typing.Optional[int], type_utils.NotGiven
-        ] = type_utils.NOT_GIVEN,
-        lines: typing.Union[
-            typing.Optional[typing.List[params.CreditNotePreviewLinesItem]],
-            type_utils.NotGiven,
-        ] = type_utils.NOT_GIVEN,
-        memo: typing.Union[
-            typing.Optional[str], type_utils.NotGiven
-        ] = type_utils.NOT_GIVEN,
-        metadata: typing.Union[
-            typing.Optional[params.CreditNotePreviewMetadata], type_utils.NotGiven
-        ] = type_utils.NOT_GIVEN,
-        out_of_band_amount: typing.Union[
-            typing.Optional[int], type_utils.NotGiven
-        ] = type_utils.NOT_GIVEN,
-        reason: typing.Union[
-            typing.Optional[
-                typing_extensions.Literal[
-                    "duplicate", "fraudulent", "order_change", "product_unsatisfactory"
-                ]
-            ],
-            type_utils.NotGiven,
-        ] = type_utils.NOT_GIVEN,
-        refund_amount: typing.Union[
-            typing.Optional[int], type_utils.NotGiven
-        ] = type_utils.NOT_GIVEN,
-        refunds: typing.Union[
-            typing.Optional[typing.List[params.CreditNotePreviewRefundsItem]],
-            type_utils.NotGiven,
-        ] = type_utils.NOT_GIVEN,
-        shipping_cost: typing.Union[
-            typing.Optional[params.CreditNotePreviewShippingCost], type_utils.NotGiven
-        ] = type_utils.NOT_GIVEN,
-        starting_after: typing.Union[
-            typing.Optional[str], type_utils.NotGiven
-        ] = type_utils.NOT_GIVEN,
-        request_options: typing.Optional[RequestOptions] = None,
-    ) -> models.CreditNotePreviewResponse:
-        """
-        Retrieve a credit note preview's line items
-
-        <p>When retrieving a credit note preview, you’ll get a <strong>lines</strong> property containing the first handful of those items. This URL you can retrieve the full (paginated) list of line items.</p>
-
-        GET /v1/credit_notes/preview/lines
-
-        Args:
-            amount: The integer amount in cents (or local equivalent) representing the total amount of the credit note.
-            credit_amount: The integer amount in cents (or local equivalent) representing the amount to credit the customer's balance, which will be automatically applied to their next invoice.
-            effective_at: The date when this credit note is in effect. Same as `created` unless overwritten. When defined, this value replaces the system-generated 'Date of issue' printed on the credit note PDF.
-            email_type: Type of email to send to the customer, one of `credit_note` or `none` and the default is `credit_note`.
-            ending_before: A cursor for use in pagination. `ending_before` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, starting with `obj_bar`, your subsequent call can include `ending_before=obj_bar` in order to fetch the previous page of the list.
-            expand: Specifies which fields in the response should be expanded.
-            limit: A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 10.
-            lines: Line items that make up the credit note.
-            memo: The credit note's memo appears on the credit note PDF.
-            metadata: Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.
-            out_of_band_amount: The integer amount in cents (or local equivalent) representing the amount that is credited outside of Stripe.
-            reason: Reason for issuing this credit note, one of `duplicate`, `fraudulent`, `order_change`, or `product_unsatisfactory`
-            refund_amount: The integer amount in cents (or local equivalent) representing the amount to refund. If set, a refund will be created for the charge associated with the invoice.
-            refunds: Refunds to link to this credit note.
-            shipping_cost: When shipping_cost contains the shipping_rate from the invoice, the shipping_cost is included in the credit note.
-            starting_after: A cursor for use in pagination. `starting_after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with `obj_foo`, your subsequent call can include `starting_after=obj_foo` in order to fetch the next page of the list.
-            invoice: ID of the invoice.
-            request_options: Additional options to customize the HTTP request
-
-        Returns:
-            Successful response.
-
-        Raises:
-            ApiError: A custom exception class that provides additional context
-                for API errors, including the HTTP status code and response body.
-
-        Examples:
-        ```py
-        await client.credit_note.preview(invoice="string")
-        ```
-        """
-        models.CreditNotePreviewResponse.model_rebuild(
-            _types_namespace=models._types_namespace
-        )
-        _query: QueryParams = {}
-        encode_query_param(
-            _query,
-            "invoice",
-            to_encodable(item=invoice, dump_with=str),
-            style="form",
-            explode=True,
-        )
-        if not isinstance(amount, type_utils.NotGiven):
-            encode_query_param(
-                _query,
-                "amount",
-                to_encodable(item=amount, dump_with=int),
-                style="form",
-                explode=True,
-            )
-        if not isinstance(credit_amount, type_utils.NotGiven):
-            encode_query_param(
-                _query,
-                "credit_amount",
-                to_encodable(item=credit_amount, dump_with=int),
-                style="form",
-                explode=True,
-            )
-        if not isinstance(effective_at, type_utils.NotGiven):
-            encode_query_param(
-                _query,
-                "effective_at",
-                to_encodable(item=effective_at, dump_with=int),
-                style="form",
-                explode=True,
-            )
-        if not isinstance(email_type, type_utils.NotGiven):
-            encode_query_param(
-                _query,
-                "email_type",
-                to_encodable(
-                    item=email_type,
-                    dump_with=typing_extensions.Literal["credit_note", "none"],
-                ),
-                style="form",
-                explode=True,
-            )
-        if not isinstance(ending_before, type_utils.NotGiven):
-            encode_query_param(
-                _query,
-                "ending_before",
-                to_encodable(item=ending_before, dump_with=str),
-                style="form",
-                explode=True,
-            )
-        if not isinstance(expand, type_utils.NotGiven):
-            encode_query_param(
-                _query,
-                "expand",
-                to_encodable(item=expand, dump_with=typing.List[str]),
-                style="deepObject",
-                explode=True,
-            )
-        if not isinstance(limit, type_utils.NotGiven):
-            encode_query_param(
-                _query,
-                "limit",
-                to_encodable(item=limit, dump_with=int),
-                style="form",
                 explode=True,
             )
         if not isinstance(lines, type_utils.NotGiven):
@@ -1705,6 +1438,275 @@ class AsyncCreditNoteClient:
                 style="deepObject",
                 explode=True,
             )
+        return await self._base_client.request(
+            method="GET",
+            path="/v1/credit_notes/preview",
+            auth_names=["basicAuth", "bearerAuth"],
+            query_params=_query,
+            cast_to=models.CreditNote,
+            request_options=request_options or default_request_options(),
+        )
+
+    async def preview_lines(
+        self,
+        *,
+        invoice: str,
+        amount: typing.Union[
+            typing.Optional[int], type_utils.NotGiven
+        ] = type_utils.NOT_GIVEN,
+        credit_amount: typing.Union[
+            typing.Optional[int], type_utils.NotGiven
+        ] = type_utils.NOT_GIVEN,
+        effective_at: typing.Union[
+            typing.Optional[int], type_utils.NotGiven
+        ] = type_utils.NOT_GIVEN,
+        email_type: typing.Union[
+            typing.Optional[typing_extensions.Literal["credit_note", "none"]],
+            type_utils.NotGiven,
+        ] = type_utils.NOT_GIVEN,
+        ending_before: typing.Union[
+            typing.Optional[str], type_utils.NotGiven
+        ] = type_utils.NOT_GIVEN,
+        expand: typing.Union[
+            typing.Optional[typing.List[str]], type_utils.NotGiven
+        ] = type_utils.NOT_GIVEN,
+        limit: typing.Union[
+            typing.Optional[int], type_utils.NotGiven
+        ] = type_utils.NOT_GIVEN,
+        lines: typing.Union[
+            typing.Optional[typing.List[params.CreditNotePreviewLinesLinesItem]],
+            type_utils.NotGiven,
+        ] = type_utils.NOT_GIVEN,
+        memo: typing.Union[
+            typing.Optional[str], type_utils.NotGiven
+        ] = type_utils.NOT_GIVEN,
+        metadata: typing.Union[
+            typing.Optional[params.CreditNotePreviewLinesMetadata], type_utils.NotGiven
+        ] = type_utils.NOT_GIVEN,
+        out_of_band_amount: typing.Union[
+            typing.Optional[int], type_utils.NotGiven
+        ] = type_utils.NOT_GIVEN,
+        reason: typing.Union[
+            typing.Optional[
+                typing_extensions.Literal[
+                    "duplicate", "fraudulent", "order_change", "product_unsatisfactory"
+                ]
+            ],
+            type_utils.NotGiven,
+        ] = type_utils.NOT_GIVEN,
+        refund_amount: typing.Union[
+            typing.Optional[int], type_utils.NotGiven
+        ] = type_utils.NOT_GIVEN,
+        refunds: typing.Union[
+            typing.Optional[typing.List[params.CreditNotePreviewLinesRefundsItem]],
+            type_utils.NotGiven,
+        ] = type_utils.NOT_GIVEN,
+        shipping_cost: typing.Union[
+            typing.Optional[params.CreditNotePreviewLinesShippingCost],
+            type_utils.NotGiven,
+        ] = type_utils.NOT_GIVEN,
+        starting_after: typing.Union[
+            typing.Optional[str], type_utils.NotGiven
+        ] = type_utils.NOT_GIVEN,
+        request_options: typing.Optional[RequestOptions] = None,
+    ) -> models.CreditNotePreviewLinesResponse:
+        """
+        Retrieve a credit note preview's line items
+
+        <p>When retrieving a credit note preview, you’ll get a <strong>lines</strong> property containing the first handful of those items. This URL you can retrieve the full (paginated) list of line items.</p>
+
+        GET /v1/credit_notes/preview/lines
+
+        Args:
+            amount: The integer amount in cents (or local equivalent) representing the total amount of the credit note.
+            credit_amount: The integer amount in cents (or local equivalent) representing the amount to credit the customer's balance, which will be automatically applied to their next invoice.
+            effective_at: The date when this credit note is in effect. Same as `created` unless overwritten. When defined, this value replaces the system-generated 'Date of issue' printed on the credit note PDF.
+            email_type: Type of email to send to the customer, one of `credit_note` or `none` and the default is `credit_note`.
+            ending_before: A cursor for use in pagination. `ending_before` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, starting with `obj_bar`, your subsequent call can include `ending_before=obj_bar` in order to fetch the previous page of the list.
+            expand: Specifies which fields in the response should be expanded.
+            limit: A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 10.
+            lines: Line items that make up the credit note.
+            memo: The credit note's memo appears on the credit note PDF.
+            metadata: Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.
+            out_of_band_amount: The integer amount in cents (or local equivalent) representing the amount that is credited outside of Stripe.
+            reason: Reason for issuing this credit note, one of `duplicate`, `fraudulent`, `order_change`, or `product_unsatisfactory`
+            refund_amount: The integer amount in cents (or local equivalent) representing the amount to refund. If set, a refund will be created for the charge associated with the invoice.
+            refunds: Refunds to link to this credit note.
+            shipping_cost: When shipping_cost contains the shipping_rate from the invoice, the shipping_cost is included in the credit note.
+            starting_after: A cursor for use in pagination. `starting_after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with `obj_foo`, your subsequent call can include `starting_after=obj_foo` in order to fetch the next page of the list.
+            invoice: ID of the invoice.
+            request_options: Additional options to customize the HTTP request
+
+        Returns:
+            Successful response.
+
+        Raises:
+            ApiError: A custom exception class that provides additional context
+                for API errors, including the HTTP status code and response body.
+
+        Examples:
+        ```py
+        await client.credit_note.preview_lines(invoice="string")
+        ```
+        """
+        models.CreditNotePreviewLinesResponse.model_rebuild(
+            _types_namespace=models._types_namespace
+        )
+        _query: QueryParams = {}
+        encode_query_param(
+            _query,
+            "invoice",
+            to_encodable(item=invoice, dump_with=str),
+            style="form",
+            explode=True,
+        )
+        if not isinstance(amount, type_utils.NotGiven):
+            encode_query_param(
+                _query,
+                "amount",
+                to_encodable(item=amount, dump_with=int),
+                style="form",
+                explode=True,
+            )
+        if not isinstance(credit_amount, type_utils.NotGiven):
+            encode_query_param(
+                _query,
+                "credit_amount",
+                to_encodable(item=credit_amount, dump_with=int),
+                style="form",
+                explode=True,
+            )
+        if not isinstance(effective_at, type_utils.NotGiven):
+            encode_query_param(
+                _query,
+                "effective_at",
+                to_encodable(item=effective_at, dump_with=int),
+                style="form",
+                explode=True,
+            )
+        if not isinstance(email_type, type_utils.NotGiven):
+            encode_query_param(
+                _query,
+                "email_type",
+                to_encodable(
+                    item=email_type,
+                    dump_with=typing_extensions.Literal["credit_note", "none"],
+                ),
+                style="form",
+                explode=True,
+            )
+        if not isinstance(ending_before, type_utils.NotGiven):
+            encode_query_param(
+                _query,
+                "ending_before",
+                to_encodable(item=ending_before, dump_with=str),
+                style="form",
+                explode=True,
+            )
+        if not isinstance(expand, type_utils.NotGiven):
+            encode_query_param(
+                _query,
+                "expand",
+                to_encodable(item=expand, dump_with=typing.List[str]),
+                style="deepObject",
+                explode=True,
+            )
+        if not isinstance(limit, type_utils.NotGiven):
+            encode_query_param(
+                _query,
+                "limit",
+                to_encodable(item=limit, dump_with=int),
+                style="form",
+                explode=True,
+            )
+        if not isinstance(lines, type_utils.NotGiven):
+            encode_query_param(
+                _query,
+                "lines",
+                to_encodable(
+                    item=lines,
+                    dump_with=typing.List[
+                        params._SerializerCreditNotePreviewLinesLinesItem
+                    ],
+                ),
+                style="deepObject",
+                explode=True,
+            )
+        if not isinstance(memo, type_utils.NotGiven):
+            encode_query_param(
+                _query,
+                "memo",
+                to_encodable(item=memo, dump_with=str),
+                style="form",
+                explode=True,
+            )
+        if not isinstance(metadata, type_utils.NotGiven):
+            encode_query_param(
+                _query,
+                "metadata",
+                to_encodable(
+                    item=metadata,
+                    dump_with=params._SerializerCreditNotePreviewLinesMetadata,
+                ),
+                style="deepObject",
+                explode=True,
+            )
+        if not isinstance(out_of_band_amount, type_utils.NotGiven):
+            encode_query_param(
+                _query,
+                "out_of_band_amount",
+                to_encodable(item=out_of_band_amount, dump_with=int),
+                style="form",
+                explode=True,
+            )
+        if not isinstance(reason, type_utils.NotGiven):
+            encode_query_param(
+                _query,
+                "reason",
+                to_encodable(
+                    item=reason,
+                    dump_with=typing_extensions.Literal[
+                        "duplicate",
+                        "fraudulent",
+                        "order_change",
+                        "product_unsatisfactory",
+                    ],
+                ),
+                style="form",
+                explode=True,
+            )
+        if not isinstance(refund_amount, type_utils.NotGiven):
+            encode_query_param(
+                _query,
+                "refund_amount",
+                to_encodable(item=refund_amount, dump_with=int),
+                style="form",
+                explode=True,
+            )
+        if not isinstance(refunds, type_utils.NotGiven):
+            encode_query_param(
+                _query,
+                "refunds",
+                to_encodable(
+                    item=refunds,
+                    dump_with=typing.List[
+                        params._SerializerCreditNotePreviewLinesRefundsItem
+                    ],
+                ),
+                style="deepObject",
+                explode=True,
+            )
+        if not isinstance(shipping_cost, type_utils.NotGiven):
+            encode_query_param(
+                _query,
+                "shipping_cost",
+                to_encodable(
+                    item=shipping_cost,
+                    dump_with=params._SerializerCreditNotePreviewLinesShippingCost,
+                ),
+                style="deepObject",
+                explode=True,
+            )
         if not isinstance(starting_after, type_utils.NotGiven):
             encode_query_param(
                 _query,
@@ -1718,7 +1720,7 @@ class AsyncCreditNoteClient:
             path="/v1/credit_notes/preview/lines",
             auth_names=["basicAuth", "bearerAuth"],
             query_params=_query,
-            cast_to=models.CreditNotePreviewResponse,
+            cast_to=models.CreditNotePreviewLinesResponse,
             request_options=request_options or default_request_options(),
         )
 

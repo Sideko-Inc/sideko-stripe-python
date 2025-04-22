@@ -34,47 +34,12 @@ client = AsyncStripe(
 res = await client.credit_note.list()
 ```
 
-### preview_1 <a name="preview_1"></a>
+### preview <a name="preview"></a>
 Preview a credit note
 
 <p>Get a preview of a credit note without creating it.</p>
 
 **API Endpoint**: `GET /v1/credit_notes/preview`
-
-#### Synchronous Client
-
-```python
-from os import getenv
-from sideko_stripe import Stripe
-
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
-res = client.credit_note.preview_1(invoice="string")
-```
-
-#### Asynchronous Client
-
-```python
-from os import getenv
-from sideko_stripe import AsyncStripe
-
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
-res = await client.credit_note.preview_1(invoice="string")
-```
-
-### preview <a name="preview"></a>
-Retrieve a credit note preview's line items
-
-<p>When retrieving a credit note preview, you’ll get a <strong>lines</strong> property containing the first handful of those items. This URL you can retrieve the full (paginated) list of line items.</p>
-
-**API Endpoint**: `GET /v1/credit_notes/preview/lines`
 
 #### Synchronous Client
 
@@ -102,6 +67,41 @@ client = AsyncStripe(
     token=getenv("API_TOKEN"),
 )
 res = await client.credit_note.preview(invoice="string")
+```
+
+### preview_lines <a name="preview_lines"></a>
+Retrieve a credit note preview's line items
+
+<p>When retrieving a credit note preview, you’ll get a <strong>lines</strong> property containing the first handful of those items. This URL you can retrieve the full (paginated) list of line items.</p>
+
+**API Endpoint**: `GET /v1/credit_notes/preview/lines`
+
+#### Synchronous Client
+
+```python
+from os import getenv
+from sideko_stripe import Stripe
+
+client = Stripe(
+    username=getenv("API_USERNAME"),
+    password=getenv("API_PASSWORD"),
+    token=getenv("API_TOKEN"),
+)
+res = client.credit_note.preview_lines(invoice="string")
+```
+
+#### Asynchronous Client
+
+```python
+from os import getenv
+from sideko_stripe import AsyncStripe
+
+client = AsyncStripe(
+    username=getenv("API_USERNAME"),
+    password=getenv("API_PASSWORD"),
+    token=getenv("API_TOKEN"),
+)
+res = await client.credit_note.preview_lines(invoice="string")
 ```
 
 ### lines <a name="lines"></a>

@@ -102,8 +102,8 @@ client = AsyncStripe(
 
 ### [application_fee.refund](sideko_stripe/resources/application_fee/refund/README.md)
 
-* [create](sideko_stripe/resources/application_fee/refund/README.md#create) - Create an application fee refund
-* [create_1](sideko_stripe/resources/application_fee/refund/README.md#create_1) - POST /v1/application_fees/{id}/refund
+* [create](sideko_stripe/resources/application_fee/refund/README.md#create) - POST /v1/application_fees/{id}/refund
+* [create_many](sideko_stripe/resources/application_fee/refund/README.md#create_many) - Create an application fee refund
 * [get](sideko_stripe/resources/application_fee/refund/README.md#get) - Retrieve an application fee refund
 * [list](sideko_stripe/resources/application_fee/refund/README.md#list) - List all application fee refunds
 * [update](sideko_stripe/resources/application_fee/refund/README.md#update) - Update an application fee refund
@@ -263,8 +263,8 @@ client = AsyncStripe(
 * [get](sideko_stripe/resources/credit_note/README.md#get) - Retrieve a credit note
 * [lines](sideko_stripe/resources/credit_note/README.md#lines) - Retrieve a credit note's line items
 * [list](sideko_stripe/resources/credit_note/README.md#list) - List all credit notes
-* [preview](sideko_stripe/resources/credit_note/README.md#preview) - Retrieve a credit note preview's line items
-* [preview_1](sideko_stripe/resources/credit_note/README.md#preview_1) - Preview a credit note
+* [preview](sideko_stripe/resources/credit_note/README.md#preview) - Preview a credit note
+* [preview_lines](sideko_stripe/resources/credit_note/README.md#preview_lines) - Retrieve a credit note preview's line items
 * [update](sideko_stripe/resources/credit_note/README.md#update) - Update a credit note
 * [void](sideko_stripe/resources/credit_note/README.md#void) - Void a credit note
 

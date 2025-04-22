@@ -3,15 +3,17 @@ import typing
 import typing_extensions
 
 
-class ApplicationFeeRefundCreateBodyMetadata(typing_extensions.TypedDict, total=False):
+class ApplicationFeeRefundCreateManyBodyMetadata(
+    typing_extensions.TypedDict, total=False
+):
     """
     Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.
     """
 
 
-class _SerializerApplicationFeeRefundCreateBodyMetadata(pydantic.BaseModel):
+class _SerializerApplicationFeeRefundCreateManyBodyMetadata(pydantic.BaseModel):
     """
-    Serializer for ApplicationFeeRefundCreateBodyMetadata handling case conversions
+    Serializer for ApplicationFeeRefundCreateManyBodyMetadata handling case conversions
     and file omissions as dictated by the API
     """
 

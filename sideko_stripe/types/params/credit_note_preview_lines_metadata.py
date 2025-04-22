@@ -3,15 +3,15 @@ import typing
 import typing_extensions
 
 
-class CreditNotePreview1Metadata(typing_extensions.TypedDict, total=False):
+class CreditNotePreviewLinesMetadata(typing_extensions.TypedDict, total=False):
     """
     Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.
     """
 
 
-class _SerializerCreditNotePreview1Metadata(pydantic.BaseModel):
+class _SerializerCreditNotePreviewLinesMetadata(pydantic.BaseModel):
     """
-    Serializer for CreditNotePreview1Metadata handling case conversions
+    Serializer for CreditNotePreviewLinesMetadata handling case conversions
     and file omissions as dictated by the API
     """
 

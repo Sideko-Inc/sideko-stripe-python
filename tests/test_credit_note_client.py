@@ -351,15 +351,88 @@ async def test_await_lines_200_generated_success():
     assert is_json, "failed response type check"
 
 
-def test_preview_200_generated_success():
+def test_preview_lines_200_generated_success():
     """Tests a GET request to the /v1/credit_notes/preview/lines endpoint.
+
+    Operation: preview_lines
+    Test Case ID: generated_success
+    Expected Status: 200
+    Mode: Synchronous execution
+
+    Response : models.CreditNotePreviewLinesResponse
+
+    Validates:
+    - Authentication requirements are satisfied
+    - All required input parameters are properly handled
+    - Response status code is correct
+    - Response data matches expected schema
+
+    This test uses example data to verify the endpoint behavior.
+    """
+    # tests calling sync method with example data
+    client = Stripe(
+        username="API_USERNAME",
+        password="API_PASSWORD",
+        token="API_TOKEN",
+        environment=Environment.MOCK_SERVER,
+    )
+    response = client.credit_note.preview_lines(invoice="string")
+    try:
+        pydantic.TypeAdapter(models.CreditNotePreviewLinesResponse).validate_python(
+            response
+        )
+        is_json = True
+    except pydantic.ValidationError:
+        is_json = False
+    assert is_json, "failed response type check"
+
+
+@pytest.mark.asyncio
+async def test_await_preview_lines_200_generated_success():
+    """Tests a GET request to the /v1/credit_notes/preview/lines endpoint.
+
+    Operation: preview_lines
+    Test Case ID: generated_success
+    Expected Status: 200
+    Mode: Asynchronous execution
+
+    Response : models.CreditNotePreviewLinesResponse
+
+    Validates:
+    - Authentication requirements are satisfied
+    - All required input parameters are properly handled
+    - Response status code is correct
+    - Response data matches expected schema
+
+    This test uses example data to verify the endpoint behavior.
+    """
+    # tests calling async method with example data
+    client = AsyncStripe(
+        username="API_USERNAME",
+        password="API_PASSWORD",
+        token="API_TOKEN",
+        environment=Environment.MOCK_SERVER,
+    )
+    response = await client.credit_note.preview_lines(invoice="string")
+    try:
+        pydantic.TypeAdapter(models.CreditNotePreviewLinesResponse).validate_python(
+            response
+        )
+        is_json = True
+    except pydantic.ValidationError:
+        is_json = False
+    assert is_json, "failed response type check"
+
+
+def test_preview_200_generated_success():
+    """Tests a GET request to the /v1/credit_notes/preview endpoint.
 
     Operation: preview
     Test Case ID: generated_success
     Expected Status: 200
     Mode: Synchronous execution
 
-    Response : models.CreditNotePreviewResponse
+    Response : models.CreditNote
 
     Validates:
     - Authentication requirements are satisfied
@@ -378,7 +451,7 @@ def test_preview_200_generated_success():
     )
     response = client.credit_note.preview(invoice="string")
     try:
-        pydantic.TypeAdapter(models.CreditNotePreviewResponse).validate_python(response)
+        pydantic.TypeAdapter(models.CreditNote).validate_python(response)
         is_json = True
     except pydantic.ValidationError:
         is_json = False
@@ -387,14 +460,14 @@ def test_preview_200_generated_success():
 
 @pytest.mark.asyncio
 async def test_await_preview_200_generated_success():
-    """Tests a GET request to the /v1/credit_notes/preview/lines endpoint.
+    """Tests a GET request to the /v1/credit_notes/preview endpoint.
 
     Operation: preview
     Test Case ID: generated_success
     Expected Status: 200
     Mode: Asynchronous execution
 
-    Response : models.CreditNotePreviewResponse
+    Response : models.CreditNote
 
     Validates:
     - Authentication requirements are satisfied
@@ -412,75 +485,6 @@ async def test_await_preview_200_generated_success():
         environment=Environment.MOCK_SERVER,
     )
     response = await client.credit_note.preview(invoice="string")
-    try:
-        pydantic.TypeAdapter(models.CreditNotePreviewResponse).validate_python(response)
-        is_json = True
-    except pydantic.ValidationError:
-        is_json = False
-    assert is_json, "failed response type check"
-
-
-def test_preview_1_200_generated_success():
-    """Tests a GET request to the /v1/credit_notes/preview endpoint.
-
-    Operation: preview_1
-    Test Case ID: generated_success
-    Expected Status: 200
-    Mode: Synchronous execution
-
-    Response : models.CreditNote
-
-    Validates:
-    - Authentication requirements are satisfied
-    - All required input parameters are properly handled
-    - Response status code is correct
-    - Response data matches expected schema
-
-    This test uses example data to verify the endpoint behavior.
-    """
-    # tests calling sync method with example data
-    client = Stripe(
-        username="API_USERNAME",
-        password="API_PASSWORD",
-        token="API_TOKEN",
-        environment=Environment.MOCK_SERVER,
-    )
-    response = client.credit_note.preview_1(invoice="string")
-    try:
-        pydantic.TypeAdapter(models.CreditNote).validate_python(response)
-        is_json = True
-    except pydantic.ValidationError:
-        is_json = False
-    assert is_json, "failed response type check"
-
-
-@pytest.mark.asyncio
-async def test_await_preview_1_200_generated_success():
-    """Tests a GET request to the /v1/credit_notes/preview endpoint.
-
-    Operation: preview_1
-    Test Case ID: generated_success
-    Expected Status: 200
-    Mode: Asynchronous execution
-
-    Response : models.CreditNote
-
-    Validates:
-    - Authentication requirements are satisfied
-    - All required input parameters are properly handled
-    - Response status code is correct
-    - Response data matches expected schema
-
-    This test uses example data to verify the endpoint behavior.
-    """
-    # tests calling async method with example data
-    client = AsyncStripe(
-        username="API_USERNAME",
-        password="API_PASSWORD",
-        token="API_TOKEN",
-        environment=Environment.MOCK_SERVER,
-    )
-    response = await client.credit_note.preview_1(invoice="string")
     try:
         pydantic.TypeAdapter(models.CreditNote).validate_python(response)
         is_json = True

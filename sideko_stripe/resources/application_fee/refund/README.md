@@ -106,55 +106,12 @@ client = AsyncStripe(
 res = await client.application_fee.refund.update(fee="string", id="string")
 ```
 
-### create_1 <a name="create_1"></a>
+### create <a name="create"></a>
 POST /v1/application_fees/{id}/refund
 
 
 
 **API Endpoint**: `POST /v1/application_fees/{id}/refund`
-
-#### Synchronous Client
-
-```python
-from os import getenv
-from sideko_stripe import Stripe
-
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
-res = client.application_fee.refund.create_1(id="string")
-```
-
-#### Asynchronous Client
-
-```python
-from os import getenv
-from sideko_stripe import AsyncStripe
-
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
-res = await client.application_fee.refund.create_1(id="string")
-```
-
-### create <a name="create"></a>
-Create an application fee refund
-
-<p>Refunds an application fee that has previously been collected but not yet refunded.
-Funds will be refunded to the Stripe account from which the fee was originally collected.</p>
-
-<p>You can optionally refund only part of an application fee.
-You can do so multiple times, until the entire fee has been refunded.</p>
-
-<p>Once entirely refunded, an application fee can’t be refunded again.
-This method will raise an error when called on an already-refunded application fee,
-or when trying to refund more money than is left on an application fee.</p>
-
-**API Endpoint**: `POST /v1/application_fees/{id}/refunds`
 
 #### Synchronous Client
 
@@ -182,4 +139,47 @@ client = AsyncStripe(
     token=getenv("API_TOKEN"),
 )
 res = await client.application_fee.refund.create(id="string")
+```
+
+### create_many <a name="create_many"></a>
+Create an application fee refund
+
+<p>Refunds an application fee that has previously been collected but not yet refunded.
+Funds will be refunded to the Stripe account from which the fee was originally collected.</p>
+
+<p>You can optionally refund only part of an application fee.
+You can do so multiple times, until the entire fee has been refunded.</p>
+
+<p>Once entirely refunded, an application fee can’t be refunded again.
+This method will raise an error when called on an already-refunded application fee,
+or when trying to refund more money than is left on an application fee.</p>
+
+**API Endpoint**: `POST /v1/application_fees/{id}/refunds`
+
+#### Synchronous Client
+
+```python
+from os import getenv
+from sideko_stripe import Stripe
+
+client = Stripe(
+    username=getenv("API_USERNAME"),
+    password=getenv("API_PASSWORD"),
+    token=getenv("API_TOKEN"),
+)
+res = client.application_fee.refund.create_many(id="string")
+```
+
+#### Asynchronous Client
+
+```python
+from os import getenv
+from sideko_stripe import AsyncStripe
+
+client = AsyncStripe(
+    username=getenv("API_USERNAME"),
+    password=getenv("API_PASSWORD"),
+    token=getenv("API_TOKEN"),
+)
+res = await client.application_fee.refund.create_many(id="string")
 ```

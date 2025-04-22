@@ -3,7 +3,7 @@ import typing
 import typing_extensions
 
 
-class CreditNotePreview1ShippingCost(typing_extensions.TypedDict):
+class CreditNotePreviewLinesShippingCost(typing_extensions.TypedDict):
     """
     When shipping_cost contains the shipping_rate from the invoice, the shipping_cost is included in the credit note.
     """
@@ -11,9 +11,9 @@ class CreditNotePreview1ShippingCost(typing_extensions.TypedDict):
     shipping_rate: typing_extensions.NotRequired[str]
 
 
-class _SerializerCreditNotePreview1ShippingCost(pydantic.BaseModel):
+class _SerializerCreditNotePreviewLinesShippingCost(pydantic.BaseModel):
     """
-    Serializer for CreditNotePreview1ShippingCost handling case conversions
+    Serializer for CreditNotePreviewLinesShippingCost handling case conversions
     and file omissions as dictated by the API
     """
 

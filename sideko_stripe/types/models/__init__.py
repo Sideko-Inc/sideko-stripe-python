@@ -412,7 +412,7 @@ from .credit_note_lines import CreditNoteLines
 from .credit_note_lines_response import CreditNoteLinesResponse
 from .credit_note_list_response import CreditNoteListResponse
 from .credit_note_metadata import CreditNoteMetadata
-from .credit_note_preview_response import CreditNotePreviewResponse
+from .credit_note_preview_lines_response import CreditNotePreviewLinesResponse
 from .credit_note_refund import CreditNoteRefund
 from .credit_notes_pretax_credit_amount import CreditNotesPretaxCreditAmount
 from .currency_option import CurrencyOption
@@ -2471,7 +2471,7 @@ __all__ = [
     "CreditNoteLinesResponse",
     "CreditNoteListResponse",
     "CreditNoteMetadata",
-    "CreditNotePreviewResponse",
+    "CreditNotePreviewLinesResponse",
     "CreditNoteRefund",
     "CreditNotesPretaxCreditAmount",
     "CurrencyOption",
@@ -4408,7 +4408,7 @@ _types_namespace = {
     "CreditNotesPretaxCreditAmount": CreditNotesPretaxCreditAmount,
     "CreditNoteMetadata": CreditNoteMetadata,
     "CreditNoteRefund": CreditNoteRefund,
-    "CreditNotePreviewResponse": CreditNotePreviewResponse,
+    "CreditNotePreviewLinesResponse": CreditNotePreviewLinesResponse,
     "CreditNoteLinesResponse": CreditNoteLinesResponse,
     "CustomerListResponse": CustomerListResponse,
     "CustomerSearchResponse": CustomerSearchResponse,

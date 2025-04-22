@@ -2,15 +2,15 @@ import pydantic
 import typing
 import typing_extensions
 
-from .credit_note_preview1_lines_item_tax_amounts_arr0_item import (
-    CreditNotePreview1LinesItemTaxAmountsArr0Item,
-    _SerializerCreditNotePreview1LinesItemTaxAmountsArr0Item,
+from .credit_note_preview_lines_lines_item_tax_amounts_arr0_item import (
+    CreditNotePreviewLinesLinesItemTaxAmountsArr0Item,
+    _SerializerCreditNotePreviewLinesLinesItemTaxAmountsArr0Item,
 )
 
 
-class CreditNotePreview1LinesItem(typing_extensions.TypedDict):
+class CreditNotePreviewLinesLinesItem(typing_extensions.TypedDict):
     """
-    CreditNotePreview1LinesItem
+    CreditNotePreviewLinesLinesItem
     """
 
     amount: typing_extensions.NotRequired[int]
@@ -22,7 +22,9 @@ class CreditNotePreview1LinesItem(typing_extensions.TypedDict):
     quantity: typing_extensions.NotRequired[int]
 
     tax_amounts: typing_extensions.NotRequired[
-        typing.Union[typing.List[CreditNotePreview1LinesItemTaxAmountsArr0Item], str]
+        typing.Union[
+            typing.List[CreditNotePreviewLinesLinesItemTaxAmountsArr0Item], str
+        ]
     ]
 
     tax_rates: typing_extensions.NotRequired[typing.Union[typing.List[str], str]]
@@ -36,9 +38,9 @@ class CreditNotePreview1LinesItem(typing_extensions.TypedDict):
     unit_amount_decimal: typing_extensions.NotRequired[str]
 
 
-class _SerializerCreditNotePreview1LinesItem(pydantic.BaseModel):
+class _SerializerCreditNotePreviewLinesLinesItem(pydantic.BaseModel):
     """
-    Serializer for CreditNotePreview1LinesItem handling case conversions
+    Serializer for CreditNotePreviewLinesLinesItem handling case conversions
     and file omissions as dictated by the API
     """
 
@@ -56,7 +58,8 @@ class _SerializerCreditNotePreview1LinesItem(pydantic.BaseModel):
     quantity: typing.Optional[int] = pydantic.Field(alias="quantity", default=None)
     tax_amounts: typing.Optional[
         typing.Union[
-            typing.List[_SerializerCreditNotePreview1LinesItemTaxAmountsArr0Item], str
+            typing.List[_SerializerCreditNotePreviewLinesLinesItemTaxAmountsArr0Item],
+            str,
         ]
     ] = pydantic.Field(alias="tax_amounts", default=None)
     tax_rates: typing.Optional[typing.Union[typing.List[str], str]] = pydantic.Field(

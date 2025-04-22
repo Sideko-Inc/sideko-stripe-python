@@ -1361,17 +1361,17 @@ from .application_fee_list_created_obj0 import (
     ApplicationFeeListCreatedObj0,
     _SerializerApplicationFeeListCreatedObj0,
 )
-from .application_fee_refund_create1_body import (
-    ApplicationFeeRefundCreate1Body,
-    _SerializerApplicationFeeRefundCreate1Body,
-)
 from .application_fee_refund_create_body import (
     ApplicationFeeRefundCreateBody,
     _SerializerApplicationFeeRefundCreateBody,
 )
-from .application_fee_refund_create_body_metadata import (
-    ApplicationFeeRefundCreateBodyMetadata,
-    _SerializerApplicationFeeRefundCreateBodyMetadata,
+from .application_fee_refund_create_many_body import (
+    ApplicationFeeRefundCreateManyBody,
+    _SerializerApplicationFeeRefundCreateManyBody,
+)
+from .application_fee_refund_create_many_body_metadata import (
+    ApplicationFeeRefundCreateManyBodyMetadata,
+    _SerializerApplicationFeeRefundCreateManyBodyMetadata,
 )
 from .application_fee_refund_update_body import (
     ApplicationFeeRefundUpdateBody,
@@ -2424,26 +2424,6 @@ from .credit_note_list_created_obj0 import (
     CreditNoteListCreatedObj0,
     _SerializerCreditNoteListCreatedObj0,
 )
-from .credit_note_preview1_lines_item import (
-    CreditNotePreview1LinesItem,
-    _SerializerCreditNotePreview1LinesItem,
-)
-from .credit_note_preview1_lines_item_tax_amounts_arr0_item import (
-    CreditNotePreview1LinesItemTaxAmountsArr0Item,
-    _SerializerCreditNotePreview1LinesItemTaxAmountsArr0Item,
-)
-from .credit_note_preview1_metadata import (
-    CreditNotePreview1Metadata,
-    _SerializerCreditNotePreview1Metadata,
-)
-from .credit_note_preview1_refunds_item import (
-    CreditNotePreview1RefundsItem,
-    _SerializerCreditNotePreview1RefundsItem,
-)
-from .credit_note_preview1_shipping_cost import (
-    CreditNotePreview1ShippingCost,
-    _SerializerCreditNotePreview1ShippingCost,
-)
 from .credit_note_preview_lines_item import (
     CreditNotePreviewLinesItem,
     _SerializerCreditNotePreviewLinesItem,
@@ -2451,6 +2431,26 @@ from .credit_note_preview_lines_item import (
 from .credit_note_preview_lines_item_tax_amounts_arr0_item import (
     CreditNotePreviewLinesItemTaxAmountsArr0Item,
     _SerializerCreditNotePreviewLinesItemTaxAmountsArr0Item,
+)
+from .credit_note_preview_lines_lines_item import (
+    CreditNotePreviewLinesLinesItem,
+    _SerializerCreditNotePreviewLinesLinesItem,
+)
+from .credit_note_preview_lines_lines_item_tax_amounts_arr0_item import (
+    CreditNotePreviewLinesLinesItemTaxAmountsArr0Item,
+    _SerializerCreditNotePreviewLinesLinesItemTaxAmountsArr0Item,
+)
+from .credit_note_preview_lines_metadata import (
+    CreditNotePreviewLinesMetadata,
+    _SerializerCreditNotePreviewLinesMetadata,
+)
+from .credit_note_preview_lines_refunds_item import (
+    CreditNotePreviewLinesRefundsItem,
+    _SerializerCreditNotePreviewLinesRefundsItem,
+)
+from .credit_note_preview_lines_shipping_cost import (
+    CreditNotePreviewLinesShippingCost,
+    _SerializerCreditNotePreviewLinesShippingCost,
 )
 from .credit_note_preview_metadata import (
     CreditNotePreviewMetadata,
@@ -10661,9 +10661,9 @@ __all__ = [
     "AccountUpdateBodyTosAcceptance",
     "ApplePayDomainCreateBody",
     "ApplicationFeeListCreatedObj0",
-    "ApplicationFeeRefundCreate1Body",
     "ApplicationFeeRefundCreateBody",
-    "ApplicationFeeRefundCreateBodyMetadata",
+    "ApplicationFeeRefundCreateManyBody",
+    "ApplicationFeeRefundCreateManyBodyMetadata",
     "ApplicationFeeRefundUpdateBody",
     "ApplicationFeeRefundUpdateBodyMetadataObj0",
     "AppsSecretCreateBody",
@@ -10932,13 +10932,13 @@ __all__ = [
     "CreditNoteCreateBodyRefundsItem",
     "CreditNoteCreateBodyShippingCost",
     "CreditNoteListCreatedObj0",
-    "CreditNotePreview1LinesItem",
-    "CreditNotePreview1LinesItemTaxAmountsArr0Item",
-    "CreditNotePreview1Metadata",
-    "CreditNotePreview1RefundsItem",
-    "CreditNotePreview1ShippingCost",
     "CreditNotePreviewLinesItem",
     "CreditNotePreviewLinesItemTaxAmountsArr0Item",
+    "CreditNotePreviewLinesLinesItem",
+    "CreditNotePreviewLinesLinesItemTaxAmountsArr0Item",
+    "CreditNotePreviewLinesMetadata",
+    "CreditNotePreviewLinesRefundsItem",
+    "CreditNotePreviewLinesShippingCost",
     "CreditNotePreviewMetadata",
     "CreditNotePreviewRefundsItem",
     "CreditNotePreviewShippingCost",
@@ -13286,9 +13286,9 @@ __all__ = [
     "_SerializerAccountUpdateBodyTosAcceptance",
     "_SerializerApplePayDomainCreateBody",
     "_SerializerApplicationFeeListCreatedObj0",
-    "_SerializerApplicationFeeRefundCreate1Body",
     "_SerializerApplicationFeeRefundCreateBody",
-    "_SerializerApplicationFeeRefundCreateBodyMetadata",
+    "_SerializerApplicationFeeRefundCreateManyBody",
+    "_SerializerApplicationFeeRefundCreateManyBodyMetadata",
     "_SerializerApplicationFeeRefundUpdateBody",
     "_SerializerApplicationFeeRefundUpdateBodyMetadataObj0",
     "_SerializerAppsSecretCreateBody",
@@ -13557,13 +13557,13 @@ __all__ = [
     "_SerializerCreditNoteCreateBodyRefundsItem",
     "_SerializerCreditNoteCreateBodyShippingCost",
     "_SerializerCreditNoteListCreatedObj0",
-    "_SerializerCreditNotePreview1LinesItem",
-    "_SerializerCreditNotePreview1LinesItemTaxAmountsArr0Item",
-    "_SerializerCreditNotePreview1Metadata",
-    "_SerializerCreditNotePreview1RefundsItem",
-    "_SerializerCreditNotePreview1ShippingCost",
     "_SerializerCreditNotePreviewLinesItem",
     "_SerializerCreditNotePreviewLinesItemTaxAmountsArr0Item",
+    "_SerializerCreditNotePreviewLinesLinesItem",
+    "_SerializerCreditNotePreviewLinesLinesItemTaxAmountsArr0Item",
+    "_SerializerCreditNotePreviewLinesMetadata",
+    "_SerializerCreditNotePreviewLinesRefundsItem",
+    "_SerializerCreditNotePreviewLinesShippingCost",
     "_SerializerCreditNotePreviewMetadata",
     "_SerializerCreditNotePreviewRefundsItem",
     "_SerializerCreditNotePreviewShippingCost",

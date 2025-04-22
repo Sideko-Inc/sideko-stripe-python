@@ -3,9 +3,9 @@ import typing
 import typing_extensions
 
 
-class CreditNotePreview1RefundsItem(typing_extensions.TypedDict):
+class CreditNotePreviewLinesRefundsItem(typing_extensions.TypedDict):
     """
-    CreditNotePreview1RefundsItem
+    CreditNotePreviewLinesRefundsItem
     """
 
     amount_refunded: typing_extensions.NotRequired[int]
@@ -13,9 +13,9 @@ class CreditNotePreview1RefundsItem(typing_extensions.TypedDict):
     refund: typing_extensions.NotRequired[str]
 
 
-class _SerializerCreditNotePreview1RefundsItem(pydantic.BaseModel):
+class _SerializerCreditNotePreviewLinesRefundsItem(pydantic.BaseModel):
     """
-    Serializer for CreditNotePreview1RefundsItem handling case conversions
+    Serializer for CreditNotePreviewLinesRefundsItem handling case conversions
     and file omissions as dictated by the API
     """
 

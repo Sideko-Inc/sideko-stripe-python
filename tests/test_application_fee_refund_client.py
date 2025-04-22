@@ -6,15 +6,84 @@ from sideko_stripe.environment import Environment
 from sideko_stripe.types import models
 
 
-def test_create_200_generated_success():
+def test_create_many_200_generated_success():
     """Tests a POST request to the /v1/application_fees/{id}/refunds endpoint.
+
+    Operation: create_many
+    Test Case ID: generated_success
+    Expected Status: 200
+    Mode: Synchronous execution
+
+    Response : models.FeeRefund
+
+    Validates:
+    - Authentication requirements are satisfied
+    - All required input parameters are properly handled
+    - Response status code is correct
+    - Response data matches expected schema
+
+    This test uses example data to verify the endpoint behavior.
+    """
+    # tests calling sync method with example data
+    client = Stripe(
+        username="API_USERNAME",
+        password="API_PASSWORD",
+        token="API_TOKEN",
+        environment=Environment.MOCK_SERVER,
+    )
+    response = client.application_fee.refund.create_many(id="string")
+    try:
+        pydantic.TypeAdapter(models.FeeRefund).validate_python(response)
+        is_json = True
+    except pydantic.ValidationError:
+        is_json = False
+    assert is_json, "failed response type check"
+
+
+@pytest.mark.asyncio
+async def test_await_create_many_200_generated_success():
+    """Tests a POST request to the /v1/application_fees/{id}/refunds endpoint.
+
+    Operation: create_many
+    Test Case ID: generated_success
+    Expected Status: 200
+    Mode: Asynchronous execution
+
+    Response : models.FeeRefund
+
+    Validates:
+    - Authentication requirements are satisfied
+    - All required input parameters are properly handled
+    - Response status code is correct
+    - Response data matches expected schema
+
+    This test uses example data to verify the endpoint behavior.
+    """
+    # tests calling async method with example data
+    client = AsyncStripe(
+        username="API_USERNAME",
+        password="API_PASSWORD",
+        token="API_TOKEN",
+        environment=Environment.MOCK_SERVER,
+    )
+    response = await client.application_fee.refund.create_many(id="string")
+    try:
+        pydantic.TypeAdapter(models.FeeRefund).validate_python(response)
+        is_json = True
+    except pydantic.ValidationError:
+        is_json = False
+    assert is_json, "failed response type check"
+
+
+def test_create_200_generated_success():
+    """Tests a POST request to the /v1/application_fees/{id}/refund endpoint.
 
     Operation: create
     Test Case ID: generated_success
     Expected Status: 200
     Mode: Synchronous execution
 
-    Response : models.FeeRefund
+    Response : models.ApplicationFee
 
     Validates:
     - Authentication requirements are satisfied
@@ -33,7 +102,7 @@ def test_create_200_generated_success():
     )
     response = client.application_fee.refund.create(id="string")
     try:
-        pydantic.TypeAdapter(models.FeeRefund).validate_python(response)
+        pydantic.TypeAdapter(models.ApplicationFee).validate_python(response)
         is_json = True
     except pydantic.ValidationError:
         is_json = False
@@ -42,14 +111,14 @@ def test_create_200_generated_success():
 
 @pytest.mark.asyncio
 async def test_await_create_200_generated_success():
-    """Tests a POST request to the /v1/application_fees/{id}/refunds endpoint.
+    """Tests a POST request to the /v1/application_fees/{id}/refund endpoint.
 
     Operation: create
     Test Case ID: generated_success
     Expected Status: 200
     Mode: Asynchronous execution
 
-    Response : models.FeeRefund
+    Response : models.ApplicationFee
 
     Validates:
     - Authentication requirements are satisfied
@@ -67,75 +136,6 @@ async def test_await_create_200_generated_success():
         environment=Environment.MOCK_SERVER,
     )
     response = await client.application_fee.refund.create(id="string")
-    try:
-        pydantic.TypeAdapter(models.FeeRefund).validate_python(response)
-        is_json = True
-    except pydantic.ValidationError:
-        is_json = False
-    assert is_json, "failed response type check"
-
-
-def test_create_1_200_generated_success():
-    """Tests a POST request to the /v1/application_fees/{id}/refund endpoint.
-
-    Operation: create_1
-    Test Case ID: generated_success
-    Expected Status: 200
-    Mode: Synchronous execution
-
-    Response : models.ApplicationFee
-
-    Validates:
-    - Authentication requirements are satisfied
-    - All required input parameters are properly handled
-    - Response status code is correct
-    - Response data matches expected schema
-
-    This test uses example data to verify the endpoint behavior.
-    """
-    # tests calling sync method with example data
-    client = Stripe(
-        username="API_USERNAME",
-        password="API_PASSWORD",
-        token="API_TOKEN",
-        environment=Environment.MOCK_SERVER,
-    )
-    response = client.application_fee.refund.create_1(id="string")
-    try:
-        pydantic.TypeAdapter(models.ApplicationFee).validate_python(response)
-        is_json = True
-    except pydantic.ValidationError:
-        is_json = False
-    assert is_json, "failed response type check"
-
-
-@pytest.mark.asyncio
-async def test_await_create_1_200_generated_success():
-    """Tests a POST request to the /v1/application_fees/{id}/refund endpoint.
-
-    Operation: create_1
-    Test Case ID: generated_success
-    Expected Status: 200
-    Mode: Asynchronous execution
-
-    Response : models.ApplicationFee
-
-    Validates:
-    - Authentication requirements are satisfied
-    - All required input parameters are properly handled
-    - Response status code is correct
-    - Response data matches expected schema
-
-    This test uses example data to verify the endpoint behavior.
-    """
-    # tests calling async method with example data
-    client = AsyncStripe(
-        username="API_USERNAME",
-        password="API_PASSWORD",
-        token="API_TOKEN",
-        environment=Environment.MOCK_SERVER,
-    )
-    response = await client.application_fee.refund.create_1(id="string")
     try:
         pydantic.TypeAdapter(models.ApplicationFee).validate_python(response)
         is_json = True

@@ -219,12 +219,12 @@ class RefundClient:
             request_options=request_options or default_request_options(),
         )
 
-    def create_1(
+    def create(
         self,
         *,
         id: str,
         data: typing.Union[
-            typing.Optional[params.ApplicationFeeRefundCreate1Body], type_utils.NotGiven
+            typing.Optional[params.ApplicationFeeRefundCreateBody], type_utils.NotGiven
         ] = type_utils.NOT_GIVEN,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> models.ApplicationFee:
@@ -234,7 +234,7 @@ class RefundClient:
         POST /v1/application_fees/{id}/refund
 
         Args:
-            data: ApplicationFeeRefundCreate1Body
+            data: ApplicationFeeRefundCreateBody
             id: str
             request_options: Additional options to customize the HTTP request
 
@@ -247,14 +247,14 @@ class RefundClient:
 
         Examples:
         ```py
-        client.application_fee.refund.create_1(id="string")
+        client.application_fee.refund.create(id="string")
         ```
         """
         models.ApplicationFee.model_rebuild(_types_namespace=models._types_namespace)
         _data = (
             to_form_urlencoded(
                 item=data,
-                dump_with=params._SerializerApplicationFeeRefundCreate1Body,
+                dump_with=params._SerializerApplicationFeeRefundCreateBody,
                 style={"amount": "form", "directive": "form", "expand": "deepObject"},
                 explode={"amount": True, "directive": True, "expand": True},
             )
@@ -270,12 +270,13 @@ class RefundClient:
             request_options=request_options or default_request_options(),
         )
 
-    def create(
+    def create_many(
         self,
         *,
         id: str,
         data: typing.Union[
-            typing.Optional[params.ApplicationFeeRefundCreateBody], type_utils.NotGiven
+            typing.Optional[params.ApplicationFeeRefundCreateManyBody],
+            type_utils.NotGiven,
         ] = type_utils.NOT_GIVEN,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> models.FeeRefund:
@@ -295,7 +296,7 @@ class RefundClient:
         POST /v1/application_fees/{id}/refunds
 
         Args:
-            data: ApplicationFeeRefundCreateBody
+            data: ApplicationFeeRefundCreateManyBody
             id: str
             request_options: Additional options to customize the HTTP request
 
@@ -308,14 +309,14 @@ class RefundClient:
 
         Examples:
         ```py
-        client.application_fee.refund.create(id="string")
+        client.application_fee.refund.create_many(id="string")
         ```
         """
         models.FeeRefund.model_rebuild(_types_namespace=models._types_namespace)
         _data = (
             to_form_urlencoded(
                 item=data,
-                dump_with=params._SerializerApplicationFeeRefundCreateBody,
+                dump_with=params._SerializerApplicationFeeRefundCreateManyBody,
                 style={
                     "amount": "form",
                     "expand": "deepObject",
@@ -541,12 +542,12 @@ class AsyncRefundClient:
             request_options=request_options or default_request_options(),
         )
 
-    async def create_1(
+    async def create(
         self,
         *,
         id: str,
         data: typing.Union[
-            typing.Optional[params.ApplicationFeeRefundCreate1Body], type_utils.NotGiven
+            typing.Optional[params.ApplicationFeeRefundCreateBody], type_utils.NotGiven
         ] = type_utils.NOT_GIVEN,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> models.ApplicationFee:
@@ -556,7 +557,7 @@ class AsyncRefundClient:
         POST /v1/application_fees/{id}/refund
 
         Args:
-            data: ApplicationFeeRefundCreate1Body
+            data: ApplicationFeeRefundCreateBody
             id: str
             request_options: Additional options to customize the HTTP request
 
@@ -569,14 +570,14 @@ class AsyncRefundClient:
 
         Examples:
         ```py
-        await client.application_fee.refund.create_1(id="string")
+        await client.application_fee.refund.create(id="string")
         ```
         """
         models.ApplicationFee.model_rebuild(_types_namespace=models._types_namespace)
         _data = (
             to_form_urlencoded(
                 item=data,
-                dump_with=params._SerializerApplicationFeeRefundCreate1Body,
+                dump_with=params._SerializerApplicationFeeRefundCreateBody,
                 style={"amount": "form", "directive": "form", "expand": "deepObject"},
                 explode={"amount": True, "directive": True, "expand": True},
             )
@@ -592,12 +593,13 @@ class AsyncRefundClient:
             request_options=request_options or default_request_options(),
         )
 
-    async def create(
+    async def create_many(
         self,
         *,
         id: str,
         data: typing.Union[
-            typing.Optional[params.ApplicationFeeRefundCreateBody], type_utils.NotGiven
+            typing.Optional[params.ApplicationFeeRefundCreateManyBody],
+            type_utils.NotGiven,
         ] = type_utils.NOT_GIVEN,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> models.FeeRefund:
@@ -617,7 +619,7 @@ class AsyncRefundClient:
         POST /v1/application_fees/{id}/refunds
 
         Args:
-            data: ApplicationFeeRefundCreateBody
+            data: ApplicationFeeRefundCreateManyBody
             id: str
             request_options: Additional options to customize the HTTP request
 
@@ -630,14 +632,14 @@ class AsyncRefundClient:
 
         Examples:
         ```py
-        await client.application_fee.refund.create(id="string")
+        await client.application_fee.refund.create_many(id="string")
         ```
         """
         models.FeeRefund.model_rebuild(_types_namespace=models._types_namespace)
         _data = (
             to_form_urlencoded(
                 item=data,
-                dump_with=params._SerializerApplicationFeeRefundCreateBody,
+                dump_with=params._SerializerApplicationFeeRefundCreateManyBody,
                 style={
                     "amount": "form",
                     "expand": "deepObject",

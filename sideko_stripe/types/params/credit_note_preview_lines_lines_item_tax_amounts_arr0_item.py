@@ -2,9 +2,9 @@ import pydantic
 import typing_extensions
 
 
-class CreditNotePreview1LinesItemTaxAmountsArr0Item(typing_extensions.TypedDict):
+class CreditNotePreviewLinesLinesItemTaxAmountsArr0Item(typing_extensions.TypedDict):
     """
-    CreditNotePreview1LinesItemTaxAmountsArr0Item
+    CreditNotePreviewLinesLinesItemTaxAmountsArr0Item
     """
 
     amount: typing_extensions.Required[int]
@@ -14,9 +14,9 @@ class CreditNotePreview1LinesItemTaxAmountsArr0Item(typing_extensions.TypedDict)
     taxable_amount: typing_extensions.Required[int]
 
 
-class _SerializerCreditNotePreview1LinesItemTaxAmountsArr0Item(pydantic.BaseModel):
+class _SerializerCreditNotePreviewLinesLinesItemTaxAmountsArr0Item(pydantic.BaseModel):
     """
-    Serializer for CreditNotePreview1LinesItemTaxAmountsArr0Item handling case conversions
+    Serializer for CreditNotePreviewLinesLinesItemTaxAmountsArr0Item handling case conversions
     and file omissions as dictated by the API
     """
 
