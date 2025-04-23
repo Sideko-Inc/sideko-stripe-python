@@ -11,8 +11,6 @@ from os import getenv
 from sideko_stripe import Stripe
 
 client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
     token=getenv("API_TOKEN"),
 )
 ```
@@ -24,8 +22,6 @@ from os import getenv
 from sideko_stripe import AsyncStripe
 
 client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
     token=getenv("API_TOKEN"),
 )
 ```
