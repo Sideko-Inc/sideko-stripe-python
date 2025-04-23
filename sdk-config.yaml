@@ -8,9 +8,6 @@ servers:
     name: production
     default: true
 auths:
-  - id: basicAuth
-    username_param: username
-    password_param: password
   - id: bearerAuth
     param: token
 modules:
