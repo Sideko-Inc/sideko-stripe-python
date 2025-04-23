@@ -12,11 +12,7 @@ List all personalization designs
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.issuing.personalization_design.list()
 ```
 
@@ -26,11 +22,7 @@ res = client.issuing.personalization_design.list()
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.issuing.personalization_design.list()
 ```
 
@@ -47,11 +39,7 @@ Retrieve a personalization design
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.issuing.personalization_design.get(personalization_design="string")
 ```
 
@@ -61,11 +49,7 @@ res = client.issuing.personalization_design.get(personalization_design="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.issuing.personalization_design.get(personalization_design="string")
 ```
 
@@ -82,11 +66,7 @@ Create a personalization design
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.issuing.personalization_design.create(physical_bundle="string")
 ```
 
@@ -96,11 +76,7 @@ res = client.issuing.personalization_design.create(physical_bundle="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.issuing.personalization_design.create(physical_bundle="string")
 ```
 
@@ -117,11 +93,7 @@ Update a personalization design
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.issuing.personalization_design.update(personalization_design="string")
 ```
 
@@ -131,11 +103,7 @@ res = client.issuing.personalization_design.update(personalization_design="strin
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.issuing.personalization_design.update(
     personalization_design="string"
 )

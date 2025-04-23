@@ -146,7 +146,7 @@ class TransactionClient:
         return self._base_client.request(
             method="GET",
             path="/v1/financial_connections/transactions",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.FinancialConnectionsTransactionListResponse,
             request_options=request_options or default_request_options(),
@@ -197,7 +197,7 @@ class TransactionClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/financial_connections/transactions/{transaction}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.FinancialConnectionsTransaction,
             request_options=request_options or default_request_options(),
@@ -337,7 +337,7 @@ class AsyncTransactionClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/financial_connections/transactions",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.FinancialConnectionsTransactionListResponse,
             request_options=request_options or default_request_options(),
@@ -388,7 +388,7 @@ class AsyncTransactionClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/financial_connections/transactions/{transaction}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.FinancialConnectionsTransaction,
             request_options=request_options or default_request_options(),

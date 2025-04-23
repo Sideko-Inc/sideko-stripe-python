@@ -12,11 +12,7 @@ List Accounts
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.linked_account.list()
 ```
 
@@ -26,11 +22,7 @@ res = client.linked_account.list()
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.linked_account.list()
 ```
 
@@ -47,11 +39,7 @@ Retrieve an Account
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.linked_account.get(account="string")
 ```
 
@@ -61,11 +49,7 @@ res = client.linked_account.get(account="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.linked_account.get(account="string")
 ```
 
@@ -82,11 +66,7 @@ Disconnect an Account
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.linked_account.disconnect(account="string")
 ```
 
@@ -96,11 +76,7 @@ res = client.linked_account.disconnect(account="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.linked_account.disconnect(account="string")
 ```
 
@@ -117,11 +93,7 @@ Refresh Account data
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.linked_account.refresh(account="string", features=["balance"])
 ```
 
@@ -131,10 +103,6 @@ res = client.linked_account.refresh(account="string", features=["balance"])
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.linked_account.refresh(account="string", features=["balance"])
 ```

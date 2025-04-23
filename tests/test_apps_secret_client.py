@@ -25,12 +25,7 @@ def test_delete_200_success_default():
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling sync method with example data
-    client = Stripe(
-        username="API_USERNAME",
-        password="API_PASSWORD",
-        token="API_TOKEN",
-        environment=Environment.MOCK_SERVER,
-    )
+    client = Stripe(token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = client.apps.secret.delete(name="string", scope={"type_": "account"})
     try:
         pydantic.TypeAdapter(models.AppsSecret).validate_python(response)
@@ -60,12 +55,7 @@ async def test_await_delete_200_success_default():
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling async method with example data
-    client = AsyncStripe(
-        username="API_USERNAME",
-        password="API_PASSWORD",
-        token="API_TOKEN",
-        environment=Environment.MOCK_SERVER,
-    )
+    client = AsyncStripe(token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = await client.apps.secret.delete(
         name="string", scope={"type_": "account"}
     )
@@ -96,12 +86,7 @@ def test_create_200_success_default():
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling sync method with example data
-    client = Stripe(
-        username="API_USERNAME",
-        password="API_PASSWORD",
-        token="API_TOKEN",
-        environment=Environment.MOCK_SERVER,
-    )
+    client = Stripe(token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = client.apps.secret.create(
         name="string", payload="string", scope={"type_": "account"}
     )
@@ -133,12 +118,7 @@ async def test_await_create_200_success_default():
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling async method with example data
-    client = AsyncStripe(
-        username="API_USERNAME",
-        password="API_PASSWORD",
-        token="API_TOKEN",
-        environment=Environment.MOCK_SERVER,
-    )
+    client = AsyncStripe(token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = await client.apps.secret.create(
         name="string", payload="string", scope={"type_": "account"}
     )
@@ -169,12 +149,7 @@ def test_find_200_generated_success():
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling sync method with example data
-    client = Stripe(
-        username="API_USERNAME",
-        password="API_PASSWORD",
-        token="API_TOKEN",
-        environment=Environment.MOCK_SERVER,
-    )
+    client = Stripe(token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = client.apps.secret.find(name="string", scope={"type_": "account"})
     try:
         pydantic.TypeAdapter(models.AppsSecret).validate_python(response)
@@ -204,12 +179,7 @@ async def test_await_find_200_generated_success():
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling async method with example data
-    client = AsyncStripe(
-        username="API_USERNAME",
-        password="API_PASSWORD",
-        token="API_TOKEN",
-        environment=Environment.MOCK_SERVER,
-    )
+    client = AsyncStripe(token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = await client.apps.secret.find(name="string", scope={"type_": "account"})
     try:
         pydantic.TypeAdapter(models.AppsSecret).validate_python(response)
@@ -238,12 +208,7 @@ def test_list_200_generated_success():
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling sync method with example data
-    client = Stripe(
-        username="API_USERNAME",
-        password="API_PASSWORD",
-        token="API_TOKEN",
-        environment=Environment.MOCK_SERVER,
-    )
+    client = Stripe(token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = client.apps.secret.list(scope={"type_": "account"})
     try:
         pydantic.TypeAdapter(models.AppsSecretListResponse).validate_python(response)
@@ -273,12 +238,7 @@ async def test_await_list_200_generated_success():
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling async method with example data
-    client = AsyncStripe(
-        username="API_USERNAME",
-        password="API_PASSWORD",
-        token="API_TOKEN",
-        environment=Environment.MOCK_SERVER,
-    )
+    client = AsyncStripe(token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = await client.apps.secret.list(scope={"type_": "account"})
     try:
         pydantic.TypeAdapter(models.AppsSecretListResponse).validate_python(response)

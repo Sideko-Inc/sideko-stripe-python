@@ -12,11 +12,7 @@ Retrieve an application fee refund
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.application_fee.refund.get(fee="string", id="string")
 ```
 
@@ -26,11 +22,7 @@ res = client.application_fee.refund.get(fee="string", id="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.application_fee.refund.get(fee="string", id="string")
 ```
 
@@ -47,11 +39,7 @@ List all application fee refunds
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.application_fee.refund.list(id="string")
 ```
 
@@ -61,11 +49,7 @@ res = client.application_fee.refund.list(id="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.application_fee.refund.list(id="string")
 ```
 
@@ -84,11 +68,7 @@ Update an application fee refund
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.application_fee.refund.update(fee="string", id="string")
 ```
 
@@ -98,11 +78,7 @@ res = client.application_fee.refund.update(fee="string", id="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.application_fee.refund.update(fee="string", id="string")
 ```
 
@@ -119,11 +95,7 @@ POST /v1/application_fees/{id}/refund
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.application_fee.refund.create(id="string")
 ```
 
@@ -133,11 +105,7 @@ res = client.application_fee.refund.create(id="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.application_fee.refund.create(id="string")
 ```
 
@@ -162,11 +130,7 @@ or when trying to refund more money than is left on an application fee.</p>
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.application_fee.refund.create_many(id="string")
 ```
 
@@ -176,10 +140,6 @@ res = client.application_fee.refund.create_many(id="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.application_fee.refund.create_many(id="string")
 ```

@@ -25,12 +25,7 @@ def test_update_many_200_success_default():
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling sync method with example data
-    client = Stripe(
-        username="API_USERNAME",
-        password="API_PASSWORD",
-        token="API_TOKEN",
-        environment=Environment.MOCK_SERVER,
-    )
+    client = Stripe(token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = client.invoice.line.update_many(
         invoice="string", lines=[{"id": "string"}]
     )
@@ -62,12 +57,7 @@ async def test_await_update_many_200_success_default():
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling async method with example data
-    client = AsyncStripe(
-        username="API_USERNAME",
-        password="API_PASSWORD",
-        token="API_TOKEN",
-        environment=Environment.MOCK_SERVER,
-    )
+    client = AsyncStripe(token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = await client.invoice.line.update_many(
         invoice="string", lines=[{"id": "string"}]
     )
@@ -98,12 +88,7 @@ def test_remove_many_200_success_default():
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling sync method with example data
-    client = Stripe(
-        username="API_USERNAME",
-        password="API_PASSWORD",
-        token="API_TOKEN",
-        environment=Environment.MOCK_SERVER,
-    )
+    client = Stripe(token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = client.invoice.line.remove_many(
         invoice="string", lines=[{"behavior": "delete", "id": "string"}]
     )
@@ -135,12 +120,7 @@ async def test_await_remove_many_200_success_default():
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling async method with example data
-    client = AsyncStripe(
-        username="API_USERNAME",
-        password="API_PASSWORD",
-        token="API_TOKEN",
-        environment=Environment.MOCK_SERVER,
-    )
+    client = AsyncStripe(token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = await client.invoice.line.remove_many(
         invoice="string", lines=[{"behavior": "delete", "id": "string"}]
     )
@@ -171,12 +151,7 @@ def test_update_200_generated_success():
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling sync method with example data
-    client = Stripe(
-        username="API_USERNAME",
-        password="API_PASSWORD",
-        token="API_TOKEN",
-        environment=Environment.MOCK_SERVER,
-    )
+    client = Stripe(token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = client.invoice.line.update(invoice="string", line_item_id="string")
     try:
         pydantic.TypeAdapter(models.LineItem).validate_python(response)
@@ -206,12 +181,7 @@ async def test_await_update_200_generated_success():
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling async method with example data
-    client = AsyncStripe(
-        username="API_USERNAME",
-        password="API_PASSWORD",
-        token="API_TOKEN",
-        environment=Environment.MOCK_SERVER,
-    )
+    client = AsyncStripe(token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = await client.invoice.line.update(invoice="string", line_item_id="string")
     try:
         pydantic.TypeAdapter(models.LineItem).validate_python(response)
@@ -240,12 +210,7 @@ def test_create_many_200_success_default():
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling sync method with example data
-    client = Stripe(
-        username="API_USERNAME",
-        password="API_PASSWORD",
-        token="API_TOKEN",
-        environment=Environment.MOCK_SERVER,
-    )
+    client = Stripe(token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = client.invoice.line.create_many(invoice="string", lines=[{}])
     try:
         pydantic.TypeAdapter(models.Invoice).validate_python(response)
@@ -275,12 +240,7 @@ async def test_await_create_many_200_success_default():
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling async method with example data
-    client = AsyncStripe(
-        username="API_USERNAME",
-        password="API_PASSWORD",
-        token="API_TOKEN",
-        environment=Environment.MOCK_SERVER,
-    )
+    client = AsyncStripe(token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = await client.invoice.line.create_many(invoice="string", lines=[{}])
     try:
         pydantic.TypeAdapter(models.Invoice).validate_python(response)
@@ -309,12 +269,7 @@ def test_list_200_generated_success():
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling sync method with example data
-    client = Stripe(
-        username="API_USERNAME",
-        password="API_PASSWORD",
-        token="API_TOKEN",
-        environment=Environment.MOCK_SERVER,
-    )
+    client = Stripe(token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = client.invoice.line.list(invoice="string")
     try:
         pydantic.TypeAdapter(models.InvoiceLineListResponse).validate_python(response)
@@ -344,12 +299,7 @@ async def test_await_list_200_generated_success():
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling async method with example data
-    client = AsyncStripe(
-        username="API_USERNAME",
-        password="API_PASSWORD",
-        token="API_TOKEN",
-        environment=Environment.MOCK_SERVER,
-    )
+    client = AsyncStripe(token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = await client.invoice.line.list(invoice="string")
     try:
         pydantic.TypeAdapter(models.InvoiceLineListResponse).validate_python(response)

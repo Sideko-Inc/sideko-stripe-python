@@ -129,7 +129,7 @@ class SetupAttemptClient:
         return self._base_client.request(
             method="GET",
             path="/v1/setup_attempts",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.SetupAttemptListResponse,
             request_options=request_options or default_request_options(),
@@ -252,7 +252,7 @@ class AsyncSetupAttemptClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/setup_attempts",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.SetupAttemptListResponse,
             request_options=request_options or default_request_options(),

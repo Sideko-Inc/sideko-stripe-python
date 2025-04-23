@@ -64,7 +64,7 @@ class CustomerSessionClient:
         return self._base_client.request(
             method="POST",
             path="/v1/customer_sessions",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.CustomerSession,
             request_options=request_options or default_request_options(),
@@ -124,7 +124,7 @@ class AsyncCustomerSessionClient:
         return await self._base_client.request(
             method="POST",
             path="/v1/customer_sessions",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.CustomerSession,
             request_options=request_options or default_request_options(),

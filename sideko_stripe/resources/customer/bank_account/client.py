@@ -72,7 +72,7 @@ class BankAccountClient:
         return self._base_client.request(
             method="DELETE",
             path=f"/v1/customers/{customer}/bank_accounts/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=typing.Union[
                 typing.Union[
@@ -167,7 +167,7 @@ class BankAccountClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/customers/{customer}/bank_accounts",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.CustomerBankAccountListResponse,
             request_options=request_options or default_request_options(),
@@ -221,7 +221,7 @@ class BankAccountClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/customers/{customer}/bank_accounts/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.BankAccount,
             request_options=request_options or default_request_options(),
@@ -294,7 +294,7 @@ class BankAccountClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/customers/{customer}/bank_accounts",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=typing.Union[
                 models.Account, models.BankAccount, models.Card, models.Source
@@ -380,7 +380,7 @@ class BankAccountClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/customers/{customer}/bank_accounts/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=typing.Union[models.Card, models.BankAccount, models.Source],
             request_options=request_options or default_request_options(),
@@ -435,7 +435,7 @@ class BankAccountClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/customers/{customer}/bank_accounts/{id}/verify",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.BankAccount,
             request_options=request_options or default_request_options(),
@@ -500,7 +500,7 @@ class AsyncBankAccountClient:
         return await self._base_client.request(
             method="DELETE",
             path=f"/v1/customers/{customer}/bank_accounts/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=typing.Union[
                 typing.Union[
@@ -595,7 +595,7 @@ class AsyncBankAccountClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/customers/{customer}/bank_accounts",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.CustomerBankAccountListResponse,
             request_options=request_options or default_request_options(),
@@ -649,7 +649,7 @@ class AsyncBankAccountClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/customers/{customer}/bank_accounts/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.BankAccount,
             request_options=request_options or default_request_options(),
@@ -722,7 +722,7 @@ class AsyncBankAccountClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/customers/{customer}/bank_accounts",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=typing.Union[
                 models.Account, models.BankAccount, models.Card, models.Source
@@ -808,7 +808,7 @@ class AsyncBankAccountClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/customers/{customer}/bank_accounts/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=typing.Union[models.Card, models.BankAccount, models.Source],
             request_options=request_options or default_request_options(),
@@ -863,7 +863,7 @@ class AsyncBankAccountClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/customers/{customer}/bank_accounts/{id}/verify",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.BankAccount,
             request_options=request_options or default_request_options(),

@@ -12,11 +12,7 @@ List payment method domains
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.payment_method_domain.list()
 ```
 
@@ -26,11 +22,7 @@ res = client.payment_method_domain.list()
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.payment_method_domain.list()
 ```
 
@@ -47,11 +39,7 @@ Retrieve a payment method domain
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.payment_method_domain.get(payment_method_domain="string")
 ```
 
@@ -61,11 +49,7 @@ res = client.payment_method_domain.get(payment_method_domain="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.payment_method_domain.get(payment_method_domain="string")
 ```
 
@@ -82,11 +66,7 @@ Create a payment method domain
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.payment_method_domain.create(domain_name="string")
 ```
 
@@ -96,11 +76,7 @@ res = client.payment_method_domain.create(domain_name="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.payment_method_domain.create(domain_name="string")
 ```
 
@@ -117,11 +93,7 @@ Update a payment method domain
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.payment_method_domain.update(payment_method_domain="string")
 ```
 
@@ -131,11 +103,7 @@ res = client.payment_method_domain.update(payment_method_domain="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.payment_method_domain.update(payment_method_domain="string")
 ```
 
@@ -157,11 +125,7 @@ The payment method doesn’t appear in Elements or Embedded Checkout for this do
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.payment_method_domain.validate(payment_method_domain="string")
 ```
 
@@ -171,10 +135,6 @@ res = client.payment_method_domain.validate(payment_method_domain="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.payment_method_domain.validate(payment_method_domain="string")
 ```

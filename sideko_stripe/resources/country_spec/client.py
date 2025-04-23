@@ -96,7 +96,7 @@ class CountrySpecClient:
         return self._base_client.request(
             method="GET",
             path="/v1/country_specs",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.CountrySpecListResponse,
             request_options=request_options or default_request_options(),
@@ -147,7 +147,7 @@ class CountrySpecClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/country_specs/{country}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.CountrySpec,
             request_options=request_options or default_request_options(),
@@ -237,7 +237,7 @@ class AsyncCountrySpecClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/country_specs",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.CountrySpecListResponse,
             request_options=request_options or default_request_options(),
@@ -288,7 +288,7 @@ class AsyncCountrySpecClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/country_specs/{country}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.CountrySpec,
             request_options=request_options or default_request_options(),

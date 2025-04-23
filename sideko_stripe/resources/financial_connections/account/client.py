@@ -134,7 +134,7 @@ class AccountClient:
         return self._base_client.request(
             method="GET",
             path="/v1/financial_connections/accounts",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.FinancialConnectionsAccountListResponse,
             request_options=request_options or default_request_options(),
@@ -188,7 +188,7 @@ class AccountClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/financial_connections/accounts/{account}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.FinancialConnectionsAccount,
             request_options=request_options or default_request_options(),
@@ -244,7 +244,7 @@ class AccountClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/financial_connections/accounts/{account}/disconnect",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.FinancialConnectionsAccount,
             request_options=request_options or default_request_options(),
@@ -301,7 +301,7 @@ class AccountClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/financial_connections/accounts/{account}/refresh",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.FinancialConnectionsAccount,
             request_options=request_options or default_request_options(),
@@ -356,7 +356,7 @@ class AccountClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/financial_connections/accounts/{account}/subscribe",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.FinancialConnectionsAccount,
             request_options=request_options or default_request_options(),
@@ -411,7 +411,7 @@ class AccountClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/financial_connections/accounts/{account}/unsubscribe",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.FinancialConnectionsAccount,
             request_options=request_options or default_request_options(),
@@ -533,7 +533,7 @@ class AsyncAccountClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/financial_connections/accounts",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.FinancialConnectionsAccountListResponse,
             request_options=request_options or default_request_options(),
@@ -587,7 +587,7 @@ class AsyncAccountClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/financial_connections/accounts/{account}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.FinancialConnectionsAccount,
             request_options=request_options or default_request_options(),
@@ -643,7 +643,7 @@ class AsyncAccountClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/financial_connections/accounts/{account}/disconnect",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.FinancialConnectionsAccount,
             request_options=request_options or default_request_options(),
@@ -700,7 +700,7 @@ class AsyncAccountClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/financial_connections/accounts/{account}/refresh",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.FinancialConnectionsAccount,
             request_options=request_options or default_request_options(),
@@ -755,7 +755,7 @@ class AsyncAccountClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/financial_connections/accounts/{account}/subscribe",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.FinancialConnectionsAccount,
             request_options=request_options or default_request_options(),
@@ -810,7 +810,7 @@ class AsyncAccountClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/financial_connections/accounts/{account}/unsubscribe",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.FinancialConnectionsAccount,
             request_options=request_options or default_request_options(),

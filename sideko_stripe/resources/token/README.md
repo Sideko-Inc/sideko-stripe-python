@@ -12,11 +12,7 @@ Retrieve a token
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.token.get(token="string")
 ```
 
@@ -26,11 +22,7 @@ res = client.token.get(token="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.token.get(token="string")
 ```
 
@@ -48,11 +40,7 @@ You can use this token with any v1 API method in place of a bank account diction
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.token.create()
 ```
 
@@ -62,10 +50,6 @@ res = client.token.create()
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.token.create()
 ```

@@ -215,7 +215,7 @@ class CardClient:
         return self._base_client.request(
             method="GET",
             path="/v1/issuing/cards",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.IssuingCardListResponse,
             request_options=request_options or default_request_options(),
@@ -267,7 +267,7 @@ class CardClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/issuing/cards/{card}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.IssuingCard,
             request_options=request_options or default_request_options(),
@@ -412,7 +412,7 @@ class CardClient:
         return self._base_client.request(
             method="POST",
             path="/v1/issuing/cards",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.IssuingCard,
             request_options=request_options or default_request_options(),
@@ -483,7 +483,7 @@ class CardClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/issuing/cards/{card}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.IssuingCard,
             request_options=request_options or default_request_options(),
@@ -690,7 +690,7 @@ class AsyncCardClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/issuing/cards",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.IssuingCardListResponse,
             request_options=request_options or default_request_options(),
@@ -742,7 +742,7 @@ class AsyncCardClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/issuing/cards/{card}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.IssuingCard,
             request_options=request_options or default_request_options(),
@@ -887,7 +887,7 @@ class AsyncCardClient:
         return await self._base_client.request(
             method="POST",
             path="/v1/issuing/cards",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.IssuingCard,
             request_options=request_options or default_request_options(),
@@ -958,7 +958,7 @@ class AsyncCardClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/issuing/cards/{card}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.IssuingCard,
             request_options=request_options or default_request_options(),

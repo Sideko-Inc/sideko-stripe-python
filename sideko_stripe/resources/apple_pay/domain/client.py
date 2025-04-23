@@ -45,7 +45,7 @@ class DomainClient:
         return self._base_client.request(
             method="DELETE",
             path=f"/v1/apple_pay/domains/{domain}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             cast_to=models.DeletedApplePayDomain,
             request_options=request_options or default_request_options(),
         )
@@ -139,7 +139,7 @@ class DomainClient:
         return self._base_client.request(
             method="GET",
             path="/v1/apple_pay/domains",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.ApplePayDomainListResponse,
             request_options=request_options or default_request_options(),
@@ -188,7 +188,7 @@ class DomainClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/apple_pay/domains/{domain}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.ApplePayDomain,
             request_options=request_options or default_request_options(),
@@ -234,7 +234,7 @@ class DomainClient:
         return self._base_client.request(
             method="POST",
             path="/v1/apple_pay/domains",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.ApplePayDomain,
             request_options=request_options or default_request_options(),
@@ -272,7 +272,7 @@ class AsyncDomainClient:
         return await self._base_client.request(
             method="DELETE",
             path=f"/v1/apple_pay/domains/{domain}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             cast_to=models.DeletedApplePayDomain,
             request_options=request_options or default_request_options(),
         )
@@ -366,7 +366,7 @@ class AsyncDomainClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/apple_pay/domains",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.ApplePayDomainListResponse,
             request_options=request_options or default_request_options(),
@@ -415,7 +415,7 @@ class AsyncDomainClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/apple_pay/domains/{domain}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.ApplePayDomain,
             request_options=request_options or default_request_options(),
@@ -461,7 +461,7 @@ class AsyncDomainClient:
         return await self._base_client.request(
             method="POST",
             path="/v1/apple_pay/domains",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.ApplePayDomain,
             request_options=request_options or default_request_options(),

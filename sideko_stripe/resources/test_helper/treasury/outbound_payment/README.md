@@ -12,11 +12,7 @@ Test mode: Update an OutboundPayment
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.test_helper.treasury.outbound_payment.update(
     id="string", tracking_details={"type_": "ach"}
 )
@@ -28,11 +24,7 @@ res = client.test_helper.treasury.outbound_payment.update(
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.test_helper.treasury.outbound_payment.update(
     id="string", tracking_details={"type_": "ach"}
 )
@@ -51,11 +43,7 @@ Test mode: Fail an OutboundPayment
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.test_helper.treasury.outbound_payment.fail(id="string")
 ```
 
@@ -65,11 +53,7 @@ res = client.test_helper.treasury.outbound_payment.fail(id="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.test_helper.treasury.outbound_payment.fail(id="string")
 ```
 
@@ -86,11 +70,7 @@ Test mode: Post an OutboundPayment
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.test_helper.treasury.outbound_payment.post(id="string")
 ```
 
@@ -100,11 +80,7 @@ res = client.test_helper.treasury.outbound_payment.post(id="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.test_helper.treasury.outbound_payment.post(id="string")
 ```
 
@@ -121,11 +97,7 @@ Test mode: Return an OutboundPayment
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.test_helper.treasury.outbound_payment.returned(id="string")
 ```
 
@@ -135,10 +107,6 @@ res = client.test_helper.treasury.outbound_payment.returned(id="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.test_helper.treasury.outbound_payment.returned(id="string")
 ```

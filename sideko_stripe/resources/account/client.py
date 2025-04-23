@@ -72,7 +72,7 @@ class AccountClient:
         return self._base_client.request(
             method="DELETE",
             path=f"/v1/accounts/{account}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             cast_to=models.DeletedAccount,
             request_options=request_options or default_request_options(),
         )
@@ -121,7 +121,7 @@ class AccountClient:
         return self._base_client.request(
             method="GET",
             path="/v1/account",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.Account,
             request_options=request_options or default_request_options(),
@@ -227,7 +227,7 @@ class AccountClient:
         return self._base_client.request(
             method="GET",
             path="/v1/accounts",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.AccountListResponse,
             request_options=request_options or default_request_options(),
@@ -279,7 +279,7 @@ class AccountClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/accounts/{account}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.Account,
             request_options=request_options or default_request_options(),
@@ -373,7 +373,7 @@ class AccountClient:
         return self._base_client.request(
             method="POST",
             path="/v1/accounts",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Account,
             request_options=request_options or default_request_options(),
@@ -470,7 +470,7 @@ class AccountClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/accounts/{account}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Account,
             request_options=request_options or default_request_options(),
@@ -524,7 +524,7 @@ class AccountClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/accounts/{account}/login_links",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.LoginLink,
             request_options=request_options or default_request_options(),
@@ -577,7 +577,7 @@ class AccountClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/accounts/{account}/reject",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Account,
             request_options=request_options or default_request_options(),
@@ -630,7 +630,7 @@ class AsyncAccountClient:
         return await self._base_client.request(
             method="DELETE",
             path=f"/v1/accounts/{account}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             cast_to=models.DeletedAccount,
             request_options=request_options or default_request_options(),
         )
@@ -679,7 +679,7 @@ class AsyncAccountClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/account",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.Account,
             request_options=request_options or default_request_options(),
@@ -785,7 +785,7 @@ class AsyncAccountClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/accounts",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.AccountListResponse,
             request_options=request_options or default_request_options(),
@@ -837,7 +837,7 @@ class AsyncAccountClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/accounts/{account}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.Account,
             request_options=request_options or default_request_options(),
@@ -931,7 +931,7 @@ class AsyncAccountClient:
         return await self._base_client.request(
             method="POST",
             path="/v1/accounts",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Account,
             request_options=request_options or default_request_options(),
@@ -1028,7 +1028,7 @@ class AsyncAccountClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/accounts/{account}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Account,
             request_options=request_options or default_request_options(),
@@ -1082,7 +1082,7 @@ class AsyncAccountClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/accounts/{account}/login_links",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.LoginLink,
             request_options=request_options or default_request_options(),
@@ -1135,7 +1135,7 @@ class AsyncAccountClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/accounts/{account}/reject",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Account,
             request_options=request_options or default_request_options(),

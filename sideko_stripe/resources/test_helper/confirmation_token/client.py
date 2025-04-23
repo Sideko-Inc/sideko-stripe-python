@@ -75,7 +75,7 @@ class ConfirmationTokenClient:
         return self._base_client.request(
             method="POST",
             path="/v1/test_helpers/confirmation_tokens",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.ConfirmationToken,
             request_options=request_options or default_request_options(),
@@ -146,7 +146,7 @@ class AsyncConfirmationTokenClient:
         return await self._base_client.request(
             method="POST",
             path="/v1/test_helpers/confirmation_tokens",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.ConfirmationToken,
             request_options=request_options or default_request_options(),

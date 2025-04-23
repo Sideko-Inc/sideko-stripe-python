@@ -178,7 +178,7 @@ class TransactionEntryClient:
         return self._base_client.request(
             method="GET",
             path="/v1/treasury/transaction_entries",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.TreasuryTransactionEntryListResponse,
             request_options=request_options or default_request_options(),
@@ -232,7 +232,7 @@ class TransactionEntryClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/treasury/transaction_entries/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.TreasuryTransactionEntry,
             request_options=request_options or default_request_options(),
@@ -403,7 +403,7 @@ class AsyncTransactionEntryClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/treasury/transaction_entries",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.TreasuryTransactionEntryListResponse,
             request_options=request_options or default_request_options(),
@@ -457,7 +457,7 @@ class AsyncTransactionEntryClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/treasury/transaction_entries/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.TreasuryTransactionEntry,
             request_options=request_options or default_request_options(),

@@ -14,11 +14,7 @@ funding instructions will be retrieved. In other words, we will return the same 
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.customer.funding_instruction.create(
     bank_transfer={"type_": "eu_bank_transfer"},
     currency="string",
@@ -33,11 +29,7 @@ res = client.customer.funding_instruction.create(
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.customer.funding_instruction.create(
     bank_transfer={"type_": "eu_bank_transfer"},
     currency="string",

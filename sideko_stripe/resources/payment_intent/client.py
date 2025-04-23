@@ -131,7 +131,7 @@ class PaymentIntentClient:
         return self._base_client.request(
             method="GET",
             path="/v1/payment_intents",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.PaymentIntentListResponse,
             request_options=request_options or default_request_options(),
@@ -219,7 +219,7 @@ class PaymentIntentClient:
         return self._base_client.request(
             method="GET",
             path="/v1/payment_intents/search",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.PaymentIntentSearchResponse,
             request_options=request_options or default_request_options(),
@@ -287,7 +287,7 @@ class PaymentIntentClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/payment_intents/{intent}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.PaymentIntent,
             request_options=request_options or default_request_options(),
@@ -597,7 +597,7 @@ class PaymentIntentClient:
         return self._base_client.request(
             method="POST",
             path="/v1/payment_intents",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.PaymentIntent,
             request_options=request_options or default_request_options(),
@@ -698,7 +698,7 @@ class PaymentIntentClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/payment_intents/{intent}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.PaymentIntent,
             request_options=request_options or default_request_options(),
@@ -752,7 +752,7 @@ class PaymentIntentClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/payment_intents/{intent}/apply_customer_balance",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.PaymentIntent,
             request_options=request_options or default_request_options(),
@@ -809,7 +809,7 @@ class PaymentIntentClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/payment_intents/{intent}/cancel",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.PaymentIntent,
             request_options=request_options or default_request_options(),
@@ -884,7 +884,7 @@ class PaymentIntentClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/payment_intents/{intent}/capture",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.PaymentIntent,
             request_options=request_options or default_request_options(),
@@ -999,7 +999,7 @@ class PaymentIntentClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/payment_intents/{intent}/confirm",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.PaymentIntent,
             request_options=request_options or default_request_options(),
@@ -1120,7 +1120,7 @@ class PaymentIntentClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/payment_intents/{intent}/increment_authorization",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.PaymentIntent,
             request_options=request_options or default_request_options(),
@@ -1184,7 +1184,7 @@ class PaymentIntentClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/payment_intents/{intent}/verify_microdeposits",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.PaymentIntent,
             request_options=request_options or default_request_options(),
@@ -1307,7 +1307,7 @@ class AsyncPaymentIntentClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/payment_intents",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.PaymentIntentListResponse,
             request_options=request_options or default_request_options(),
@@ -1395,7 +1395,7 @@ class AsyncPaymentIntentClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/payment_intents/search",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.PaymentIntentSearchResponse,
             request_options=request_options or default_request_options(),
@@ -1463,7 +1463,7 @@ class AsyncPaymentIntentClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/payment_intents/{intent}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.PaymentIntent,
             request_options=request_options or default_request_options(),
@@ -1773,7 +1773,7 @@ class AsyncPaymentIntentClient:
         return await self._base_client.request(
             method="POST",
             path="/v1/payment_intents",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.PaymentIntent,
             request_options=request_options or default_request_options(),
@@ -1874,7 +1874,7 @@ class AsyncPaymentIntentClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/payment_intents/{intent}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.PaymentIntent,
             request_options=request_options or default_request_options(),
@@ -1928,7 +1928,7 @@ class AsyncPaymentIntentClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/payment_intents/{intent}/apply_customer_balance",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.PaymentIntent,
             request_options=request_options or default_request_options(),
@@ -1985,7 +1985,7 @@ class AsyncPaymentIntentClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/payment_intents/{intent}/cancel",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.PaymentIntent,
             request_options=request_options or default_request_options(),
@@ -2060,7 +2060,7 @@ class AsyncPaymentIntentClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/payment_intents/{intent}/capture",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.PaymentIntent,
             request_options=request_options or default_request_options(),
@@ -2175,7 +2175,7 @@ class AsyncPaymentIntentClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/payment_intents/{intent}/confirm",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.PaymentIntent,
             request_options=request_options or default_request_options(),
@@ -2296,7 +2296,7 @@ class AsyncPaymentIntentClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/payment_intents/{intent}/increment_authorization",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.PaymentIntent,
             request_options=request_options or default_request_options(),
@@ -2360,7 +2360,7 @@ class AsyncPaymentIntentClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/payment_intents/{intent}/verify_microdeposits",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.PaymentIntent,
             request_options=request_options or default_request_options(),

@@ -155,7 +155,7 @@ class TopupsClient:
         return self._base_client.request(
             method="GET",
             path="/v1/topups",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.TopupsListResponse,
             request_options=request_options or default_request_options(),
@@ -207,7 +207,7 @@ class TopupsClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/topups/{topup}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.Topup,
             request_options=request_options or default_request_options(),
@@ -306,7 +306,7 @@ class TopupsClient:
         return self._base_client.request(
             method="POST",
             path="/v1/topups",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Topup,
             request_options=request_options or default_request_options(),
@@ -363,7 +363,7 @@ class TopupsClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/topups/{topup}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Topup,
             request_options=request_options or default_request_options(),
@@ -416,7 +416,7 @@ class TopupsClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/topups/{topup}/cancel",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Topup,
             request_options=request_options or default_request_options(),
@@ -563,7 +563,7 @@ class AsyncTopupsClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/topups",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.TopupsListResponse,
             request_options=request_options or default_request_options(),
@@ -615,7 +615,7 @@ class AsyncTopupsClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/topups/{topup}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.Topup,
             request_options=request_options or default_request_options(),
@@ -714,7 +714,7 @@ class AsyncTopupsClient:
         return await self._base_client.request(
             method="POST",
             path="/v1/topups",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Topup,
             request_options=request_options or default_request_options(),
@@ -771,7 +771,7 @@ class AsyncTopupsClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/topups/{topup}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Topup,
             request_options=request_options or default_request_options(),
@@ -824,7 +824,7 @@ class AsyncTopupsClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/topups/{topup}/cancel",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Topup,
             request_options=request_options or default_request_options(),

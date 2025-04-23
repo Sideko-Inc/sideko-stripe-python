@@ -62,7 +62,7 @@ class RefundClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/test_helpers/refunds/{refund}/expire",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Refund,
             request_options=request_options or default_request_options(),
@@ -120,7 +120,7 @@ class AsyncRefundClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/test_helpers/refunds/{refund}/expire",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Refund,
             request_options=request_options or default_request_options(),

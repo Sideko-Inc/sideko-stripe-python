@@ -169,7 +169,7 @@ class BalanceTransactionClient:
         return self._base_client.request(
             method="GET",
             path="/v1/balance_transactions",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.BalanceTransactionListResponse,
             request_options=request_options or default_request_options(),
@@ -225,7 +225,7 @@ class BalanceTransactionClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/balance_transactions/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.BalanceTransaction,
             request_options=request_options or default_request_options(),
@@ -388,7 +388,7 @@ class AsyncBalanceTransactionClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/balance_transactions",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.BalanceTransactionListResponse,
             request_options=request_options or default_request_options(),
@@ -444,7 +444,7 @@ class AsyncBalanceTransactionClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/balance_transactions/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.BalanceTransaction,
             request_options=request_options or default_request_options(),

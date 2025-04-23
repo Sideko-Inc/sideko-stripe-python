@@ -51,7 +51,7 @@ class ValueListClient:
         return self._base_client.request(
             method="DELETE",
             path=f"/v1/radar/value_lists/{value_list}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             cast_to=models.DeletedRadarValueList,
             request_options=request_options or default_request_options(),
         )
@@ -177,7 +177,7 @@ class ValueListClient:
         return self._base_client.request(
             method="GET",
             path="/v1/radar/value_lists",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.RadarValueListListResponse,
             request_options=request_options or default_request_options(),
@@ -228,7 +228,7 @@ class ValueListClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/radar/value_lists/{value_list}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.RadarValueList,
             request_options=request_options or default_request_options(),
@@ -319,7 +319,7 @@ class ValueListClient:
         return self._base_client.request(
             method="POST",
             path="/v1/radar/value_lists",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.RadarValueList,
             request_options=request_options or default_request_options(),
@@ -376,7 +376,7 @@ class ValueListClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/radar/value_lists/{value_list}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.RadarValueList,
             request_options=request_options or default_request_options(),
@@ -419,7 +419,7 @@ class AsyncValueListClient:
         return await self._base_client.request(
             method="DELETE",
             path=f"/v1/radar/value_lists/{value_list}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             cast_to=models.DeletedRadarValueList,
             request_options=request_options or default_request_options(),
         )
@@ -545,7 +545,7 @@ class AsyncValueListClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/radar/value_lists",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.RadarValueListListResponse,
             request_options=request_options or default_request_options(),
@@ -596,7 +596,7 @@ class AsyncValueListClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/radar/value_lists/{value_list}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.RadarValueList,
             request_options=request_options or default_request_options(),
@@ -687,7 +687,7 @@ class AsyncValueListClient:
         return await self._base_client.request(
             method="POST",
             path="/v1/radar/value_lists",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.RadarValueList,
             request_options=request_options or default_request_options(),
@@ -744,7 +744,7 @@ class AsyncValueListClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/radar/value_lists/{value_list}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.RadarValueList,
             request_options=request_options or default_request_options(),

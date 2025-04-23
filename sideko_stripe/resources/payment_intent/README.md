@@ -12,11 +12,7 @@ List all PaymentIntents
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.payment_intent.list()
 ```
 
@@ -26,11 +22,7 @@ res = client.payment_intent.list()
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.payment_intent.list()
 ```
 
@@ -50,11 +42,7 @@ to an hour behind during outages. Search functionality is not available to merch
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.payment_intent.search(query="string")
 ```
 
@@ -64,11 +52,7 @@ res = client.payment_intent.search(query="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.payment_intent.search(query="string")
 ```
 
@@ -89,11 +73,7 @@ Retrieve a PaymentIntent
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.payment_intent.get(intent="string")
 ```
 
@@ -103,11 +83,7 @@ res = client.payment_intent.get(intent="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.payment_intent.get(intent="string")
 ```
 
@@ -133,11 +109,7 @@ available in the <a href="/docs/api/payment_intents/confirm">confirm API</a> whe
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.payment_intent.create(amount=123, currency="string")
 ```
 
@@ -147,11 +119,7 @@ res = client.payment_intent.create(amount=123, currency="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.payment_intent.create(amount=123, currency="string")
 ```
 
@@ -174,11 +142,7 @@ the <a href="/docs/api/payment_intents/confirm">confirm API</a> instead.</p>
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.payment_intent.update(intent="string")
 ```
 
@@ -188,11 +152,7 @@ res = client.payment_intent.update(intent="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.payment_intent.update(intent="string")
 ```
 
@@ -209,11 +169,7 @@ Reconcile a customer_balance PaymentIntent
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.payment_intent.apply_customer_balance(intent="string")
 ```
 
@@ -223,11 +179,7 @@ res = client.payment_intent.apply_customer_balance(intent="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.payment_intent.apply_customer_balance(intent="string")
 ```
 
@@ -248,11 +200,7 @@ Cancel a PaymentIntent
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.payment_intent.cancel(intent="string")
 ```
 
@@ -262,11 +210,7 @@ res = client.payment_intent.cancel(intent="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.payment_intent.cancel(intent="string")
 ```
 
@@ -287,11 +231,7 @@ Capture a PaymentIntent
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.payment_intent.capture(intent="string")
 ```
 
@@ -301,11 +241,7 @@ res = client.payment_intent.capture(intent="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.payment_intent.capture(intent="string")
 ```
 
@@ -346,11 +282,7 @@ transition the PaymentIntent to the <code>canceled</code> state.</p>
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.payment_intent.confirm(intent="string")
 ```
 
@@ -360,11 +292,7 @@ res = client.payment_intent.confirm(intent="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.payment_intent.confirm(intent="string")
 ```
 
@@ -404,11 +332,7 @@ After it’s captured, a PaymentIntent can no longer be incremented.</p>
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.payment_intent.increment_authorization(amount=123, intent="string")
 ```
 
@@ -418,11 +342,7 @@ res = client.payment_intent.increment_authorization(amount=123, intent="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.payment_intent.increment_authorization(amount=123, intent="string")
 ```
 
@@ -439,11 +359,7 @@ Verify microdeposits on a PaymentIntent
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.payment_intent.verify_microdeposits(intent="string")
 ```
 
@@ -453,10 +369,6 @@ res = client.payment_intent.verify_microdeposits(intent="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.payment_intent.verify_microdeposits(intent="string")
 ```

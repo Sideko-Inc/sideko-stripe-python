@@ -12,11 +12,7 @@ List Accounts
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.financial_connections.account.list()
 ```
 
@@ -26,11 +22,7 @@ res = client.financial_connections.account.list()
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.financial_connections.account.list()
 ```
 
@@ -47,11 +39,7 @@ Retrieve an Account
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.financial_connections.account.get(account="string")
 ```
 
@@ -61,11 +49,7 @@ res = client.financial_connections.account.get(account="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.financial_connections.account.get(account="string")
 ```
 
@@ -82,11 +66,7 @@ Disconnect an Account
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.financial_connections.account.disconnect(account="string")
 ```
 
@@ -96,11 +76,7 @@ res = client.financial_connections.account.disconnect(account="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.financial_connections.account.disconnect(account="string")
 ```
 
@@ -117,11 +93,7 @@ Refresh Account data
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.financial_connections.account.refresh(
     account="string", features=["balance"]
 )
@@ -133,11 +105,7 @@ res = client.financial_connections.account.refresh(
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.financial_connections.account.refresh(
     account="string", features=["balance"]
 )
@@ -156,11 +124,7 @@ Subscribe to data refreshes for an Account
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.financial_connections.account.subscribe(
     account="string", features=["transactions"]
 )
@@ -172,11 +136,7 @@ res = client.financial_connections.account.subscribe(
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.financial_connections.account.subscribe(
     account="string", features=["transactions"]
 )
@@ -195,11 +155,7 @@ Unsubscribe from data refreshes for an Account
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.financial_connections.account.unsubscribe(
     account="string", features=["transactions"]
 )
@@ -211,11 +167,7 @@ res = client.financial_connections.account.unsubscribe(
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.financial_connections.account.unsubscribe(
     account="string", features=["transactions"]
 )

@@ -12,11 +12,7 @@ List customer balance transactions
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.customer.balance_transaction.list(customer="string")
 ```
 
@@ -26,11 +22,7 @@ res = client.customer.balance_transaction.list(customer="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.customer.balance_transaction.list(customer="string")
 ```
 
@@ -47,11 +39,7 @@ Retrieve a customer balance transaction
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.customer.balance_transaction.get(customer="string", transaction="string")
 ```
 
@@ -61,11 +49,7 @@ res = client.customer.balance_transaction.get(customer="string", transaction="st
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.customer.balance_transaction.get(
     customer="string", transaction="string"
 )
@@ -84,11 +68,7 @@ Create a customer balance transaction
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.customer.balance_transaction.create(
     amount=123, currency="string", customer="string"
 )
@@ -100,11 +80,7 @@ res = client.customer.balance_transaction.create(
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.customer.balance_transaction.create(
     amount=123, currency="string", customer="string"
 )
@@ -123,11 +99,7 @@ Update a customer credit balance transaction
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.customer.balance_transaction.update(
     customer="string", transaction="string"
 )
@@ -139,11 +111,7 @@ res = client.customer.balance_transaction.update(
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.customer.balance_transaction.update(
     customer="string", transaction="string"
 )

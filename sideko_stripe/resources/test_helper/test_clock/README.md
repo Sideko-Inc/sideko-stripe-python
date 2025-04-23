@@ -12,11 +12,7 @@ Delete a test clock
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.test_helper.test_clock.delete(test_clock="string")
 ```
 
@@ -26,11 +22,7 @@ res = client.test_helper.test_clock.delete(test_clock="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.test_helper.test_clock.delete(test_clock="string")
 ```
 
@@ -47,11 +39,7 @@ List all test clocks
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.test_helper.test_clock.list()
 ```
 
@@ -61,11 +49,7 @@ res = client.test_helper.test_clock.list()
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.test_helper.test_clock.list()
 ```
 
@@ -82,11 +66,7 @@ Retrieve a test clock
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.test_helper.test_clock.get(test_clock="string")
 ```
 
@@ -96,11 +76,7 @@ res = client.test_helper.test_clock.get(test_clock="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.test_helper.test_clock.get(test_clock="string")
 ```
 
@@ -117,11 +93,7 @@ Create a test clock
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.test_helper.test_clock.create(frozen_time=123)
 ```
 
@@ -131,11 +103,7 @@ res = client.test_helper.test_clock.create(frozen_time=123)
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.test_helper.test_clock.create(frozen_time=123)
 ```
 
@@ -152,11 +120,7 @@ Advance a test clock
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.test_helper.test_clock.advance(frozen_time=123, test_clock="string")
 ```
 
@@ -166,10 +130,6 @@ res = client.test_helper.test_clock.advance(frozen_time=123, test_clock="string"
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.test_helper.test_clock.advance(frozen_time=123, test_clock="string")
 ```

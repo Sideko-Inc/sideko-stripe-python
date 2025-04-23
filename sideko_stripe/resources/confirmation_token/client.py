@@ -63,7 +63,7 @@ class ConfirmationTokenClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/confirmation_tokens/{confirmation_token}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.ConfirmationToken,
             request_options=request_options or default_request_options(),
@@ -120,7 +120,7 @@ class AsyncConfirmationTokenClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/confirmation_tokens/{confirmation_token}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.ConfirmationToken,
             request_options=request_options or default_request_options(),

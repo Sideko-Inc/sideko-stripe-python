@@ -113,7 +113,7 @@ class RequestClient:
         return self._base_client.request(
             method="GET",
             path="/v1/forwarding/requests",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.ForwardingRequestListResponse,
             request_options=request_options or default_request_options(),
@@ -164,7 +164,7 @@ class RequestClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/forwarding/requests/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.ForwardingRequest,
             request_options=request_options or default_request_options(),
@@ -257,7 +257,7 @@ class RequestClient:
         return self._base_client.request(
             method="POST",
             path="/v1/forwarding/requests",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.ForwardingRequest,
             request_options=request_options or default_request_options(),
@@ -362,7 +362,7 @@ class AsyncRequestClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/forwarding/requests",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.ForwardingRequestListResponse,
             request_options=request_options or default_request_options(),
@@ -413,7 +413,7 @@ class AsyncRequestClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/forwarding/requests/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.ForwardingRequest,
             request_options=request_options or default_request_options(),
@@ -506,7 +506,7 @@ class AsyncRequestClient:
         return await self._base_client.request(
             method="POST",
             path="/v1/forwarding/requests",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.ForwardingRequest,
             request_options=request_options or default_request_options(),

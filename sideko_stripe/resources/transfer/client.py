@@ -143,7 +143,7 @@ class TransferClient:
         return self._base_client.request(
             method="GET",
             path="/v1/transfers",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.TransferListResponse,
             request_options=request_options or default_request_options(),
@@ -195,7 +195,7 @@ class TransferClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/transfers/{transfer}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.Transfer,
             request_options=request_options or default_request_options(),
@@ -301,7 +301,7 @@ class TransferClient:
         return self._base_client.request(
             method="POST",
             path="/v1/transfers",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Transfer,
             request_options=request_options or default_request_options(),
@@ -360,7 +360,7 @@ class TransferClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/transfers/{transfer}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Transfer,
             request_options=request_options or default_request_options(),
@@ -495,7 +495,7 @@ class AsyncTransferClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/transfers",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.TransferListResponse,
             request_options=request_options or default_request_options(),
@@ -547,7 +547,7 @@ class AsyncTransferClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/transfers/{transfer}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.Transfer,
             request_options=request_options or default_request_options(),
@@ -653,7 +653,7 @@ class AsyncTransferClient:
         return await self._base_client.request(
             method="POST",
             path="/v1/transfers",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Transfer,
             request_options=request_options or default_request_options(),
@@ -712,7 +712,7 @@ class AsyncTransferClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/transfers/{transfer}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Transfer,
             request_options=request_options or default_request_options(),

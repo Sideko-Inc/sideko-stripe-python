@@ -25,12 +25,7 @@ def test_refund_200_generated_success():
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling sync method with example data
-    client = Stripe(
-        username="API_USERNAME",
-        password="API_PASSWORD",
-        token="API_TOKEN",
-        environment=Environment.MOCK_SERVER,
-    )
+    client = Stripe(token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = client.test_helper.issuing.transaction.refund(transaction="string")
     try:
         pydantic.TypeAdapter(models.IssuingTransaction).validate_python(response)
@@ -60,12 +55,7 @@ async def test_await_refund_200_generated_success():
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling async method with example data
-    client = AsyncStripe(
-        username="API_USERNAME",
-        password="API_PASSWORD",
-        token="API_TOKEN",
-        environment=Environment.MOCK_SERVER,
-    )
+    client = AsyncStripe(token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = await client.test_helper.issuing.transaction.refund(transaction="string")
     try:
         pydantic.TypeAdapter(models.IssuingTransaction).validate_python(response)
@@ -94,12 +84,7 @@ def test_create_unlinked_refund_200_success_default():
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling sync method with example data
-    client = Stripe(
-        username="API_USERNAME",
-        password="API_PASSWORD",
-        token="API_TOKEN",
-        environment=Environment.MOCK_SERVER,
-    )
+    client = Stripe(token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = client.test_helper.issuing.transaction.create_unlinked_refund(
         amount=123, card="string"
     )
@@ -131,12 +116,7 @@ async def test_await_create_unlinked_refund_200_success_default():
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling async method with example data
-    client = AsyncStripe(
-        username="API_USERNAME",
-        password="API_PASSWORD",
-        token="API_TOKEN",
-        environment=Environment.MOCK_SERVER,
-    )
+    client = AsyncStripe(token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = await client.test_helper.issuing.transaction.create_unlinked_refund(
         amount=123, card="string"
     )
@@ -167,12 +147,7 @@ def test_create_force_capture_200_success_default():
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling sync method with example data
-    client = Stripe(
-        username="API_USERNAME",
-        password="API_PASSWORD",
-        token="API_TOKEN",
-        environment=Environment.MOCK_SERVER,
-    )
+    client = Stripe(token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = client.test_helper.issuing.transaction.create_force_capture(
         amount=123, card="string"
     )
@@ -204,12 +179,7 @@ async def test_await_create_force_capture_200_success_default():
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling async method with example data
-    client = AsyncStripe(
-        username="API_USERNAME",
-        password="API_PASSWORD",
-        token="API_TOKEN",
-        environment=Environment.MOCK_SERVER,
-    )
+    client = AsyncStripe(token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = await client.test_helper.issuing.transaction.create_force_capture(
         amount=123, card="string"
     )

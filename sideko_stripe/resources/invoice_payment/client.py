@@ -142,7 +142,7 @@ class InvoicePaymentClient:
         return self._base_client.request(
             method="GET",
             path="/v1/invoice_payments",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.InvoicePaymentListResponse,
             request_options=request_options or default_request_options(),
@@ -194,7 +194,7 @@ class InvoicePaymentClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/invoice_payments/{invoice_payment}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.InvoicePayment,
             request_options=request_options or default_request_options(),
@@ -329,7 +329,7 @@ class AsyncInvoicePaymentClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/invoice_payments",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.InvoicePaymentListResponse,
             request_options=request_options or default_request_options(),
@@ -381,7 +381,7 @@ class AsyncInvoicePaymentClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/invoice_payments/{invoice_payment}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.InvoicePayment,
             request_options=request_options or default_request_options(),

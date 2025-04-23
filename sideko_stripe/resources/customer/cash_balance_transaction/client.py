@@ -101,7 +101,7 @@ class CashBalanceTransactionClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/customers/{customer}/cash_balance_transactions",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.CustomerCashBalanceTransactionListResponse,
             request_options=request_options or default_request_options(),
@@ -159,7 +159,7 @@ class CashBalanceTransactionClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/customers/{customer}/cash_balance_transactions/{transaction}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.CustomerCashBalanceTransaction,
             request_options=request_options or default_request_options(),
@@ -254,7 +254,7 @@ class AsyncCashBalanceTransactionClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/customers/{customer}/cash_balance_transactions",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.CustomerCashBalanceTransactionListResponse,
             request_options=request_options or default_request_options(),
@@ -312,7 +312,7 @@ class AsyncCashBalanceTransactionClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/customers/{customer}/cash_balance_transactions/{transaction}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.CustomerCashBalanceTransaction,
             request_options=request_options or default_request_options(),

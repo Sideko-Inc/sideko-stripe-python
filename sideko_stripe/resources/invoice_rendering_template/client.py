@@ -114,7 +114,7 @@ class InvoiceRenderingTemplateClient:
         return self._base_client.request(
             method="GET",
             path="/v1/invoice_rendering_templates",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.InvoiceRenderingTemplateListResponse,
             request_options=request_options or default_request_options(),
@@ -177,7 +177,7 @@ class InvoiceRenderingTemplateClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/invoice_rendering_templates/{template}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.InvoiceRenderingTemplate,
             request_options=request_options or default_request_options(),
@@ -230,7 +230,7 @@ class InvoiceRenderingTemplateClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/invoice_rendering_templates/{template}/archive",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.InvoiceRenderingTemplate,
             request_options=request_options or default_request_options(),
@@ -283,7 +283,7 @@ class InvoiceRenderingTemplateClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/invoice_rendering_templates/{template}/unarchive",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.InvoiceRenderingTemplate,
             request_options=request_options or default_request_options(),
@@ -389,7 +389,7 @@ class AsyncInvoiceRenderingTemplateClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/invoice_rendering_templates",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.InvoiceRenderingTemplateListResponse,
             request_options=request_options or default_request_options(),
@@ -452,7 +452,7 @@ class AsyncInvoiceRenderingTemplateClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/invoice_rendering_templates/{template}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.InvoiceRenderingTemplate,
             request_options=request_options or default_request_options(),
@@ -505,7 +505,7 @@ class AsyncInvoiceRenderingTemplateClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/invoice_rendering_templates/{template}/archive",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.InvoiceRenderingTemplate,
             request_options=request_options or default_request_options(),
@@ -558,7 +558,7 @@ class AsyncInvoiceRenderingTemplateClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/invoice_rendering_templates/{template}/unarchive",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.InvoiceRenderingTemplate,
             request_options=request_options or default_request_options(),

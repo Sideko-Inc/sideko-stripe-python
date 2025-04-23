@@ -236,7 +236,7 @@ class PaymentMethodClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/customers/{customer}/payment_methods",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.CustomerPaymentMethodListResponse,
             request_options=request_options or default_request_options(),
@@ -290,7 +290,7 @@ class PaymentMethodClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/customers/{customer}/payment_methods/{payment_method}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.PaymentMethod,
             request_options=request_options or default_request_options(),
@@ -519,7 +519,7 @@ class AsyncPaymentMethodClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/customers/{customer}/payment_methods",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.CustomerPaymentMethodListResponse,
             request_options=request_options or default_request_options(),
@@ -575,7 +575,7 @@ class AsyncPaymentMethodClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/customers/{customer}/payment_methods/{payment_method}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.PaymentMethod,
             request_options=request_options or default_request_options(),

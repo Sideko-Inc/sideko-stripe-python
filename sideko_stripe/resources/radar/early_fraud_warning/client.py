@@ -143,7 +143,7 @@ class EarlyFraudWarningClient:
         return self._base_client.request(
             method="GET",
             path="/v1/radar/early_fraud_warnings",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.RadarEarlyFraudWarningListResponse,
             request_options=request_options or default_request_options(),
@@ -199,7 +199,7 @@ class EarlyFraudWarningClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/radar/early_fraud_warnings/{early_fraud_warning}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.RadarEarlyFraudWarning,
             request_options=request_options or default_request_options(),
@@ -336,7 +336,7 @@ class AsyncEarlyFraudWarningClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/radar/early_fraud_warnings",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.RadarEarlyFraudWarningListResponse,
             request_options=request_options or default_request_options(),
@@ -392,7 +392,7 @@ class AsyncEarlyFraudWarningClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/radar/early_fraud_warnings/{early_fraud_warning}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.RadarEarlyFraudWarning,
             request_options=request_options or default_request_options(),

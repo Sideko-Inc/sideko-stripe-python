@@ -50,7 +50,7 @@ class ConfigurationClient:
         return self._base_client.request(
             method="DELETE",
             path=f"/v1/terminal/configurations/{configuration}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             cast_to=models.DeletedTerminalConfiguration,
             request_options=request_options or default_request_options(),
         )
@@ -149,7 +149,7 @@ class ConfigurationClient:
         return self._base_client.request(
             method="GET",
             path="/v1/terminal/configurations",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.TerminalConfigurationListResponse,
             request_options=request_options or default_request_options(),
@@ -205,7 +205,7 @@ class ConfigurationClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/terminal/configurations/{configuration}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=typing.Union[
                 models.TerminalConfiguration, models.DeletedTerminalConfiguration
@@ -280,7 +280,7 @@ class ConfigurationClient:
         return self._base_client.request(
             method="POST",
             path="/v1/terminal/configurations",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.TerminalConfiguration,
             request_options=request_options or default_request_options(),
@@ -357,7 +357,7 @@ class ConfigurationClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/terminal/configurations/{configuration}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=typing.Union[
                 models.TerminalConfiguration, models.DeletedTerminalConfiguration
@@ -402,7 +402,7 @@ class AsyncConfigurationClient:
         return await self._base_client.request(
             method="DELETE",
             path=f"/v1/terminal/configurations/{configuration}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             cast_to=models.DeletedTerminalConfiguration,
             request_options=request_options or default_request_options(),
         )
@@ -501,7 +501,7 @@ class AsyncConfigurationClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/terminal/configurations",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.TerminalConfigurationListResponse,
             request_options=request_options or default_request_options(),
@@ -557,7 +557,7 @@ class AsyncConfigurationClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/terminal/configurations/{configuration}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=typing.Union[
                 models.TerminalConfiguration, models.DeletedTerminalConfiguration
@@ -632,7 +632,7 @@ class AsyncConfigurationClient:
         return await self._base_client.request(
             method="POST",
             path="/v1/terminal/configurations",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.TerminalConfiguration,
             request_options=request_options or default_request_options(),
@@ -709,7 +709,7 @@ class AsyncConfigurationClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/terminal/configurations/{configuration}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=typing.Union[
                 models.TerminalConfiguration, models.DeletedTerminalConfiguration

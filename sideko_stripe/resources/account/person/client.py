@@ -52,7 +52,7 @@ class PersonClient:
         return self._base_client.request(
             method="DELETE",
             path=f"/v1/accounts/{account}/persons/{person}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             cast_to=models.DeletedPerson,
             request_options=request_options or default_request_options(),
         )
@@ -156,7 +156,7 @@ class PersonClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/accounts/{account}/persons",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.AccountPersonListResponse,
             request_options=request_options or default_request_options(),
@@ -210,7 +210,7 @@ class PersonClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/accounts/{account}/persons/{person}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.Person,
             request_options=request_options or default_request_options(),
@@ -321,7 +321,7 @@ class PersonClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/accounts/{account}/persons",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Person,
             request_options=request_options or default_request_options(),
@@ -434,7 +434,7 @@ class PersonClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/accounts/{account}/persons/{person}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Person,
             request_options=request_options or default_request_options(),
@@ -479,7 +479,7 @@ class AsyncPersonClient:
         return await self._base_client.request(
             method="DELETE",
             path=f"/v1/accounts/{account}/persons/{person}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             cast_to=models.DeletedPerson,
             request_options=request_options or default_request_options(),
         )
@@ -583,7 +583,7 @@ class AsyncPersonClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/accounts/{account}/persons",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.AccountPersonListResponse,
             request_options=request_options or default_request_options(),
@@ -637,7 +637,7 @@ class AsyncPersonClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/accounts/{account}/persons/{person}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.Person,
             request_options=request_options or default_request_options(),
@@ -748,7 +748,7 @@ class AsyncPersonClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/accounts/{account}/persons",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Person,
             request_options=request_options or default_request_options(),
@@ -861,7 +861,7 @@ class AsyncPersonClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/accounts/{account}/persons/{person}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Person,
             request_options=request_options or default_request_options(),

@@ -12,11 +12,7 @@ List billing meter event summaries
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.billing.meter.event_summaries.list(
     customer="string", end_time=123, id="string", start_time=123
 )
@@ -28,11 +24,7 @@ res = client.billing.meter.event_summaries.list(
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.billing.meter.event_summaries.list(
     customer="string", end_time=123, id="string", start_time=123
 )

@@ -25,12 +25,7 @@ def test_unarchive_200_generated_success():
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling sync method with example data
-    client = Stripe(
-        username="API_USERNAME",
-        password="API_PASSWORD",
-        token="API_TOKEN",
-        environment=Environment.MOCK_SERVER,
-    )
+    client = Stripe(token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = client.invoice_rendering_template.unarchive(template="string")
     try:
         pydantic.TypeAdapter(models.InvoiceRenderingTemplate).validate_python(response)
@@ -60,12 +55,7 @@ async def test_await_unarchive_200_generated_success():
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling async method with example data
-    client = AsyncStripe(
-        username="API_USERNAME",
-        password="API_PASSWORD",
-        token="API_TOKEN",
-        environment=Environment.MOCK_SERVER,
-    )
+    client = AsyncStripe(token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = await client.invoice_rendering_template.unarchive(template="string")
     try:
         pydantic.TypeAdapter(models.InvoiceRenderingTemplate).validate_python(response)
@@ -94,12 +84,7 @@ def test_archive_200_generated_success():
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling sync method with example data
-    client = Stripe(
-        username="API_USERNAME",
-        password="API_PASSWORD",
-        token="API_TOKEN",
-        environment=Environment.MOCK_SERVER,
-    )
+    client = Stripe(token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = client.invoice_rendering_template.archive(template="string")
     try:
         pydantic.TypeAdapter(models.InvoiceRenderingTemplate).validate_python(response)
@@ -129,12 +114,7 @@ async def test_await_archive_200_generated_success():
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling async method with example data
-    client = AsyncStripe(
-        username="API_USERNAME",
-        password="API_PASSWORD",
-        token="API_TOKEN",
-        environment=Environment.MOCK_SERVER,
-    )
+    client = AsyncStripe(token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = await client.invoice_rendering_template.archive(template="string")
     try:
         pydantic.TypeAdapter(models.InvoiceRenderingTemplate).validate_python(response)
@@ -163,12 +143,7 @@ def test_get_200_generated_success():
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling sync method with example data
-    client = Stripe(
-        username="API_USERNAME",
-        password="API_PASSWORD",
-        token="API_TOKEN",
-        environment=Environment.MOCK_SERVER,
-    )
+    client = Stripe(token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = client.invoice_rendering_template.get(template="string")
     try:
         pydantic.TypeAdapter(models.InvoiceRenderingTemplate).validate_python(response)
@@ -198,12 +173,7 @@ async def test_await_get_200_generated_success():
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling async method with example data
-    client = AsyncStripe(
-        username="API_USERNAME",
-        password="API_PASSWORD",
-        token="API_TOKEN",
-        environment=Environment.MOCK_SERVER,
-    )
+    client = AsyncStripe(token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = await client.invoice_rendering_template.get(template="string")
     try:
         pydantic.TypeAdapter(models.InvoiceRenderingTemplate).validate_python(response)
@@ -232,12 +202,7 @@ def test_list_200_generated_success():
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling sync method with example data
-    client = Stripe(
-        username="API_USERNAME",
-        password="API_PASSWORD",
-        token="API_TOKEN",
-        environment=Environment.MOCK_SERVER,
-    )
+    client = Stripe(token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = client.invoice_rendering_template.list()
     try:
         pydantic.TypeAdapter(
@@ -269,12 +234,7 @@ async def test_await_list_200_generated_success():
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling async method with example data
-    client = AsyncStripe(
-        username="API_USERNAME",
-        password="API_PASSWORD",
-        token="API_TOKEN",
-        environment=Environment.MOCK_SERVER,
-    )
+    client = AsyncStripe(token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = await client.invoice_rendering_template.list()
     try:
         pydantic.TypeAdapter(

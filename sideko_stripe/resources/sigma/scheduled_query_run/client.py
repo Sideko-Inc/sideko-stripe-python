@@ -99,7 +99,7 @@ class ScheduledQueryRunClient:
         return self._base_client.request(
             method="GET",
             path="/v1/sigma/scheduled_query_runs",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.SigmaScheduledQueryRunListResponse,
             request_options=request_options or default_request_options(),
@@ -151,7 +151,7 @@ class ScheduledQueryRunClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/sigma/scheduled_query_runs/{scheduled_query_run}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.ScheduledQueryRun,
             request_options=request_options or default_request_options(),
@@ -244,7 +244,7 @@ class AsyncScheduledQueryRunClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/sigma/scheduled_query_runs",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.SigmaScheduledQueryRunListResponse,
             request_options=request_options or default_request_options(),
@@ -296,7 +296,7 @@ class AsyncScheduledQueryRunClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/sigma/scheduled_query_runs/{scheduled_query_run}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.ScheduledQueryRun,
             request_options=request_options or default_request_options(),

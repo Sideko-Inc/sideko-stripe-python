@@ -60,7 +60,7 @@ class ConnectionTokenClient:
         return self._base_client.request(
             method="POST",
             path="/v1/terminal/connection_tokens",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.TerminalConnectionToken,
             request_options=request_options or default_request_options(),
@@ -116,7 +116,7 @@ class AsyncConnectionTokenClient:
         return await self._base_client.request(
             method="POST",
             path="/v1/terminal/connection_tokens",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.TerminalConnectionToken,
             request_options=request_options or default_request_options(),

@@ -72,7 +72,7 @@ class SourceClient:
         return self._base_client.request(
             method="DELETE",
             path=f"/v1/customers/{customer}/sources/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=typing.Union[
                 typing.Union[
@@ -177,7 +177,7 @@ class SourceClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/customers/{customer}/sources",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.CustomerSourceListResponse,
             request_options=request_options or default_request_options(),
@@ -231,7 +231,7 @@ class SourceClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/customers/{customer}/sources/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=typing.Union[
                 models.Account, models.BankAccount, models.Card, models.Source
@@ -306,7 +306,7 @@ class SourceClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/customers/{customer}/sources",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=typing.Union[
                 models.Account, models.BankAccount, models.Card, models.Source
@@ -392,7 +392,7 @@ class SourceClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/customers/{customer}/sources/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=typing.Union[models.Card, models.BankAccount, models.Source],
             request_options=request_options or default_request_options(),
@@ -447,7 +447,7 @@ class SourceClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/customers/{customer}/sources/{id}/verify",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.BankAccount,
             request_options=request_options or default_request_options(),
@@ -512,7 +512,7 @@ class AsyncSourceClient:
         return await self._base_client.request(
             method="DELETE",
             path=f"/v1/customers/{customer}/sources/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=typing.Union[
                 typing.Union[
@@ -617,7 +617,7 @@ class AsyncSourceClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/customers/{customer}/sources",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.CustomerSourceListResponse,
             request_options=request_options or default_request_options(),
@@ -671,7 +671,7 @@ class AsyncSourceClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/customers/{customer}/sources/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=typing.Union[
                 models.Account, models.BankAccount, models.Card, models.Source
@@ -746,7 +746,7 @@ class AsyncSourceClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/customers/{customer}/sources",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=typing.Union[
                 models.Account, models.BankAccount, models.Card, models.Source
@@ -832,7 +832,7 @@ class AsyncSourceClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/customers/{customer}/sources/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=typing.Union[models.Card, models.BankAccount, models.Source],
             request_options=request_options or default_request_options(),
@@ -887,7 +887,7 @@ class AsyncSourceClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/customers/{customer}/sources/{id}/verify",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.BankAccount,
             request_options=request_options or default_request_options(),

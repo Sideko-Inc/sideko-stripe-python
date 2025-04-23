@@ -129,7 +129,7 @@ class PhysicalBundleClient:
         return self._base_client.request(
             method="GET",
             path="/v1/issuing/physical_bundles",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.IssuingPhysicalBundleListResponse,
             request_options=request_options or default_request_options(),
@@ -180,7 +180,7 @@ class PhysicalBundleClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/issuing/physical_bundles/{physical_bundle}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.IssuingPhysicalBundle,
             request_options=request_options or default_request_options(),
@@ -302,7 +302,7 @@ class AsyncPhysicalBundleClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/issuing/physical_bundles",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.IssuingPhysicalBundleListResponse,
             request_options=request_options or default_request_options(),
@@ -353,7 +353,7 @@ class AsyncPhysicalBundleClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/issuing/physical_bundles/{physical_bundle}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.IssuingPhysicalBundle,
             request_options=request_options or default_request_options(),

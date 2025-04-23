@@ -66,7 +66,7 @@ class CapabilityClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/accounts/{account}/capabilities",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.AccountCapabilityListResponse,
             request_options=request_options or default_request_options(),
@@ -120,7 +120,7 @@ class CapabilityClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/accounts/{account}/capabilities/{capability}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.Capability,
             request_options=request_options or default_request_options(),
@@ -175,7 +175,7 @@ class CapabilityClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/accounts/{account}/capabilities/{capability}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Capability,
             request_options=request_options or default_request_options(),
@@ -234,7 +234,7 @@ class AsyncCapabilityClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/accounts/{account}/capabilities",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.AccountCapabilityListResponse,
             request_options=request_options or default_request_options(),
@@ -288,7 +288,7 @@ class AsyncCapabilityClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/accounts/{account}/capabilities/{capability}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.Capability,
             request_options=request_options or default_request_options(),
@@ -343,7 +343,7 @@ class AsyncCapabilityClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/accounts/{account}/capabilities/{capability}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Capability,
             request_options=request_options or default_request_options(),

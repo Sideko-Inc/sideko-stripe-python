@@ -148,7 +148,7 @@ class TokenClient:
         return self._base_client.request(
             method="GET",
             path="/v1/issuing/tokens",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.IssuingTokenListResponse,
             request_options=request_options or default_request_options(),
@@ -200,7 +200,7 @@ class TokenClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/issuing/tokens/{token}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.IssuingToken,
             request_options=request_options or default_request_options(),
@@ -251,7 +251,7 @@ class TokenClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/issuing/tokens/{token}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.IssuingToken,
             request_options=request_options or default_request_options(),
@@ -391,7 +391,7 @@ class AsyncTokenClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/issuing/tokens",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.IssuingTokenListResponse,
             request_options=request_options or default_request_options(),
@@ -443,7 +443,7 @@ class AsyncTokenClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/issuing/tokens/{token}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.IssuingToken,
             request_options=request_options or default_request_options(),
@@ -494,7 +494,7 @@ class AsyncTokenClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/issuing/tokens/{token}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.IssuingToken,
             request_options=request_options or default_request_options(),

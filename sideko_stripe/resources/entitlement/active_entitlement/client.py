@@ -105,7 +105,7 @@ class ActiveEntitlementClient:
         return self._base_client.request(
             method="GET",
             path="/v1/entitlements/active_entitlements",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.EntitlementActiveEntitlementListResponse,
             request_options=request_options or default_request_options(),
@@ -156,7 +156,7 @@ class ActiveEntitlementClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/entitlements/active_entitlements/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.EntitlementsActiveEntitlement,
             request_options=request_options or default_request_options(),
@@ -255,7 +255,7 @@ class AsyncActiveEntitlementClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/entitlements/active_entitlements",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.EntitlementActiveEntitlementListResponse,
             request_options=request_options or default_request_options(),
@@ -306,7 +306,7 @@ class AsyncActiveEntitlementClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/entitlements/active_entitlements/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.EntitlementsActiveEntitlement,
             request_options=request_options or default_request_options(),

@@ -120,7 +120,7 @@ class CreditBalanceTransactionClient:
         return self._base_client.request(
             method="GET",
             path="/v1/billing/credit_balance_transactions",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.BillingCreditBalanceTransactionListResponse,
             request_options=request_options or default_request_options(),
@@ -174,7 +174,7 @@ class CreditBalanceTransactionClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/billing/credit_balance_transactions/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.BillingCreditBalanceTransaction,
             request_options=request_options or default_request_options(),
@@ -288,7 +288,7 @@ class AsyncCreditBalanceTransactionClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/billing/credit_balance_transactions",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.BillingCreditBalanceTransactionListResponse,
             request_options=request_options or default_request_options(),
@@ -342,7 +342,7 @@ class AsyncCreditBalanceTransactionClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/billing/credit_balance_transactions/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.BillingCreditBalanceTransaction,
             request_options=request_options or default_request_options(),

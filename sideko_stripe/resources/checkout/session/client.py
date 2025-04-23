@@ -204,7 +204,7 @@ class SessionClient:
         return self._base_client.request(
             method="GET",
             path="/v1/checkout/sessions",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.CheckoutSessionListResponse,
             request_options=request_options or default_request_options(),
@@ -256,7 +256,7 @@ class SessionClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/checkout/sessions/{session}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.CheckoutSession,
             request_options=request_options or default_request_options(),
@@ -395,7 +395,7 @@ class SessionClient:
         return self._base_client.request(
             method="POST",
             path="/v1/checkout/sessions",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.CheckoutSession,
             request_options=request_options or default_request_options(),
@@ -458,7 +458,7 @@ class SessionClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/checkout/sessions/{session}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.CheckoutSession,
             request_options=request_options or default_request_options(),
@@ -513,7 +513,7 @@ class SessionClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/checkout/sessions/{session}/expire",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.CheckoutSession,
             request_options=request_options or default_request_options(),
@@ -705,7 +705,7 @@ class AsyncSessionClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/checkout/sessions",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.CheckoutSessionListResponse,
             request_options=request_options or default_request_options(),
@@ -757,7 +757,7 @@ class AsyncSessionClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/checkout/sessions/{session}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.CheckoutSession,
             request_options=request_options or default_request_options(),
@@ -896,7 +896,7 @@ class AsyncSessionClient:
         return await self._base_client.request(
             method="POST",
             path="/v1/checkout/sessions",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.CheckoutSession,
             request_options=request_options or default_request_options(),
@@ -959,7 +959,7 @@ class AsyncSessionClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/checkout/sessions/{session}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.CheckoutSession,
             request_options=request_options or default_request_options(),
@@ -1014,7 +1014,7 @@ class AsyncSessionClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/checkout/sessions/{session}/expire",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.CheckoutSession,
             request_options=request_options or default_request_options(),

@@ -120,7 +120,7 @@ class SettlementClient:
         return self._base_client.request(
             method="POST",
             path="/v1/test_helpers/issuing/settlements",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.IssuingSettlement,
             request_options=request_options or default_request_options(),
@@ -173,7 +173,7 @@ class SettlementClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/test_helpers/issuing/settlements/{settlement}/complete",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.IssuingSettlement,
             request_options=request_options or default_request_options(),
@@ -288,7 +288,7 @@ class AsyncSettlementClient:
         return await self._base_client.request(
             method="POST",
             path="/v1/test_helpers/issuing/settlements",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.IssuingSettlement,
             request_options=request_options or default_request_options(),
@@ -341,7 +341,7 @@ class AsyncSettlementClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/test_helpers/issuing/settlements/{settlement}/complete",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.IssuingSettlement,
             request_options=request_options or default_request_options(),

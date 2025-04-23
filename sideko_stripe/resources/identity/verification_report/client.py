@@ -157,7 +157,7 @@ class VerificationReportClient:
         return self._base_client.request(
             method="GET",
             path="/v1/identity/verification_reports",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.IdentityVerificationReportListResponse,
             request_options=request_options or default_request_options(),
@@ -208,7 +208,7 @@ class VerificationReportClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/identity/verification_reports/{report}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.IdentityVerificationReport,
             request_options=request_options or default_request_options(),
@@ -358,7 +358,7 @@ class AsyncVerificationReportClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/identity/verification_reports",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.IdentityVerificationReportListResponse,
             request_options=request_options or default_request_options(),
@@ -409,7 +409,7 @@ class AsyncVerificationReportClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/identity/verification_reports/{report}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.IdentityVerificationReport,
             request_options=request_options or default_request_options(),

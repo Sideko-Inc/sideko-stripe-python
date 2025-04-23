@@ -50,7 +50,7 @@ class TestClockClient:
         return self._base_client.request(
             method="DELETE",
             path=f"/v1/test_helpers/test_clocks/{test_clock}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             cast_to=models.DeletedTestHelpersTestClock,
             request_options=request_options or default_request_options(),
         )
@@ -134,7 +134,7 @@ class TestClockClient:
         return self._base_client.request(
             method="GET",
             path="/v1/test_helpers/test_clocks",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.TestHelperTestClockListResponse,
             request_options=request_options or default_request_options(),
@@ -185,7 +185,7 @@ class TestClockClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/test_helpers/test_clocks/{test_clock}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.TestHelpersTestClock,
             request_options=request_options or default_request_options(),
@@ -237,7 +237,7 @@ class TestClockClient:
         return self._base_client.request(
             method="POST",
             path="/v1/test_helpers/test_clocks",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.TestHelpersTestClock,
             request_options=request_options or default_request_options(),
@@ -287,7 +287,7 @@ class TestClockClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/test_helpers/test_clocks/{test_clock}/advance",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.TestHelpersTestClock,
             request_options=request_options or default_request_options(),
@@ -330,7 +330,7 @@ class AsyncTestClockClient:
         return await self._base_client.request(
             method="DELETE",
             path=f"/v1/test_helpers/test_clocks/{test_clock}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             cast_to=models.DeletedTestHelpersTestClock,
             request_options=request_options or default_request_options(),
         )
@@ -414,7 +414,7 @@ class AsyncTestClockClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/test_helpers/test_clocks",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.TestHelperTestClockListResponse,
             request_options=request_options or default_request_options(),
@@ -465,7 +465,7 @@ class AsyncTestClockClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/test_helpers/test_clocks/{test_clock}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.TestHelpersTestClock,
             request_options=request_options or default_request_options(),
@@ -517,7 +517,7 @@ class AsyncTestClockClient:
         return await self._base_client.request(
             method="POST",
             path="/v1/test_helpers/test_clocks",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.TestHelpersTestClock,
             request_options=request_options or default_request_options(),
@@ -569,7 +569,7 @@ class AsyncTestClockClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/test_helpers/test_clocks/{test_clock}/advance",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.TestHelpersTestClock,
             request_options=request_options or default_request_options(),

@@ -154,7 +154,7 @@ class SessionClient:
         return self._base_client.request(
             method="POST",
             path="/v1/billing_portal/sessions",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.BillingPortalSession,
             request_options=request_options or default_request_options(),
@@ -303,7 +303,7 @@ class AsyncSessionClient:
         return await self._base_client.request(
             method="POST",
             path="/v1/billing_portal/sessions",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.BillingPortalSession,
             request_options=request_options or default_request_options(),

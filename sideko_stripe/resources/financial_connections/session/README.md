@@ -12,11 +12,7 @@ Retrieve a Session
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.financial_connections.session.get(session="string")
 ```
 
@@ -26,11 +22,7 @@ res = client.financial_connections.session.get(session="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.financial_connections.session.get(session="string")
 ```
 
@@ -47,11 +39,7 @@ Create a Session
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.financial_connections.session.create(
     account_holder={"type_": "account"}, permissions=["balances"]
 )
@@ -63,11 +51,7 @@ res = client.financial_connections.session.create(
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.financial_connections.session.create(
     account_holder={"type_": "account"}, permissions=["balances"]
 )

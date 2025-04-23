@@ -166,7 +166,7 @@ class PromotionCodeClient:
         return self._base_client.request(
             method="GET",
             path="/v1/promotion_codes",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.PromotionCodeListResponse,
             request_options=request_options or default_request_options(),
@@ -218,7 +218,7 @@ class PromotionCodeClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/promotion_codes/{promotion_code}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.PromotionCode,
             request_options=request_options or default_request_options(),
@@ -328,7 +328,7 @@ class PromotionCodeClient:
         return self._base_client.request(
             method="POST",
             path="/v1/promotion_codes",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.PromotionCode,
             request_options=request_options or default_request_options(),
@@ -391,7 +391,7 @@ class PromotionCodeClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/promotion_codes/{promotion_code}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.PromotionCode,
             request_options=request_options or default_request_options(),
@@ -550,7 +550,7 @@ class AsyncPromotionCodeClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/promotion_codes",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.PromotionCodeListResponse,
             request_options=request_options or default_request_options(),
@@ -602,7 +602,7 @@ class AsyncPromotionCodeClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/promotion_codes/{promotion_code}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.PromotionCode,
             request_options=request_options or default_request_options(),
@@ -712,7 +712,7 @@ class AsyncPromotionCodeClient:
         return await self._base_client.request(
             method="POST",
             path="/v1/promotion_codes",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.PromotionCode,
             request_options=request_options or default_request_options(),
@@ -775,7 +775,7 @@ class AsyncPromotionCodeClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/promotion_codes/{promotion_code}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.PromotionCode,
             request_options=request_options or default_request_options(),

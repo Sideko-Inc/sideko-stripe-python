@@ -46,7 +46,7 @@ class DiscountClient:
         return self._base_client.request(
             method="DELETE",
             path=f"/v1/subscriptions/{subscription_exposed_id}/discount",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             cast_to=models.DeletedDiscount,
             request_options=request_options or default_request_options(),
         )
@@ -89,7 +89,7 @@ class AsyncDiscountClient:
         return await self._base_client.request(
             method="DELETE",
             path=f"/v1/subscriptions/{subscription_exposed_id}/discount",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             cast_to=models.DeletedDiscount,
             request_options=request_options or default_request_options(),
         )

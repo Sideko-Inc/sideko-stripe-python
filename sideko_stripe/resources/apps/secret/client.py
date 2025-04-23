@@ -106,7 +106,7 @@ class SecretClient:
         return self._base_client.request(
             method="GET",
             path="/v1/apps/secrets",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.AppsSecretListResponse,
             request_options=request_options or default_request_options(),
@@ -173,7 +173,7 @@ class SecretClient:
         return self._base_client.request(
             method="GET",
             path="/v1/apps/secrets/find",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.AppsSecret,
             request_options=request_options or default_request_options(),
@@ -249,7 +249,7 @@ class SecretClient:
         return self._base_client.request(
             method="POST",
             path="/v1/apps/secrets",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.AppsSecret,
             request_options=request_options or default_request_options(),
@@ -299,7 +299,7 @@ class SecretClient:
         return self._base_client.request(
             method="POST",
             path="/v1/apps/secrets/delete",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.AppsSecret,
             request_options=request_options or default_request_options(),
@@ -398,7 +398,7 @@ class AsyncSecretClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/apps/secrets",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.AppsSecretListResponse,
             request_options=request_options or default_request_options(),
@@ -465,7 +465,7 @@ class AsyncSecretClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/apps/secrets/find",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.AppsSecret,
             request_options=request_options or default_request_options(),
@@ -541,7 +541,7 @@ class AsyncSecretClient:
         return await self._base_client.request(
             method="POST",
             path="/v1/apps/secrets",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.AppsSecret,
             request_options=request_options or default_request_options(),
@@ -591,7 +591,7 @@ class AsyncSecretClient:
         return await self._base_client.request(
             method="POST",
             path="/v1/apps/secrets/delete",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.AppsSecret,
             request_options=request_options or default_request_options(),

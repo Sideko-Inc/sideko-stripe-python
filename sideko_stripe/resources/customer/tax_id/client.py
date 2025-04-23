@@ -53,7 +53,7 @@ class TaxIdClient:
         return self._base_client.request(
             method="DELETE",
             path=f"/v1/customers/{customer}/tax_ids/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             cast_to=models.DeletedTaxId,
             request_options=request_options or default_request_options(),
         )
@@ -142,7 +142,7 @@ class TaxIdClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/customers/{customer}/tax_ids",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.CustomerTaxIdListResponse,
             request_options=request_options or default_request_options(),
@@ -196,7 +196,7 @@ class TaxIdClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/customers/{customer}/tax_ids/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.TaxId,
             request_options=request_options or default_request_options(),
@@ -350,7 +350,7 @@ class TaxIdClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/customers/{customer}/tax_ids",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.TaxId,
             request_options=request_options or default_request_options(),
@@ -395,7 +395,7 @@ class AsyncTaxIdClient:
         return await self._base_client.request(
             method="DELETE",
             path=f"/v1/customers/{customer}/tax_ids/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             cast_to=models.DeletedTaxId,
             request_options=request_options or default_request_options(),
         )
@@ -484,7 +484,7 @@ class AsyncTaxIdClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/customers/{customer}/tax_ids",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.CustomerTaxIdListResponse,
             request_options=request_options or default_request_options(),
@@ -538,7 +538,7 @@ class AsyncTaxIdClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/customers/{customer}/tax_ids/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.TaxId,
             request_options=request_options or default_request_options(),
@@ -694,7 +694,7 @@ class AsyncTaxIdClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/customers/{customer}/tax_ids",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.TaxId,
             request_options=request_options or default_request_options(),

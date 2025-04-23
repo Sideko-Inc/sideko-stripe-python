@@ -1,7 +1,7 @@
 import httpx
 import typing
 
-from sideko_stripe.core import AsyncBaseClient, AuthBasic, AuthBearer, SyncBaseClient
+from sideko_stripe.core import AsyncBaseClient, AuthBearer, SyncBaseClient
 from sideko_stripe.environment import Environment
 from sideko_stripe.resources.account import AccountClient, AsyncAccountClient
 from sideko_stripe.resources.account_link import (
@@ -189,8 +189,6 @@ class Stripe:
         timeout: typing.Optional[float] = 60,
         httpx_client: typing.Optional[httpx.Client] = None,
         environment: Environment = Environment.PRODUCTION,
-        username: typing.Optional[str] = None,
-        password: typing.Optional[str] = None,
         token: typing.Optional[str] = None,
     ):
         """Initialize root client"""
@@ -199,9 +197,6 @@ class Stripe:
             httpx_client=httpx.Client(timeout=timeout)
             if httpx_client is None
             else httpx_client,
-        )
-        self._base_client.register_auth(
-            "basicAuth", AuthBasic(username=username, password=password)
         )
         self._base_client.register_auth("bearerAuth", AuthBearer(val=token))
         self.account = AccountClient(base_client=self._base_client)
@@ -305,8 +300,6 @@ class AsyncStripe:
         timeout: typing.Optional[float] = 60,
         httpx_client: typing.Optional[httpx.AsyncClient] = None,
         environment: Environment = Environment.PRODUCTION,
-        username: typing.Optional[str] = None,
-        password: typing.Optional[str] = None,
         token: typing.Optional[str] = None,
     ):
         """Initialize root client"""
@@ -315,9 +308,6 @@ class AsyncStripe:
             httpx_client=httpx.AsyncClient(timeout=timeout)
             if httpx_client is None
             else httpx_client,
-        )
-        self._base_client.register_auth(
-            "basicAuth", AuthBasic(username=username, password=password)
         )
         self._base_client.register_auth("bearerAuth", AuthBearer(val=token))
         self.account = AsyncAccountClient(base_client=self._base_client)

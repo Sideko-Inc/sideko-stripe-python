@@ -12,11 +12,7 @@ Retrieve an invoice's line items
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.invoice.line.list(invoice="string")
 ```
 
@@ -26,11 +22,7 @@ res = client.invoice.line.list(invoice="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.invoice.line.list(invoice="string")
 ```
 
@@ -47,11 +39,7 @@ Bulk add invoice line items
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.invoice.line.create_many(invoice="string", lines=[{}])
 ```
 
@@ -61,11 +49,7 @@ res = client.invoice.line.create_many(invoice="string", lines=[{}])
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.invoice.line.create_many(invoice="string", lines=[{}])
 ```
 
@@ -85,11 +69,7 @@ Updating an invoice’s line item is only possible before the invoice is finaliz
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.invoice.line.update(invoice="string", line_item_id="string")
 ```
 
@@ -99,11 +79,7 @@ res = client.invoice.line.update(invoice="string", line_item_id="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.invoice.line.update(invoice="string", line_item_id="string")
 ```
 
@@ -120,11 +96,7 @@ Bulk remove invoice line items
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.invoice.line.remove_many(
     invoice="string", lines=[{"behavior": "delete", "id": "string"}]
 )
@@ -136,11 +108,7 @@ res = client.invoice.line.remove_many(
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.invoice.line.remove_many(
     invoice="string", lines=[{"behavior": "delete", "id": "string"}]
 )
@@ -159,11 +127,7 @@ Bulk update invoice line items
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.invoice.line.update_many(invoice="string", lines=[{"id": "string"}])
 ```
 
@@ -173,10 +137,6 @@ res = client.invoice.line.update_many(invoice="string", lines=[{"id": "string"}]
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.invoice.line.update_many(invoice="string", lines=[{"id": "string"}])
 ```

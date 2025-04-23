@@ -50,7 +50,7 @@ class InvoiceClient:
         return self._base_client.request(
             method="DELETE",
             path=f"/v1/invoices/{invoice}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             cast_to=models.DeletedInvoice,
             request_options=request_options or default_request_options(),
         )
@@ -239,7 +239,7 @@ class InvoiceClient:
         return self._base_client.request(
             method="GET",
             path="/v1/invoices",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.InvoiceListResponse,
             request_options=request_options or default_request_options(),
@@ -327,7 +327,7 @@ class InvoiceClient:
         return self._base_client.request(
             method="GET",
             path="/v1/invoices/search",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.InvoiceSearchResponse,
             request_options=request_options or default_request_options(),
@@ -379,7 +379,7 @@ class InvoiceClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/invoices/{invoice}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.Invoice,
             request_options=request_options or default_request_options(),
@@ -496,7 +496,7 @@ class InvoiceClient:
         return self._base_client.request(
             method="POST",
             path="/v1/invoices",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Invoice,
             request_options=request_options or default_request_options(),
@@ -583,7 +583,7 @@ class InvoiceClient:
         return self._base_client.request(
             method="POST",
             path="/v1/invoices/create_preview",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Invoice,
             request_options=request_options or default_request_options(),
@@ -697,7 +697,7 @@ class InvoiceClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/invoices/{invoice}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Invoice,
             request_options=request_options or default_request_options(),
@@ -750,7 +750,7 @@ class InvoiceClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/invoices/{invoice}/finalize",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Invoice,
             request_options=request_options or default_request_options(),
@@ -803,7 +803,7 @@ class InvoiceClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/invoices/{invoice}/mark_uncollectible",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Invoice,
             request_options=request_options or default_request_options(),
@@ -872,7 +872,7 @@ class InvoiceClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/invoices/{invoice}/pay",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Invoice,
             request_options=request_options or default_request_options(),
@@ -927,7 +927,7 @@ class InvoiceClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/invoices/{invoice}/send",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Invoice,
             request_options=request_options or default_request_options(),
@@ -982,7 +982,7 @@ class InvoiceClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/invoices/{invoice}/void",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Invoice,
             request_options=request_options or default_request_options(),
@@ -1023,7 +1023,7 @@ class AsyncInvoiceClient:
         return await self._base_client.request(
             method="DELETE",
             path=f"/v1/invoices/{invoice}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             cast_to=models.DeletedInvoice,
             request_options=request_options or default_request_options(),
         )
@@ -1212,7 +1212,7 @@ class AsyncInvoiceClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/invoices",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.InvoiceListResponse,
             request_options=request_options or default_request_options(),
@@ -1300,7 +1300,7 @@ class AsyncInvoiceClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/invoices/search",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.InvoiceSearchResponse,
             request_options=request_options or default_request_options(),
@@ -1352,7 +1352,7 @@ class AsyncInvoiceClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/invoices/{invoice}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.Invoice,
             request_options=request_options or default_request_options(),
@@ -1469,7 +1469,7 @@ class AsyncInvoiceClient:
         return await self._base_client.request(
             method="POST",
             path="/v1/invoices",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Invoice,
             request_options=request_options or default_request_options(),
@@ -1556,7 +1556,7 @@ class AsyncInvoiceClient:
         return await self._base_client.request(
             method="POST",
             path="/v1/invoices/create_preview",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Invoice,
             request_options=request_options or default_request_options(),
@@ -1670,7 +1670,7 @@ class AsyncInvoiceClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/invoices/{invoice}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Invoice,
             request_options=request_options or default_request_options(),
@@ -1723,7 +1723,7 @@ class AsyncInvoiceClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/invoices/{invoice}/finalize",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Invoice,
             request_options=request_options or default_request_options(),
@@ -1776,7 +1776,7 @@ class AsyncInvoiceClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/invoices/{invoice}/mark_uncollectible",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Invoice,
             request_options=request_options or default_request_options(),
@@ -1845,7 +1845,7 @@ class AsyncInvoiceClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/invoices/{invoice}/pay",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Invoice,
             request_options=request_options or default_request_options(),
@@ -1900,7 +1900,7 @@ class AsyncInvoiceClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/invoices/{invoice}/send",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Invoice,
             request_options=request_options or default_request_options(),
@@ -1955,7 +1955,7 @@ class AsyncInvoiceClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/invoices/{invoice}/void",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Invoice,
             request_options=request_options or default_request_options(),

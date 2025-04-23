@@ -12,11 +12,7 @@ Test mode: Create a ReceivedCredit
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.test_helper.treasury.received_credit.create(
     amount=123, currency="string", financial_account="string", network="ach"
 )
@@ -28,11 +24,7 @@ res = client.test_helper.treasury.received_credit.create(
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.test_helper.treasury.received_credit.create(
     amount=123, currency="string", financial_account="string", network="ach"
 )

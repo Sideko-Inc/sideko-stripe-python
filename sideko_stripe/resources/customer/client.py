@@ -99,7 +99,7 @@ class CustomerClient:
         return self._base_client.request(
             method="DELETE",
             path=f"/v1/customers/{customer}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             cast_to=models.DeletedCustomer,
             request_options=request_options or default_request_options(),
         )
@@ -228,7 +228,7 @@ class CustomerClient:
         return self._base_client.request(
             method="GET",
             path="/v1/customers",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.CustomerListResponse,
             request_options=request_options or default_request_options(),
@@ -316,7 +316,7 @@ class CustomerClient:
         return self._base_client.request(
             method="GET",
             path="/v1/customers/search",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.CustomerSearchResponse,
             request_options=request_options or default_request_options(),
@@ -368,7 +368,7 @@ class CustomerClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/customers/{customer}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=typing.Union[models.Customer, models.DeletedCustomer],
             request_options=request_options or default_request_options(),
@@ -461,7 +461,7 @@ class CustomerClient:
         return self._base_client.request(
             method="POST",
             path="/v1/customers",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Customer,
             request_options=request_options or default_request_options(),
@@ -564,7 +564,7 @@ class CustomerClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/customers/{customer}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Customer,
             request_options=request_options or default_request_options(),
@@ -621,7 +621,7 @@ class AsyncCustomerClient:
         return await self._base_client.request(
             method="DELETE",
             path=f"/v1/customers/{customer}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             cast_to=models.DeletedCustomer,
             request_options=request_options or default_request_options(),
         )
@@ -750,7 +750,7 @@ class AsyncCustomerClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/customers",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.CustomerListResponse,
             request_options=request_options or default_request_options(),
@@ -838,7 +838,7 @@ class AsyncCustomerClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/customers/search",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.CustomerSearchResponse,
             request_options=request_options or default_request_options(),
@@ -890,7 +890,7 @@ class AsyncCustomerClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/customers/{customer}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=typing.Union[models.Customer, models.DeletedCustomer],
             request_options=request_options or default_request_options(),
@@ -983,7 +983,7 @@ class AsyncCustomerClient:
         return await self._base_client.request(
             method="POST",
             path="/v1/customers",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Customer,
             request_options=request_options or default_request_options(),
@@ -1086,7 +1086,7 @@ class AsyncCustomerClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/customers/{customer}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Customer,
             request_options=request_options or default_request_options(),

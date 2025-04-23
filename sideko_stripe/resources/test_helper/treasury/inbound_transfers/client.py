@@ -65,7 +65,7 @@ class InboundTransfersClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/test_helpers/treasury/inbound_transfers/{id}/fail",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.TreasuryInboundTransfer,
             request_options=request_options or default_request_options(),
@@ -121,7 +121,7 @@ class InboundTransfersClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/test_helpers/treasury/inbound_transfers/{id}/return",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.TreasuryInboundTransfer,
             request_options=request_options or default_request_options(),
@@ -177,7 +177,7 @@ class InboundTransfersClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/test_helpers/treasury/inbound_transfers/{id}/succeed",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.TreasuryInboundTransfer,
             request_options=request_options or default_request_options(),
@@ -238,7 +238,7 @@ class AsyncInboundTransfersClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/test_helpers/treasury/inbound_transfers/{id}/fail",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.TreasuryInboundTransfer,
             request_options=request_options or default_request_options(),
@@ -294,7 +294,7 @@ class AsyncInboundTransfersClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/test_helpers/treasury/inbound_transfers/{id}/return",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.TreasuryInboundTransfer,
             request_options=request_options or default_request_options(),
@@ -350,7 +350,7 @@ class AsyncInboundTransfersClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/test_helpers/treasury/inbound_transfers/{id}/succeed",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.TreasuryInboundTransfer,
             request_options=request_options or default_request_options(),

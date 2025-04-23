@@ -72,7 +72,7 @@ class CardClient:
         return self._base_client.request(
             method="DELETE",
             path=f"/v1/customers/{customer}/cards/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=typing.Union[
                 typing.Union[
@@ -169,7 +169,7 @@ class CardClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/customers/{customer}/cards",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.CustomerCardListResponse,
             request_options=request_options or default_request_options(),
@@ -223,7 +223,7 @@ class CardClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/customers/{customer}/cards/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.Card,
             request_options=request_options or default_request_options(),
@@ -296,7 +296,7 @@ class CardClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/customers/{customer}/cards",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=typing.Union[
                 models.Account, models.BankAccount, models.Card, models.Source
@@ -382,7 +382,7 @@ class CardClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/customers/{customer}/cards/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=typing.Union[models.Card, models.BankAccount, models.Source],
             request_options=request_options or default_request_options(),
@@ -447,7 +447,7 @@ class AsyncCardClient:
         return await self._base_client.request(
             method="DELETE",
             path=f"/v1/customers/{customer}/cards/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=typing.Union[
                 typing.Union[
@@ -544,7 +544,7 @@ class AsyncCardClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/customers/{customer}/cards",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.CustomerCardListResponse,
             request_options=request_options or default_request_options(),
@@ -598,7 +598,7 @@ class AsyncCardClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/customers/{customer}/cards/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.Card,
             request_options=request_options or default_request_options(),
@@ -671,7 +671,7 @@ class AsyncCardClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/customers/{customer}/cards",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=typing.Union[
                 models.Account, models.BankAccount, models.Card, models.Source
@@ -757,7 +757,7 @@ class AsyncCardClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/customers/{customer}/cards/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=typing.Union[models.Card, models.BankAccount, models.Source],
             request_options=request_options or default_request_options(),

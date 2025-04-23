@@ -12,11 +12,7 @@ Delete a Reader
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.terminal.reader.delete(reader="string")
 ```
 
@@ -26,11 +22,7 @@ res = client.terminal.reader.delete(reader="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.terminal.reader.delete(reader="string")
 ```
 
@@ -47,11 +39,7 @@ List all Readers
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.terminal.reader.list()
 ```
 
@@ -61,11 +49,7 @@ res = client.terminal.reader.list()
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.terminal.reader.list()
 ```
 
@@ -82,11 +66,7 @@ Retrieve a Reader
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.terminal.reader.get(reader="string")
 ```
 
@@ -96,11 +76,7 @@ res = client.terminal.reader.get(reader="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.terminal.reader.get(reader="string")
 ```
 
@@ -117,11 +93,7 @@ Create a Reader
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.terminal.reader.create(registration_code="string")
 ```
 
@@ -131,11 +103,7 @@ res = client.terminal.reader.create(registration_code="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.terminal.reader.create(registration_code="string")
 ```
 
@@ -152,11 +120,7 @@ Update a Reader
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.terminal.reader.update(reader="string")
 ```
 
@@ -166,11 +130,7 @@ res = client.terminal.reader.update(reader="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.terminal.reader.update(reader="string")
 ```
 
@@ -187,11 +147,7 @@ Cancel the current reader action
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.terminal.reader.cancel_action(reader="string")
 ```
 
@@ -201,11 +157,7 @@ res = client.terminal.reader.cancel_action(reader="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.terminal.reader.cancel_action(reader="string")
 ```
 
@@ -222,11 +174,7 @@ Hand-off a PaymentIntent to a Reader
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.terminal.reader.process_payment_intent(
     payment_intent="string", reader="string"
 )
@@ -238,11 +186,7 @@ res = client.terminal.reader.process_payment_intent(
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.terminal.reader.process_payment_intent(
     payment_intent="string", reader="string"
 )
@@ -261,11 +205,7 @@ Hand-off a SetupIntent to a Reader
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.terminal.reader.process_setup_intent(
     allow_redisplay="always", reader="string", setup_intent="string"
 )
@@ -277,11 +217,7 @@ res = client.terminal.reader.process_setup_intent(
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.terminal.reader.process_setup_intent(
     allow_redisplay="always", reader="string", setup_intent="string"
 )
@@ -300,11 +236,7 @@ Refund a Charge or a PaymentIntent in-person
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.terminal.reader.refund_payment(reader="string")
 ```
 
@@ -314,11 +246,7 @@ res = client.terminal.reader.refund_payment(reader="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.terminal.reader.refund_payment(reader="string")
 ```
 
@@ -335,11 +263,7 @@ Set reader display
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.terminal.reader.set_reader_display(reader="string", type_="cart")
 ```
 
@@ -349,10 +273,6 @@ res = client.terminal.reader.set_reader_display(reader="string", type_="cart")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.terminal.reader.set_reader_display(reader="string", type_="cart")
 ```

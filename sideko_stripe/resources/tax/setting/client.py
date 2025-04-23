@@ -61,7 +61,7 @@ class SettingClient:
         return self._base_client.request(
             method="GET",
             path="/v1/tax/settings",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.TaxSettings,
             request_options=request_options or default_request_options(),
@@ -115,7 +115,7 @@ class SettingClient:
         return self._base_client.request(
             method="POST",
             path="/v1/tax/settings",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.TaxSettings,
             request_options=request_options or default_request_options(),
@@ -169,7 +169,7 @@ class AsyncSettingClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/tax/settings",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.TaxSettings,
             request_options=request_options or default_request_options(),
@@ -223,7 +223,7 @@ class AsyncSettingClient:
         return await self._base_client.request(
             method="POST",
             path="/v1/tax/settings",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.TaxSettings,
             request_options=request_options or default_request_options(),

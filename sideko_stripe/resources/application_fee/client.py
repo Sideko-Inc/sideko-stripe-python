@@ -134,7 +134,7 @@ class ApplicationFeeClient:
         return self._base_client.request(
             method="GET",
             path="/v1/application_fees",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.ApplicationFeeListResponse,
             request_options=request_options or default_request_options(),
@@ -186,7 +186,7 @@ class ApplicationFeeClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/application_fees/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.ApplicationFee,
             request_options=request_options or default_request_options(),
@@ -310,7 +310,7 @@ class AsyncApplicationFeeClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/application_fees",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.ApplicationFeeListResponse,
             request_options=request_options or default_request_options(),
@@ -362,7 +362,7 @@ class AsyncApplicationFeeClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/application_fees/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.ApplicationFee,
             request_options=request_options or default_request_options(),

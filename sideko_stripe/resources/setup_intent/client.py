@@ -156,7 +156,7 @@ class SetupIntentClient:
         return self._base_client.request(
             method="GET",
             path="/v1/setup_intents",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.SetupIntentListResponse,
             request_options=request_options or default_request_options(),
@@ -224,7 +224,7 @@ class SetupIntentClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/setup_intents/{intent}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.SetupIntent,
             request_options=request_options or default_request_options(),
@@ -320,7 +320,7 @@ class SetupIntentClient:
         return self._base_client.request(
             method="POST",
             path="/v1/setup_intents",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.SetupIntent,
             request_options=request_options or default_request_options(),
@@ -397,7 +397,7 @@ class SetupIntentClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/setup_intents/{intent}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.SetupIntent,
             request_options=request_options or default_request_options(),
@@ -452,7 +452,7 @@ class SetupIntentClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/setup_intents/{intent}/cancel",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.SetupIntent,
             request_options=request_options or default_request_options(),
@@ -538,7 +538,7 @@ class SetupIntentClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/setup_intents/{intent}/confirm",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.SetupIntent,
             request_options=request_options or default_request_options(),
@@ -602,7 +602,7 @@ class SetupIntentClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/setup_intents/{intent}/verify_microdeposits",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.SetupIntent,
             request_options=request_options or default_request_options(),
@@ -751,7 +751,7 @@ class AsyncSetupIntentClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/setup_intents",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.SetupIntentListResponse,
             request_options=request_options or default_request_options(),
@@ -819,7 +819,7 @@ class AsyncSetupIntentClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/setup_intents/{intent}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.SetupIntent,
             request_options=request_options or default_request_options(),
@@ -915,7 +915,7 @@ class AsyncSetupIntentClient:
         return await self._base_client.request(
             method="POST",
             path="/v1/setup_intents",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.SetupIntent,
             request_options=request_options or default_request_options(),
@@ -992,7 +992,7 @@ class AsyncSetupIntentClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/setup_intents/{intent}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.SetupIntent,
             request_options=request_options or default_request_options(),
@@ -1047,7 +1047,7 @@ class AsyncSetupIntentClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/setup_intents/{intent}/cancel",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.SetupIntent,
             request_options=request_options or default_request_options(),
@@ -1133,7 +1133,7 @@ class AsyncSetupIntentClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/setup_intents/{intent}/confirm",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.SetupIntent,
             request_options=request_options or default_request_options(),
@@ -1197,7 +1197,7 @@ class AsyncSetupIntentClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/setup_intents/{intent}/verify_microdeposits",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.SetupIntent,
             request_options=request_options or default_request_options(),

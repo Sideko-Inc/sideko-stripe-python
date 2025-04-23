@@ -102,7 +102,7 @@ class LineClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/invoices/{invoice}/lines",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.InvoiceLineListResponse,
             request_options=request_options or default_request_options(),
@@ -168,7 +168,7 @@ class LineClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/invoices/{invoice}/add_lines",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Invoice,
             request_options=request_options or default_request_options(),
@@ -252,7 +252,7 @@ class LineClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/invoices/{invoice}/lines/{line_item_id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.LineItem,
             request_options=request_options or default_request_options(),
@@ -320,7 +320,7 @@ class LineClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/invoices/{invoice}/remove_lines",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Invoice,
             request_options=request_options or default_request_options(),
@@ -386,7 +386,7 @@ class LineClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/invoices/{invoice}/update_lines",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Invoice,
             request_options=request_options or default_request_options(),
@@ -481,7 +481,7 @@ class AsyncLineClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/invoices/{invoice}/lines",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.InvoiceLineListResponse,
             request_options=request_options or default_request_options(),
@@ -547,7 +547,7 @@ class AsyncLineClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/invoices/{invoice}/add_lines",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Invoice,
             request_options=request_options or default_request_options(),
@@ -631,7 +631,7 @@ class AsyncLineClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/invoices/{invoice}/lines/{line_item_id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.LineItem,
             request_options=request_options or default_request_options(),
@@ -699,7 +699,7 @@ class AsyncLineClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/invoices/{invoice}/remove_lines",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Invoice,
             request_options=request_options or default_request_options(),
@@ -767,7 +767,7 @@ class AsyncLineClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/invoices/{invoice}/update_lines",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Invoice,
             request_options=request_options or default_request_options(),

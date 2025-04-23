@@ -12,11 +12,7 @@ List all OutboundTransfers
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.treasury.outbound_transfer.list(financial_account="string")
 ```
 
@@ -26,11 +22,7 @@ res = client.treasury.outbound_transfer.list(financial_account="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.treasury.outbound_transfer.list(financial_account="string")
 ```
 
@@ -47,11 +39,7 @@ Retrieve an OutboundTransfer
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.treasury.outbound_transfer.get(outbound_transfer="string")
 ```
 
@@ -61,11 +49,7 @@ res = client.treasury.outbound_transfer.get(outbound_transfer="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.treasury.outbound_transfer.get(outbound_transfer="string")
 ```
 
@@ -82,11 +66,7 @@ Create an OutboundTransfer
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.treasury.outbound_transfer.create(
     amount=123, currency="string", financial_account="string"
 )
@@ -98,11 +78,7 @@ res = client.treasury.outbound_transfer.create(
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.treasury.outbound_transfer.create(
     amount=123, currency="string", financial_account="string"
 )
@@ -121,11 +97,7 @@ Cancel an OutboundTransfer
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.treasury.outbound_transfer.cancel(outbound_transfer="string")
 ```
 
@@ -135,10 +107,6 @@ res = client.treasury.outbound_transfer.cancel(outbound_transfer="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.treasury.outbound_transfer.cancel(outbound_transfer="string")
 ```

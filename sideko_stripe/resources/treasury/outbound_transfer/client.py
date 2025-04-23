@@ -132,7 +132,7 @@ class OutboundTransferClient:
         return self._base_client.request(
             method="GET",
             path="/v1/treasury/outbound_transfers",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.TreasuryOutboundTransferListResponse,
             request_options=request_options or default_request_options(),
@@ -186,7 +186,7 @@ class OutboundTransferClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/treasury/outbound_transfers/{outbound_transfer}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.TreasuryOutboundTransfer,
             request_options=request_options or default_request_options(),
@@ -307,7 +307,7 @@ class OutboundTransferClient:
         return self._base_client.request(
             method="POST",
             path="/v1/treasury/outbound_transfers",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.TreasuryOutboundTransfer,
             request_options=request_options or default_request_options(),
@@ -363,7 +363,7 @@ class OutboundTransferClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/treasury/outbound_transfers/{outbound_transfer}/cancel",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.TreasuryOutboundTransfer,
             request_options=request_options or default_request_options(),
@@ -487,7 +487,7 @@ class AsyncOutboundTransferClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/treasury/outbound_transfers",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.TreasuryOutboundTransferListResponse,
             request_options=request_options or default_request_options(),
@@ -541,7 +541,7 @@ class AsyncOutboundTransferClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/treasury/outbound_transfers/{outbound_transfer}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.TreasuryOutboundTransfer,
             request_options=request_options or default_request_options(),
@@ -662,7 +662,7 @@ class AsyncOutboundTransferClient:
         return await self._base_client.request(
             method="POST",
             path="/v1/treasury/outbound_transfers",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.TreasuryOutboundTransfer,
             request_options=request_options or default_request_options(),
@@ -718,7 +718,7 @@ class AsyncOutboundTransferClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/treasury/outbound_transfers/{outbound_transfer}/cancel",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.TreasuryOutboundTransfer,
             request_options=request_options or default_request_options(),

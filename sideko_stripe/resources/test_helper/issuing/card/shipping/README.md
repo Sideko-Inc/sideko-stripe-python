@@ -12,11 +12,7 @@ Deliver a testmode card
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.test_helper.issuing.card.shipping.deliver(card="string")
 ```
 
@@ -26,11 +22,7 @@ res = client.test_helper.issuing.card.shipping.deliver(card="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.test_helper.issuing.card.shipping.deliver(card="string")
 ```
 
@@ -47,11 +39,7 @@ Fail a testmode card
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.test_helper.issuing.card.shipping.fail(card="string")
 ```
 
@@ -61,11 +49,7 @@ res = client.test_helper.issuing.card.shipping.fail(card="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.test_helper.issuing.card.shipping.fail(card="string")
 ```
 
@@ -82,11 +66,7 @@ Return a testmode card
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.test_helper.issuing.card.shipping.returned(card="string")
 ```
 
@@ -96,11 +76,7 @@ res = client.test_helper.issuing.card.shipping.returned(card="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.test_helper.issuing.card.shipping.returned(card="string")
 ```
 
@@ -117,11 +93,7 @@ Ship a testmode card
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.test_helper.issuing.card.shipping.ship(card="string")
 ```
 
@@ -131,11 +103,7 @@ res = client.test_helper.issuing.card.shipping.ship(card="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.test_helper.issuing.card.shipping.ship(card="string")
 ```
 
@@ -152,11 +120,7 @@ Submit a testmode card
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.test_helper.issuing.card.shipping.submit(card="string")
 ```
 
@@ -166,10 +130,6 @@ res = client.test_helper.issuing.card.shipping.submit(card="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.test_helper.issuing.card.shipping.submit(card="string")
 ```

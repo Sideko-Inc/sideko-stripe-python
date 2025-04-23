@@ -158,7 +158,7 @@ class ChargeClient:
         return self._base_client.request(
             method="GET",
             path="/v1/charges",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.ChargeListResponse,
             request_options=request_options or default_request_options(),
@@ -246,7 +246,7 @@ class ChargeClient:
         return self._base_client.request(
             method="GET",
             path="/v1/charges/search",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.ChargeSearchResponse,
             request_options=request_options or default_request_options(),
@@ -298,7 +298,7 @@ class ChargeClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/charges/{charge}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.Charge,
             request_options=request_options or default_request_options(),
@@ -391,7 +391,7 @@ class ChargeClient:
         return self._base_client.request(
             method="POST",
             path="/v1/charges",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Charge,
             request_options=request_options or default_request_options(),
@@ -462,7 +462,7 @@ class ChargeClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/charges/{charge}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Charge,
             request_options=request_options or default_request_options(),
@@ -539,7 +539,7 @@ class ChargeClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/charges/{charge}/capture",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Charge,
             request_options=request_options or default_request_options(),
@@ -688,7 +688,7 @@ class AsyncChargeClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/charges",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.ChargeListResponse,
             request_options=request_options or default_request_options(),
@@ -776,7 +776,7 @@ class AsyncChargeClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/charges/search",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.ChargeSearchResponse,
             request_options=request_options or default_request_options(),
@@ -828,7 +828,7 @@ class AsyncChargeClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/charges/{charge}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.Charge,
             request_options=request_options or default_request_options(),
@@ -921,7 +921,7 @@ class AsyncChargeClient:
         return await self._base_client.request(
             method="POST",
             path="/v1/charges",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Charge,
             request_options=request_options or default_request_options(),
@@ -992,7 +992,7 @@ class AsyncChargeClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/charges/{charge}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Charge,
             request_options=request_options or default_request_options(),
@@ -1069,7 +1069,7 @@ class AsyncChargeClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/charges/{charge}/capture",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Charge,
             request_options=request_options or default_request_options(),

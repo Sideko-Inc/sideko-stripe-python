@@ -120,7 +120,7 @@ class ReportRunClient:
         return self._base_client.request(
             method="GET",
             path="/v1/reporting/report_runs",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.ReportingReportRunListResponse,
             request_options=request_options or default_request_options(),
@@ -174,7 +174,7 @@ class ReportRunClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/reporting/report_runs/{report_run}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.ReportingReportRun,
             request_options=request_options or default_request_options(),
@@ -238,7 +238,7 @@ class ReportRunClient:
         return self._base_client.request(
             method="POST",
             path="/v1/reporting/report_runs",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.ReportingReportRun,
             request_options=request_options or default_request_options(),
@@ -351,7 +351,7 @@ class AsyncReportRunClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/reporting/report_runs",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.ReportingReportRunListResponse,
             request_options=request_options or default_request_options(),
@@ -405,7 +405,7 @@ class AsyncReportRunClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/reporting/report_runs/{report_run}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.ReportingReportRun,
             request_options=request_options or default_request_options(),
@@ -469,7 +469,7 @@ class AsyncReportRunClient:
         return await self._base_client.request(
             method="POST",
             path="/v1/reporting/report_runs",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.ReportingReportRun,
             request_options=request_options or default_request_options(),

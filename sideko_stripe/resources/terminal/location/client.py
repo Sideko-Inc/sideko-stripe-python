@@ -47,7 +47,7 @@ class LocationClient:
         return self._base_client.request(
             method="DELETE",
             path=f"/v1/terminal/locations/{location}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             cast_to=models.DeletedTerminalLocation,
             request_options=request_options or default_request_options(),
         )
@@ -131,7 +131,7 @@ class LocationClient:
         return self._base_client.request(
             method="GET",
             path="/v1/terminal/locations",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.TerminalLocationListResponse,
             request_options=request_options or default_request_options(),
@@ -182,7 +182,7 @@ class LocationClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/terminal/locations/{location}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=typing.Union[
                 models.TerminalLocation, models.DeletedTerminalLocation
@@ -266,7 +266,7 @@ class LocationClient:
         return self._base_client.request(
             method="POST",
             path="/v1/terminal/locations",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.TerminalLocation,
             request_options=request_options or default_request_options(),
@@ -330,7 +330,7 @@ class LocationClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/terminal/locations/{location}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=typing.Union[
                 models.TerminalLocation, models.DeletedTerminalLocation
@@ -372,7 +372,7 @@ class AsyncLocationClient:
         return await self._base_client.request(
             method="DELETE",
             path=f"/v1/terminal/locations/{location}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             cast_to=models.DeletedTerminalLocation,
             request_options=request_options or default_request_options(),
         )
@@ -456,7 +456,7 @@ class AsyncLocationClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/terminal/locations",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.TerminalLocationListResponse,
             request_options=request_options or default_request_options(),
@@ -507,7 +507,7 @@ class AsyncLocationClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/terminal/locations/{location}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=typing.Union[
                 models.TerminalLocation, models.DeletedTerminalLocation
@@ -591,7 +591,7 @@ class AsyncLocationClient:
         return await self._base_client.request(
             method="POST",
             path="/v1/terminal/locations",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.TerminalLocation,
             request_options=request_options or default_request_options(),
@@ -655,7 +655,7 @@ class AsyncLocationClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/terminal/locations/{location}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=typing.Union[
                 models.TerminalLocation, models.DeletedTerminalLocation

@@ -12,11 +12,7 @@ Retrieve a ConfirmationToken
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.confirmation_token.get(confirmation_token="string")
 ```
 
@@ -26,10 +22,6 @@ res = client.confirmation_token.get(confirmation_token="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.confirmation_token.get(confirmation_token="string")
 ```

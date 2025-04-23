@@ -141,7 +141,7 @@ class ReceivedCreditClient:
         return self._base_client.request(
             method="GET",
             path="/v1/treasury/received_credits",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.TreasuryReceivedCreditListResponse,
             request_options=request_options or default_request_options(),
@@ -195,7 +195,7 @@ class ReceivedCreditClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/treasury/received_credits/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.TreasuryReceivedCredit,
             request_options=request_options or default_request_options(),
@@ -329,7 +329,7 @@ class AsyncReceivedCreditClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/treasury/received_credits",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.TreasuryReceivedCreditListResponse,
             request_options=request_options or default_request_options(),
@@ -383,7 +383,7 @@ class AsyncReceivedCreditClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/treasury/received_credits/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.TreasuryReceivedCredit,
             request_options=request_options or default_request_options(),

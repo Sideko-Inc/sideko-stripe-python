@@ -48,7 +48,7 @@ class PlanClient:
         return self._base_client.request(
             method="DELETE",
             path=f"/v1/plans/{plan}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             cast_to=models.DeletedPlan,
             request_options=request_options or default_request_options(),
         )
@@ -173,7 +173,7 @@ class PlanClient:
         return self._base_client.request(
             method="GET",
             path="/v1/plans",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.PlanListResponse,
             request_options=request_options or default_request_options(),
@@ -225,7 +225,7 @@ class PlanClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/plans/{plan}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.Plan,
             request_options=request_options or default_request_options(),
@@ -399,7 +399,7 @@ class PlanClient:
         return self._base_client.request(
             method="POST",
             path="/v1/plans",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Plan,
             request_options=request_options or default_request_options(),
@@ -466,7 +466,7 @@ class PlanClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/plans/{plan}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Plan,
             request_options=request_options or default_request_options(),
@@ -506,7 +506,7 @@ class AsyncPlanClient:
         return await self._base_client.request(
             method="DELETE",
             path=f"/v1/plans/{plan}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             cast_to=models.DeletedPlan,
             request_options=request_options or default_request_options(),
         )
@@ -631,7 +631,7 @@ class AsyncPlanClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/plans",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.PlanListResponse,
             request_options=request_options or default_request_options(),
@@ -683,7 +683,7 @@ class AsyncPlanClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/plans/{plan}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.Plan,
             request_options=request_options or default_request_options(),
@@ -857,7 +857,7 @@ class AsyncPlanClient:
         return await self._base_client.request(
             method="POST",
             path="/v1/plans",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Plan,
             request_options=request_options or default_request_options(),
@@ -924,7 +924,7 @@ class AsyncPlanClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/plans/{plan}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Plan,
             request_options=request_options or default_request_options(),

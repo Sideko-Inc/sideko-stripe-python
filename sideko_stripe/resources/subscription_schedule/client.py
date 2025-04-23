@@ -204,7 +204,7 @@ class SubscriptionScheduleClient:
         return self._base_client.request(
             method="GET",
             path="/v1/subscription_schedules",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.SubscriptionScheduleListResponse,
             request_options=request_options or default_request_options(),
@@ -258,7 +258,7 @@ class SubscriptionScheduleClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/subscription_schedules/{schedule}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.SubscriptionSchedule1,
             request_options=request_options or default_request_options(),
@@ -329,7 +329,7 @@ class SubscriptionScheduleClient:
         return self._base_client.request(
             method="POST",
             path="/v1/subscription_schedules",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.SubscriptionSchedule1,
             request_options=request_options or default_request_options(),
@@ -398,7 +398,7 @@ class SubscriptionScheduleClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/subscription_schedules/{schedule}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.SubscriptionSchedule1,
             request_options=request_options or default_request_options(),
@@ -457,7 +457,7 @@ class SubscriptionScheduleClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/subscription_schedules/{schedule}/cancel",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.SubscriptionSchedule1,
             request_options=request_options or default_request_options(),
@@ -512,7 +512,7 @@ class SubscriptionScheduleClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/subscription_schedules/{schedule}/release",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.SubscriptionSchedule1,
             request_options=request_options or default_request_options(),
@@ -709,7 +709,7 @@ class AsyncSubscriptionScheduleClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/subscription_schedules",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.SubscriptionScheduleListResponse,
             request_options=request_options or default_request_options(),
@@ -763,7 +763,7 @@ class AsyncSubscriptionScheduleClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/subscription_schedules/{schedule}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.SubscriptionSchedule1,
             request_options=request_options or default_request_options(),
@@ -834,7 +834,7 @@ class AsyncSubscriptionScheduleClient:
         return await self._base_client.request(
             method="POST",
             path="/v1/subscription_schedules",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.SubscriptionSchedule1,
             request_options=request_options or default_request_options(),
@@ -903,7 +903,7 @@ class AsyncSubscriptionScheduleClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/subscription_schedules/{schedule}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.SubscriptionSchedule1,
             request_options=request_options or default_request_options(),
@@ -962,7 +962,7 @@ class AsyncSubscriptionScheduleClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/subscription_schedules/{schedule}/cancel",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.SubscriptionSchedule1,
             request_options=request_options or default_request_options(),
@@ -1017,7 +1017,7 @@ class AsyncSubscriptionScheduleClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/subscription_schedules/{schedule}/release",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.SubscriptionSchedule1,
             request_options=request_options or default_request_options(),

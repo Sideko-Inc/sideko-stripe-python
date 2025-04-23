@@ -62,7 +62,7 @@ class SuppliersClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/climate/suppliers/{supplier}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.ClimateSupplier,
             request_options=request_options or default_request_options(),
@@ -118,7 +118,7 @@ class AsyncSuppliersClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/climate/suppliers/{supplier}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.ClimateSupplier,
             request_options=request_options or default_request_options(),

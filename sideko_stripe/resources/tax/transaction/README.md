@@ -12,11 +12,7 @@ Retrieve a transaction
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.tax.transaction.get(transaction="string")
 ```
 
@@ -26,11 +22,7 @@ res = client.tax.transaction.get(transaction="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.tax.transaction.get(transaction="string")
 ```
 
@@ -47,11 +39,7 @@ Create a transaction from a calculation
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.tax.transaction.create_from_calculation(
     calculation="string", reference="string"
 )
@@ -63,11 +51,7 @@ res = client.tax.transaction.create_from_calculation(
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.tax.transaction.create_from_calculation(
     calculation="string", reference="string"
 )
@@ -86,11 +70,7 @@ Create a reversal transaction
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.tax.transaction.create_reversal(
     mode="full", original_transaction="string", reference="string"
 )
@@ -102,11 +82,7 @@ res = client.tax.transaction.create_reversal(
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.tax.transaction.create_reversal(
     mode="full", original_transaction="string", reference="string"
 )

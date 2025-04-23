@@ -25,12 +25,7 @@ def test_returned_200_generated_success():
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling sync method with example data
-    client = Stripe(
-        username="API_USERNAME",
-        password="API_PASSWORD",
-        token="API_TOKEN",
-        environment=Environment.MOCK_SERVER,
-    )
+    client = Stripe(token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = client.test_helper.treasury.outbound_payment.returned(id="string")
     try:
         pydantic.TypeAdapter(models.TreasuryOutboundPayment).validate_python(response)
@@ -60,12 +55,7 @@ async def test_await_returned_200_generated_success():
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling async method with example data
-    client = AsyncStripe(
-        username="API_USERNAME",
-        password="API_PASSWORD",
-        token="API_TOKEN",
-        environment=Environment.MOCK_SERVER,
-    )
+    client = AsyncStripe(token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = await client.test_helper.treasury.outbound_payment.returned(id="string")
     try:
         pydantic.TypeAdapter(models.TreasuryOutboundPayment).validate_python(response)
@@ -94,12 +84,7 @@ def test_post_200_generated_success():
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling sync method with example data
-    client = Stripe(
-        username="API_USERNAME",
-        password="API_PASSWORD",
-        token="API_TOKEN",
-        environment=Environment.MOCK_SERVER,
-    )
+    client = Stripe(token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = client.test_helper.treasury.outbound_payment.post(id="string")
     try:
         pydantic.TypeAdapter(models.TreasuryOutboundPayment).validate_python(response)
@@ -129,12 +114,7 @@ async def test_await_post_200_generated_success():
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling async method with example data
-    client = AsyncStripe(
-        username="API_USERNAME",
-        password="API_PASSWORD",
-        token="API_TOKEN",
-        environment=Environment.MOCK_SERVER,
-    )
+    client = AsyncStripe(token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = await client.test_helper.treasury.outbound_payment.post(id="string")
     try:
         pydantic.TypeAdapter(models.TreasuryOutboundPayment).validate_python(response)
@@ -163,12 +143,7 @@ def test_fail_200_generated_success():
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling sync method with example data
-    client = Stripe(
-        username="API_USERNAME",
-        password="API_PASSWORD",
-        token="API_TOKEN",
-        environment=Environment.MOCK_SERVER,
-    )
+    client = Stripe(token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = client.test_helper.treasury.outbound_payment.fail(id="string")
     try:
         pydantic.TypeAdapter(models.TreasuryOutboundPayment).validate_python(response)
@@ -198,12 +173,7 @@ async def test_await_fail_200_generated_success():
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling async method with example data
-    client = AsyncStripe(
-        username="API_USERNAME",
-        password="API_PASSWORD",
-        token="API_TOKEN",
-        environment=Environment.MOCK_SERVER,
-    )
+    client = AsyncStripe(token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = await client.test_helper.treasury.outbound_payment.fail(id="string")
     try:
         pydantic.TypeAdapter(models.TreasuryOutboundPayment).validate_python(response)
@@ -232,12 +202,7 @@ def test_update_200_success_default():
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling sync method with example data
-    client = Stripe(
-        username="API_USERNAME",
-        password="API_PASSWORD",
-        token="API_TOKEN",
-        environment=Environment.MOCK_SERVER,
-    )
+    client = Stripe(token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = client.test_helper.treasury.outbound_payment.update(
         id="string", tracking_details={"type_": "ach"}
     )
@@ -269,12 +234,7 @@ async def test_await_update_200_success_default():
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling async method with example data
-    client = AsyncStripe(
-        username="API_USERNAME",
-        password="API_PASSWORD",
-        token="API_TOKEN",
-        environment=Environment.MOCK_SERVER,
-    )
+    client = AsyncStripe(token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = await client.test_helper.treasury.outbound_payment.update(
         id="string", tracking_details={"type_": "ach"}
     )

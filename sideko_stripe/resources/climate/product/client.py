@@ -96,7 +96,7 @@ class ProductClient:
         return self._base_client.request(
             method="GET",
             path="/v1/climate/products",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.ClimateProductListResponse,
             request_options=request_options or default_request_options(),
@@ -147,7 +147,7 @@ class ProductClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/climate/products/{product}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.ClimateProduct,
             request_options=request_options or default_request_options(),
@@ -237,7 +237,7 @@ class AsyncProductClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/climate/products",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.ClimateProductListResponse,
             request_options=request_options or default_request_options(),
@@ -288,7 +288,7 @@ class AsyncProductClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/climate/products/{product}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.ClimateProduct,
             request_options=request_options or default_request_options(),

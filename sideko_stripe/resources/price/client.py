@@ -193,7 +193,7 @@ class PriceClient:
         return self._base_client.request(
             method="GET",
             path="/v1/prices",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.PriceListResponse,
             request_options=request_options or default_request_options(),
@@ -281,7 +281,7 @@ class PriceClient:
         return self._base_client.request(
             method="GET",
             path="/v1/prices/search",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.PriceSearchResponse,
             request_options=request_options or default_request_options(),
@@ -333,7 +333,7 @@ class PriceClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/prices/{price}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.Price,
             request_options=request_options or default_request_options(),
@@ -517,7 +517,7 @@ class PriceClient:
         return self._base_client.request(
             method="POST",
             path="/v1/prices",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Price,
             request_options=request_options or default_request_options(),
@@ -588,7 +588,7 @@ class PriceClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/prices/{price}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Price,
             request_options=request_options or default_request_options(),
@@ -773,7 +773,7 @@ class AsyncPriceClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/prices",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.PriceListResponse,
             request_options=request_options or default_request_options(),
@@ -861,7 +861,7 @@ class AsyncPriceClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/prices/search",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.PriceSearchResponse,
             request_options=request_options or default_request_options(),
@@ -913,7 +913,7 @@ class AsyncPriceClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/prices/{price}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.Price,
             request_options=request_options or default_request_options(),
@@ -1097,7 +1097,7 @@ class AsyncPriceClient:
         return await self._base_client.request(
             method="POST",
             path="/v1/prices",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Price,
             request_options=request_options or default_request_options(),
@@ -1168,7 +1168,7 @@ class AsyncPriceClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/prices/{price}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Price,
             request_options=request_options or default_request_options(),

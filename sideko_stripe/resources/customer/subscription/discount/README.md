@@ -12,11 +12,7 @@ Delete a customer discount
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.customer.subscription.discount.delete(
     customer="string", subscription_exposed_id="string"
 )
@@ -28,11 +24,7 @@ res = client.customer.subscription.discount.delete(
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.customer.subscription.discount.delete(
     customer="string", subscription_exposed_id="string"
 )
@@ -51,11 +43,7 @@ GET /v1/customers/{customer}/subscriptions/{subscription_exposed_id}/discount
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.customer.subscription.discount.list(
     customer="string", subscription_exposed_id="string"
 )
@@ -67,11 +55,7 @@ res = client.customer.subscription.discount.list(
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.customer.subscription.discount.list(
     customer="string", subscription_exposed_id="string"
 )

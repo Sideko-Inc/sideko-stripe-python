@@ -48,7 +48,7 @@ class ReaderClient:
         return self._base_client.request(
             method="DELETE",
             path=f"/v1/terminal/readers/{reader}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             cast_to=models.DeletedTerminalReader,
             request_options=request_options or default_request_options(),
         )
@@ -211,7 +211,7 @@ class ReaderClient:
         return self._base_client.request(
             method="GET",
             path="/v1/terminal/readers",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.TerminalReaderListResponse,
             request_options=request_options or default_request_options(),
@@ -263,7 +263,7 @@ class ReaderClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/terminal/readers/{reader}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=typing.Union[models.TerminalReader, models.DeletedTerminalReader],
             request_options=request_options or default_request_options(),
@@ -345,7 +345,7 @@ class ReaderClient:
         return self._base_client.request(
             method="POST",
             path="/v1/terminal/readers",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.TerminalReader,
             request_options=request_options or default_request_options(),
@@ -402,7 +402,7 @@ class ReaderClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/terminal/readers/{reader}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=typing.Union[models.TerminalReader, models.DeletedTerminalReader],
             request_options=request_options or default_request_options(),
@@ -455,7 +455,7 @@ class ReaderClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/terminal/readers/{reader}/cancel_action",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.TerminalReader,
             request_options=request_options or default_request_options(),
@@ -521,7 +521,7 @@ class ReaderClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/terminal/readers/{reader}/process_payment_intent",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.TerminalReader,
             request_options=request_options or default_request_options(),
@@ -596,7 +596,7 @@ class ReaderClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/terminal/readers/{reader}/process_setup_intent",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.TerminalReader,
             request_options=request_options or default_request_options(),
@@ -667,7 +667,7 @@ class ReaderClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/terminal/readers/{reader}/refund_payment",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.TerminalReader,
             request_options=request_options or default_request_options(),
@@ -723,7 +723,7 @@ class ReaderClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/terminal/readers/{reader}/set_reader_display",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.TerminalReader,
             request_options=request_options or default_request_options(),
@@ -763,7 +763,7 @@ class AsyncReaderClient:
         return await self._base_client.request(
             method="DELETE",
             path=f"/v1/terminal/readers/{reader}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             cast_to=models.DeletedTerminalReader,
             request_options=request_options or default_request_options(),
         )
@@ -926,7 +926,7 @@ class AsyncReaderClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/terminal/readers",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.TerminalReaderListResponse,
             request_options=request_options or default_request_options(),
@@ -978,7 +978,7 @@ class AsyncReaderClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/terminal/readers/{reader}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=typing.Union[models.TerminalReader, models.DeletedTerminalReader],
             request_options=request_options or default_request_options(),
@@ -1060,7 +1060,7 @@ class AsyncReaderClient:
         return await self._base_client.request(
             method="POST",
             path="/v1/terminal/readers",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.TerminalReader,
             request_options=request_options or default_request_options(),
@@ -1117,7 +1117,7 @@ class AsyncReaderClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/terminal/readers/{reader}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=typing.Union[models.TerminalReader, models.DeletedTerminalReader],
             request_options=request_options or default_request_options(),
@@ -1170,7 +1170,7 @@ class AsyncReaderClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/terminal/readers/{reader}/cancel_action",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.TerminalReader,
             request_options=request_options or default_request_options(),
@@ -1236,7 +1236,7 @@ class AsyncReaderClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/terminal/readers/{reader}/process_payment_intent",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.TerminalReader,
             request_options=request_options or default_request_options(),
@@ -1311,7 +1311,7 @@ class AsyncReaderClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/terminal/readers/{reader}/process_setup_intent",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.TerminalReader,
             request_options=request_options or default_request_options(),
@@ -1382,7 +1382,7 @@ class AsyncReaderClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/terminal/readers/{reader}/refund_payment",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.TerminalReader,
             request_options=request_options or default_request_options(),
@@ -1438,7 +1438,7 @@ class AsyncReaderClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/terminal/readers/{reader}/set_reader_display",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.TerminalReader,
             request_options=request_options or default_request_options(),

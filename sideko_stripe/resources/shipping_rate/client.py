@@ -140,7 +140,7 @@ class ShippingRateClient:
         return self._base_client.request(
             method="GET",
             path="/v1/shipping_rates",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.ShippingRateListResponse,
             request_options=request_options or default_request_options(),
@@ -191,7 +191,7 @@ class ShippingRateClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/shipping_rates/{shipping_rate_token}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.ShippingRate,
             request_options=request_options or default_request_options(),
@@ -296,7 +296,7 @@ class ShippingRateClient:
         return self._base_client.request(
             method="POST",
             path="/v1/shipping_rates",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.ShippingRate,
             request_options=request_options or default_request_options(),
@@ -360,7 +360,7 @@ class ShippingRateClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/shipping_rates/{shipping_rate_token}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.ShippingRate,
             request_options=request_options or default_request_options(),
@@ -492,7 +492,7 @@ class AsyncShippingRateClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/shipping_rates",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.ShippingRateListResponse,
             request_options=request_options or default_request_options(),
@@ -543,7 +543,7 @@ class AsyncShippingRateClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/shipping_rates/{shipping_rate_token}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.ShippingRate,
             request_options=request_options or default_request_options(),
@@ -648,7 +648,7 @@ class AsyncShippingRateClient:
         return await self._base_client.request(
             method="POST",
             path="/v1/shipping_rates",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.ShippingRate,
             request_options=request_options or default_request_options(),
@@ -712,7 +712,7 @@ class AsyncShippingRateClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/shipping_rates/{shipping_rate_token}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.ShippingRate,
             request_options=request_options or default_request_options(),

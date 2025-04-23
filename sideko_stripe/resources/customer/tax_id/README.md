@@ -12,11 +12,7 @@ Delete a Customer tax ID
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.customer.tax_id.delete(customer="string", id="string")
 ```
 
@@ -26,11 +22,7 @@ res = client.customer.tax_id.delete(customer="string", id="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.customer.tax_id.delete(customer="string", id="string")
 ```
 
@@ -47,11 +39,7 @@ List all Customer tax IDs
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.customer.tax_id.list(customer="string")
 ```
 
@@ -61,11 +49,7 @@ res = client.customer.tax_id.list(customer="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.customer.tax_id.list(customer="string")
 ```
 
@@ -82,11 +66,7 @@ Retrieve a Customer tax ID
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.customer.tax_id.get(customer="string", id="string")
 ```
 
@@ -96,11 +76,7 @@ res = client.customer.tax_id.get(customer="string", id="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.customer.tax_id.get(customer="string", id="string")
 ```
 
@@ -117,11 +93,7 @@ Create a Customer tax ID
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.customer.tax_id.create(customer="string", type_="ad_nrt", value="string")
 ```
 
@@ -131,11 +103,7 @@ res = client.customer.tax_id.create(customer="string", type_="ad_nrt", value="st
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.customer.tax_id.create(
     customer="string", type_="ad_nrt", value="string"
 )

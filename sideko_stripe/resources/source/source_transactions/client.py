@@ -96,7 +96,7 @@ class SourceTransactionsClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/sources/{source}/source_transactions",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.SourceSourceTransactionsListResponse,
             request_options=request_options or default_request_options(),
@@ -151,7 +151,7 @@ class SourceTransactionsClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/sources/{source}/source_transactions/{source_transaction}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.SourceTransaction,
             request_options=request_options or default_request_options(),
@@ -241,7 +241,7 @@ class AsyncSourceTransactionsClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/sources/{source}/source_transactions",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.SourceSourceTransactionsListResponse,
             request_options=request_options or default_request_options(),
@@ -296,7 +296,7 @@ class AsyncSourceTransactionsClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/sources/{source}/source_transactions/{source_transaction}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.SourceTransaction,
             request_options=request_options or default_request_options(),

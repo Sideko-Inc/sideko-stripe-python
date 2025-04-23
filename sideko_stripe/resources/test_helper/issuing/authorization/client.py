@@ -186,7 +186,7 @@ class AuthorizationClient:
         return self._base_client.request(
             method="POST",
             path="/v1/test_helpers/issuing/authorizations",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.IssuingAuthorization,
             request_options=request_options or default_request_options(),
@@ -252,7 +252,7 @@ class AuthorizationClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/test_helpers/issuing/authorizations/{authorization}/capture",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.IssuingAuthorization,
             request_options=request_options or default_request_options(),
@@ -308,7 +308,7 @@ class AuthorizationClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/test_helpers/issuing/authorizations/{authorization}/expire",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.IssuingAuthorization,
             request_options=request_options or default_request_options(),
@@ -387,7 +387,7 @@ class AuthorizationClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/test_helpers/issuing/authorizations/{authorization}/finalize_amount",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.IssuingAuthorization,
             request_options=request_options or default_request_options(),
@@ -458,7 +458,7 @@ class AuthorizationClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/test_helpers/issuing/authorizations/{authorization}/increment",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.IssuingAuthorization,
             request_options=request_options or default_request_options(),
@@ -514,7 +514,7 @@ class AuthorizationClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/test_helpers/issuing/authorizations/{authorization}/reverse",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.IssuingAuthorization,
             request_options=request_options or default_request_options(),
@@ -693,7 +693,7 @@ class AsyncAuthorizationClient:
         return await self._base_client.request(
             method="POST",
             path="/v1/test_helpers/issuing/authorizations",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.IssuingAuthorization,
             request_options=request_options or default_request_options(),
@@ -759,7 +759,7 @@ class AsyncAuthorizationClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/test_helpers/issuing/authorizations/{authorization}/capture",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.IssuingAuthorization,
             request_options=request_options or default_request_options(),
@@ -815,7 +815,7 @@ class AsyncAuthorizationClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/test_helpers/issuing/authorizations/{authorization}/expire",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.IssuingAuthorization,
             request_options=request_options or default_request_options(),
@@ -894,7 +894,7 @@ class AsyncAuthorizationClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/test_helpers/issuing/authorizations/{authorization}/finalize_amount",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.IssuingAuthorization,
             request_options=request_options or default_request_options(),
@@ -965,7 +965,7 @@ class AsyncAuthorizationClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/test_helpers/issuing/authorizations/{authorization}/increment",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.IssuingAuthorization,
             request_options=request_options or default_request_options(),
@@ -1021,7 +1021,7 @@ class AsyncAuthorizationClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/test_helpers/issuing/authorizations/{authorization}/reverse",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.IssuingAuthorization,
             request_options=request_options or default_request_options(),

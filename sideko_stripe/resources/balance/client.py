@@ -63,7 +63,7 @@ class BalanceClient:
         return self._base_client.request(
             method="GET",
             path="/v1/balance",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.Balance,
             request_options=request_options or default_request_options(),
@@ -119,7 +119,7 @@ class AsyncBalanceClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/balance",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.Balance,
             request_options=request_options or default_request_options(),

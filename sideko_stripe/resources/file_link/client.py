@@ -142,7 +142,7 @@ class FileLinkClient:
         return self._base_client.request(
             method="GET",
             path="/v1/file_links",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.FileLinkListResponse,
             request_options=request_options or default_request_options(),
@@ -194,7 +194,7 @@ class FileLinkClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/file_links/{link}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.FileLink,
             request_options=request_options or default_request_options(),
@@ -267,7 +267,7 @@ class FileLinkClient:
         return self._base_client.request(
             method="POST",
             path="/v1/file_links",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.FileLink,
             request_options=request_options or default_request_options(),
@@ -324,7 +324,7 @@ class FileLinkClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/file_links/{link}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.FileLink,
             request_options=request_options or default_request_options(),
@@ -459,7 +459,7 @@ class AsyncFileLinkClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/file_links",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.FileLinkListResponse,
             request_options=request_options or default_request_options(),
@@ -511,7 +511,7 @@ class AsyncFileLinkClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/file_links/{link}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.FileLink,
             request_options=request_options or default_request_options(),
@@ -584,7 +584,7 @@ class AsyncFileLinkClient:
         return await self._base_client.request(
             method="POST",
             path="/v1/file_links",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.FileLink,
             request_options=request_options or default_request_options(),
@@ -641,7 +641,7 @@ class AsyncFileLinkClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/file_links/{link}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.FileLink,
             request_options=request_options or default_request_options(),

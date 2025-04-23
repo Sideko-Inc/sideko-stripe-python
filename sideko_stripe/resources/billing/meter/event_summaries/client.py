@@ -144,7 +144,7 @@ class EventSummariesClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/billing/meters/{id}/event_summaries",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.BillingMeterEventSummariesListResponse,
             request_options=request_options or default_request_options(),
@@ -281,7 +281,7 @@ class AsyncEventSummariesClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/billing/meters/{id}/event_summaries",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.BillingMeterEventSummariesListResponse,
             request_options=request_options or default_request_options(),

@@ -85,7 +85,7 @@ class MeterEventClient:
         return self._base_client.request(
             method="POST",
             path="/v1/billing/meter_events",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.BillingMeterEvent,
             request_options=request_options or default_request_options(),
@@ -166,7 +166,7 @@ class AsyncMeterEventClient:
         return await self._base_client.request(
             method="POST",
             path="/v1/billing/meter_events",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.BillingMeterEvent,
             request_options=request_options or default_request_options(),

@@ -47,7 +47,7 @@ class ValueListItemClient:
         return self._base_client.request(
             method="DELETE",
             path=f"/v1/radar/value_list_items/{item}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             cast_to=models.DeletedRadarValueListItem,
             request_options=request_options or default_request_options(),
         )
@@ -172,7 +172,7 @@ class ValueListItemClient:
         return self._base_client.request(
             method="GET",
             path="/v1/radar/value_list_items",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.RadarValueListItemListResponse,
             request_options=request_options or default_request_options(),
@@ -223,7 +223,7 @@ class ValueListItemClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/radar/value_list_items/{item}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.RadarValueListItem,
             request_options=request_options or default_request_options(),
@@ -273,7 +273,7 @@ class ValueListItemClient:
         return self._base_client.request(
             method="POST",
             path="/v1/radar/value_list_items",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.RadarValueListItem,
             request_options=request_options or default_request_options(),
@@ -313,7 +313,7 @@ class AsyncValueListItemClient:
         return await self._base_client.request(
             method="DELETE",
             path=f"/v1/radar/value_list_items/{item}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             cast_to=models.DeletedRadarValueListItem,
             request_options=request_options or default_request_options(),
         )
@@ -438,7 +438,7 @@ class AsyncValueListItemClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/radar/value_list_items",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.RadarValueListItemListResponse,
             request_options=request_options or default_request_options(),
@@ -489,7 +489,7 @@ class AsyncValueListItemClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/radar/value_list_items/{item}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.RadarValueListItem,
             request_options=request_options or default_request_options(),
@@ -539,7 +539,7 @@ class AsyncValueListItemClient:
         return await self._base_client.request(
             method="POST",
             path="/v1/radar/value_list_items",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.RadarValueListItem,
             request_options=request_options or default_request_options(),

@@ -12,11 +12,7 @@ Create a test-mode authorization
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.test_helper.issuing.authorization.create(card="string")
 ```
 
@@ -26,11 +22,7 @@ res = client.test_helper.issuing.authorization.create(card="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.test_helper.issuing.authorization.create(card="string")
 ```
 
@@ -47,11 +39,7 @@ Capture a test-mode authorization
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.test_helper.issuing.authorization.capture(authorization="string")
 ```
 
@@ -61,11 +49,7 @@ res = client.test_helper.issuing.authorization.capture(authorization="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.test_helper.issuing.authorization.capture(authorization="string")
 ```
 
@@ -82,11 +66,7 @@ Expire a test-mode authorization
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.test_helper.issuing.authorization.expire(authorization="string")
 ```
 
@@ -96,11 +76,7 @@ res = client.test_helper.issuing.authorization.expire(authorization="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.test_helper.issuing.authorization.expire(authorization="string")
 ```
 
@@ -117,11 +93,7 @@ Finalize a test-mode authorization's amount
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.test_helper.issuing.authorization.finalize_amount(
     authorization="string", final_amount=123
 )
@@ -133,11 +105,7 @@ res = client.test_helper.issuing.authorization.finalize_amount(
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.test_helper.issuing.authorization.finalize_amount(
     authorization="string", final_amount=123
 )
@@ -156,11 +124,7 @@ Increment a test-mode authorization
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.test_helper.issuing.authorization.increment(
     authorization="string", increment_amount=123
 )
@@ -172,11 +136,7 @@ res = client.test_helper.issuing.authorization.increment(
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.test_helper.issuing.authorization.increment(
     authorization="string", increment_amount=123
 )
@@ -195,11 +155,7 @@ Reverse a test-mode authorization
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.test_helper.issuing.authorization.reverse(authorization="string")
 ```
 
@@ -209,10 +165,6 @@ res = client.test_helper.issuing.authorization.reverse(authorization="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.test_helper.issuing.authorization.reverse(authorization="string")
 ```

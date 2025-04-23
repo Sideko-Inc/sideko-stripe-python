@@ -143,7 +143,7 @@ class CreditNoteClient:
         return self._base_client.request(
             method="GET",
             path="/v1/credit_notes",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.CreditNoteListResponse,
             request_options=request_options or default_request_options(),
@@ -378,7 +378,7 @@ class CreditNoteClient:
         return self._base_client.request(
             method="GET",
             path="/v1/credit_notes/preview",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.CreditNote,
             request_options=request_options or default_request_options(),
@@ -655,7 +655,7 @@ class CreditNoteClient:
         return self._base_client.request(
             method="GET",
             path="/v1/credit_notes/preview/lines",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.CreditNotePreviewLinesResponse,
             request_options=request_options or default_request_options(),
@@ -745,7 +745,7 @@ class CreditNoteClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/credit_notes/{credit_note}/lines",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.CreditNoteLinesResponse,
             request_options=request_options or default_request_options(),
@@ -797,7 +797,7 @@ class CreditNoteClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/credit_notes/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.CreditNote,
             request_options=request_options or default_request_options(),
@@ -961,7 +961,7 @@ class CreditNoteClient:
         return self._base_client.request(
             method="POST",
             path="/v1/credit_notes",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.CreditNote,
             request_options=request_options or default_request_options(),
@@ -1018,7 +1018,7 @@ class CreditNoteClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/credit_notes/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.CreditNote,
             request_options=request_options or default_request_options(),
@@ -1071,7 +1071,7 @@ class CreditNoteClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/credit_notes/{id}/void",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.CreditNote,
             request_options=request_options or default_request_options(),
@@ -1206,7 +1206,7 @@ class AsyncCreditNoteClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/credit_notes",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.CreditNoteListResponse,
             request_options=request_options or default_request_options(),
@@ -1441,7 +1441,7 @@ class AsyncCreditNoteClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/credit_notes/preview",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.CreditNote,
             request_options=request_options or default_request_options(),
@@ -1718,7 +1718,7 @@ class AsyncCreditNoteClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/credit_notes/preview/lines",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.CreditNotePreviewLinesResponse,
             request_options=request_options or default_request_options(),
@@ -1808,7 +1808,7 @@ class AsyncCreditNoteClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/credit_notes/{credit_note}/lines",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.CreditNoteLinesResponse,
             request_options=request_options or default_request_options(),
@@ -1860,7 +1860,7 @@ class AsyncCreditNoteClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/credit_notes/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.CreditNote,
             request_options=request_options or default_request_options(),
@@ -2024,7 +2024,7 @@ class AsyncCreditNoteClient:
         return await self._base_client.request(
             method="POST",
             path="/v1/credit_notes",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.CreditNote,
             request_options=request_options or default_request_options(),
@@ -2081,7 +2081,7 @@ class AsyncCreditNoteClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/credit_notes/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.CreditNote,
             request_options=request_options or default_request_options(),
@@ -2134,7 +2134,7 @@ class AsyncCreditNoteClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/credit_notes/{id}/void",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.CreditNote,
             request_options=request_options or default_request_options(),

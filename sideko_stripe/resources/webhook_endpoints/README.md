@@ -12,11 +12,7 @@ Delete a webhook endpoint
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.webhook_endpoints.delete(webhook_endpoint="string")
 ```
 
@@ -26,11 +22,7 @@ res = client.webhook_endpoints.delete(webhook_endpoint="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.webhook_endpoints.delete(webhook_endpoint="string")
 ```
 
@@ -47,11 +39,7 @@ List all webhook endpoints
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.webhook_endpoints.list()
 ```
 
@@ -61,11 +49,7 @@ res = client.webhook_endpoints.list()
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.webhook_endpoints.list()
 ```
 
@@ -82,11 +66,7 @@ Retrieve a webhook endpoint
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.webhook_endpoints.get(webhook_endpoint="string")
 ```
 
@@ -96,11 +76,7 @@ res = client.webhook_endpoints.get(webhook_endpoint="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.webhook_endpoints.get(webhook_endpoint="string")
 ```
 
@@ -117,11 +93,7 @@ Create a webhook endpoint
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.webhook_endpoints.create(enabled_events=["*"], url="string")
 ```
 
@@ -131,11 +103,7 @@ res = client.webhook_endpoints.create(enabled_events=["*"], url="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.webhook_endpoints.create(enabled_events=["*"], url="string")
 ```
 
@@ -152,11 +120,7 @@ Update a webhook endpoint
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.webhook_endpoints.update(webhook_endpoint="string")
 ```
 
@@ -166,10 +130,6 @@ res = client.webhook_endpoints.update(webhook_endpoint="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.webhook_endpoints.update(webhook_endpoint="string")
 ```

@@ -167,7 +167,7 @@ class HistoryClient:
         return self._base_client.request(
             method="GET",
             path="/v1/balance/history",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.BalanceHistoryListResponse,
             request_options=request_options or default_request_options(),
@@ -223,7 +223,7 @@ class HistoryClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/balance/history/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.BalanceTransaction,
             request_options=request_options or default_request_options(),
@@ -384,7 +384,7 @@ class AsyncHistoryClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/balance/history",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.BalanceHistoryListResponse,
             request_options=request_options or default_request_options(),
@@ -440,7 +440,7 @@ class AsyncHistoryClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/balance/history/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.BalanceTransaction,
             request_options=request_options or default_request_options(),

@@ -125,7 +125,7 @@ class ReceivedDebitClient:
         return self._base_client.request(
             method="GET",
             path="/v1/treasury/received_debits",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.TreasuryReceivedDebitListResponse,
             request_options=request_options or default_request_options(),
@@ -179,7 +179,7 @@ class ReceivedDebitClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/treasury/received_debits/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.TreasuryReceivedDebit,
             request_options=request_options or default_request_options(),
@@ -297,7 +297,7 @@ class AsyncReceivedDebitClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/treasury/received_debits",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.TreasuryReceivedDebitListResponse,
             request_options=request_options or default_request_options(),
@@ -351,7 +351,7 @@ class AsyncReceivedDebitClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/treasury/received_debits/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.TreasuryReceivedDebit,
             request_options=request_options or default_request_options(),

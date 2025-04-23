@@ -96,7 +96,7 @@ class ExchangeRateClient:
         return self._base_client.request(
             method="GET",
             path="/v1/exchange_rates",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.ExchangeRateListResponse,
             request_options=request_options or default_request_options(),
@@ -147,7 +147,7 @@ class ExchangeRateClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/exchange_rates/{rate_id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.ExchangeRate,
             request_options=request_options or default_request_options(),
@@ -237,7 +237,7 @@ class AsyncExchangeRateClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/exchange_rates",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.ExchangeRateListResponse,
             request_options=request_options or default_request_options(),
@@ -288,7 +288,7 @@ class AsyncExchangeRateClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/exchange_rates/{rate_id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.ExchangeRate,
             request_options=request_options or default_request_options(),

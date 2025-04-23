@@ -60,7 +60,7 @@ class ReportTypeClient:
         return self._base_client.request(
             method="GET",
             path="/v1/reporting/report_types",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.ReportingReportTypeListResponse,
             request_options=request_options or default_request_options(),
@@ -111,7 +111,7 @@ class ReportTypeClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/reporting/report_types/{report_type}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.ReportingReportType,
             request_options=request_options or default_request_options(),
@@ -165,7 +165,7 @@ class AsyncReportTypeClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/reporting/report_types",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.ReportingReportTypeListResponse,
             request_options=request_options or default_request_options(),
@@ -216,7 +216,7 @@ class AsyncReportTypeClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/reporting/report_types/{report_type}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.ReportingReportType,
             request_options=request_options or default_request_options(),

@@ -142,7 +142,7 @@ class CreditReversalClient:
         return self._base_client.request(
             method="GET",
             path="/v1/treasury/credit_reversals",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.TreasuryCreditReversalListResponse,
             request_options=request_options or default_request_options(),
@@ -196,7 +196,7 @@ class CreditReversalClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/treasury/credit_reversals/{credit_reversal}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.TreasuryCreditReversal,
             request_options=request_options or default_request_options(),
@@ -260,7 +260,7 @@ class CreditReversalClient:
         return self._base_client.request(
             method="POST",
             path="/v1/treasury/credit_reversals",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.TreasuryCreditReversal,
             request_options=request_options or default_request_options(),
@@ -394,7 +394,7 @@ class AsyncCreditReversalClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/treasury/credit_reversals",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.TreasuryCreditReversalListResponse,
             request_options=request_options or default_request_options(),
@@ -448,7 +448,7 @@ class AsyncCreditReversalClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/treasury/credit_reversals/{credit_reversal}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.TreasuryCreditReversal,
             request_options=request_options or default_request_options(),
@@ -512,7 +512,7 @@ class AsyncCreditReversalClient:
         return await self._base_client.request(
             method="POST",
             path="/v1/treasury/credit_reversals",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.TreasuryCreditReversal,
             request_options=request_options or default_request_options(),

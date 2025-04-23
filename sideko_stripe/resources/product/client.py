@@ -49,7 +49,7 @@ class ProductClient:
         return self._base_client.request(
             method="DELETE",
             path=f"/v1/products/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             cast_to=models.DeletedProduct,
             request_options=request_options or default_request_options(),
         )
@@ -202,7 +202,7 @@ class ProductClient:
         return self._base_client.request(
             method="GET",
             path="/v1/products",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.ProductListResponse,
             request_options=request_options or default_request_options(),
@@ -290,7 +290,7 @@ class ProductClient:
         return self._base_client.request(
             method="GET",
             path="/v1/products/search",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.ProductSearchResponse,
             request_options=request_options or default_request_options(),
@@ -342,7 +342,7 @@ class ProductClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/products/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.Product,
             request_options=request_options or default_request_options(),
@@ -497,7 +497,7 @@ class ProductClient:
         return self._base_client.request(
             method="POST",
             path="/v1/products",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Product,
             request_options=request_options or default_request_options(),
@@ -580,7 +580,7 @@ class ProductClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/products/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Product,
             request_options=request_options or default_request_options(),
@@ -621,7 +621,7 @@ class AsyncProductClient:
         return await self._base_client.request(
             method="DELETE",
             path=f"/v1/products/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             cast_to=models.DeletedProduct,
             request_options=request_options or default_request_options(),
         )
@@ -774,7 +774,7 @@ class AsyncProductClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/products",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.ProductListResponse,
             request_options=request_options or default_request_options(),
@@ -862,7 +862,7 @@ class AsyncProductClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/products/search",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.ProductSearchResponse,
             request_options=request_options or default_request_options(),
@@ -914,7 +914,7 @@ class AsyncProductClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/products/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.Product,
             request_options=request_options or default_request_options(),
@@ -1069,7 +1069,7 @@ class AsyncProductClient:
         return await self._base_client.request(
             method="POST",
             path="/v1/products",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Product,
             request_options=request_options or default_request_options(),
@@ -1152,7 +1152,7 @@ class AsyncProductClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/products/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.Product,
             request_options=request_options or default_request_options(),

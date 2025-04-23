@@ -63,7 +63,7 @@ class CalculationClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/tax/calculations/{calculation}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.TaxCalculation,
             request_options=request_options or default_request_options(),
@@ -163,7 +163,7 @@ class CalculationClient:
         return self._base_client.request(
             method="POST",
             path="/v1/tax/calculations",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.TaxCalculation,
             request_options=request_options or default_request_options(),
@@ -219,7 +219,7 @@ class AsyncCalculationClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/tax/calculations/{calculation}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.TaxCalculation,
             request_options=request_options or default_request_options(),
@@ -321,7 +321,7 @@ class AsyncCalculationClient:
         return await self._base_client.request(
             method="POST",
             path="/v1/tax/calculations",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.TaxCalculation,
             request_options=request_options or default_request_options(),

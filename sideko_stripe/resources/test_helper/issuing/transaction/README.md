@@ -12,11 +12,7 @@ Create a test-mode force capture
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.test_helper.issuing.transaction.create_force_capture(
     amount=123, card="string"
 )
@@ -28,11 +24,7 @@ res = client.test_helper.issuing.transaction.create_force_capture(
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.test_helper.issuing.transaction.create_force_capture(
     amount=123, card="string"
 )
@@ -51,11 +43,7 @@ Create a test-mode unlinked refund
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.test_helper.issuing.transaction.create_unlinked_refund(
     amount=123, card="string"
 )
@@ -67,11 +55,7 @@ res = client.test_helper.issuing.transaction.create_unlinked_refund(
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.test_helper.issuing.transaction.create_unlinked_refund(
     amount=123, card="string"
 )
@@ -90,11 +74,7 @@ Refund a test-mode transaction
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.test_helper.issuing.transaction.refund(transaction="string")
 ```
 
@@ -104,10 +84,6 @@ res = client.test_helper.issuing.transaction.refund(transaction="string")
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.test_helper.issuing.transaction.refund(transaction="string")
 ```

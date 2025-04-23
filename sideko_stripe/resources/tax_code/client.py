@@ -96,7 +96,7 @@ class TaxCodeClient:
         return self._base_client.request(
             method="GET",
             path="/v1/tax_codes",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.TaxCodeListResponse,
             request_options=request_options or default_request_options(),
@@ -147,7 +147,7 @@ class TaxCodeClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/tax_codes/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.TaxCode,
             request_options=request_options or default_request_options(),
@@ -237,7 +237,7 @@ class AsyncTaxCodeClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/tax_codes",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.TaxCodeListResponse,
             request_options=request_options or default_request_options(),
@@ -288,7 +288,7 @@ class AsyncTaxCodeClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/tax_codes/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.TaxCode,
             request_options=request_options or default_request_options(),

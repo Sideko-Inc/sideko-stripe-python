@@ -121,7 +121,7 @@ class PaymentMethodDomainClient:
         return self._base_client.request(
             method="GET",
             path="/v1/payment_method_domains",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.PaymentMethodDomainListResponse,
             request_options=request_options or default_request_options(),
@@ -172,7 +172,7 @@ class PaymentMethodDomainClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/payment_method_domains/{payment_method_domain}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.PaymentMethodDomain,
             request_options=request_options or default_request_options(),
@@ -224,7 +224,7 @@ class PaymentMethodDomainClient:
         return self._base_client.request(
             method="POST",
             path="/v1/payment_method_domains",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.PaymentMethodDomain,
             request_options=request_options or default_request_options(),
@@ -276,7 +276,7 @@ class PaymentMethodDomainClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/payment_method_domains/{payment_method_domain}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.PaymentMethodDomain,
             request_options=request_options or default_request_options(),
@@ -333,7 +333,7 @@ class PaymentMethodDomainClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/payment_method_domains/{payment_method_domain}/validate",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.PaymentMethodDomain,
             request_options=request_options or default_request_options(),
@@ -447,7 +447,7 @@ class AsyncPaymentMethodDomainClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/payment_method_domains",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.PaymentMethodDomainListResponse,
             request_options=request_options or default_request_options(),
@@ -498,7 +498,7 @@ class AsyncPaymentMethodDomainClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/payment_method_domains/{payment_method_domain}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.PaymentMethodDomain,
             request_options=request_options or default_request_options(),
@@ -550,7 +550,7 @@ class AsyncPaymentMethodDomainClient:
         return await self._base_client.request(
             method="POST",
             path="/v1/payment_method_domains",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.PaymentMethodDomain,
             request_options=request_options or default_request_options(),
@@ -602,7 +602,7 @@ class AsyncPaymentMethodDomainClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/payment_method_domains/{payment_method_domain}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.PaymentMethodDomain,
             request_options=request_options or default_request_options(),
@@ -659,7 +659,7 @@ class AsyncPaymentMethodDomainClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/payment_method_domains/{payment_method_domain}/validate",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.PaymentMethodDomain,
             request_options=request_options or default_request_options(),

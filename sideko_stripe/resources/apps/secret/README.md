@@ -12,11 +12,7 @@ List secrets
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.apps.secret.list(scope={"type_": "account"})
 ```
 
@@ -26,11 +22,7 @@ res = client.apps.secret.list(scope={"type_": "account"})
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.apps.secret.list(scope={"type_": "account"})
 ```
 
@@ -47,11 +39,7 @@ Find a Secret
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.apps.secret.find(name="string", scope={"type_": "account"})
 ```
 
@@ -61,11 +49,7 @@ res = client.apps.secret.find(name="string", scope={"type_": "account"})
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.apps.secret.find(name="string", scope={"type_": "account"})
 ```
 
@@ -82,11 +66,7 @@ Set a Secret
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.apps.secret.create(
     name="string", payload="string", scope={"type_": "account"}
 )
@@ -98,11 +78,7 @@ res = client.apps.secret.create(
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.apps.secret.create(
     name="string", payload="string", scope={"type_": "account"}
 )
@@ -121,11 +97,7 @@ Delete a Secret
 from os import getenv
 from sideko_stripe import Stripe
 
-client = Stripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = Stripe(token=getenv("API_TOKEN"))
 res = client.apps.secret.delete(name="string", scope={"type_": "account"})
 ```
 
@@ -135,10 +107,6 @@ res = client.apps.secret.delete(name="string", scope={"type_": "account"})
 from os import getenv
 from sideko_stripe import AsyncStripe
 
-client = AsyncStripe(
-    username=getenv("API_USERNAME"),
-    password=getenv("API_PASSWORD"),
-    token=getenv("API_TOKEN"),
-)
+client = AsyncStripe(token=getenv("API_TOKEN"))
 res = await client.apps.secret.delete(name="string", scope={"type_": "account"})
 ```

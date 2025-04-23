@@ -129,7 +129,7 @@ class AlertClient:
         return self._base_client.request(
             method="GET",
             path="/v1/billing/alerts",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.BillingAlertListResponse,
             request_options=request_options or default_request_options(),
@@ -181,7 +181,7 @@ class AlertClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/billing/alerts/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.BillingAlert,
             request_options=request_options or default_request_options(),
@@ -252,7 +252,7 @@ class AlertClient:
         return self._base_client.request(
             method="POST",
             path="/v1/billing/alerts",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.BillingAlert,
             request_options=request_options or default_request_options(),
@@ -305,7 +305,7 @@ class AlertClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/billing/alerts/{id}/activate",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.BillingAlert,
             request_options=request_options or default_request_options(),
@@ -358,7 +358,7 @@ class AlertClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/billing/alerts/{id}/archive",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.BillingAlert,
             request_options=request_options or default_request_options(),
@@ -411,7 +411,7 @@ class AlertClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/billing/alerts/{id}/deactivate",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.BillingAlert,
             request_options=request_options or default_request_options(),
@@ -532,7 +532,7 @@ class AsyncAlertClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/billing/alerts",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.BillingAlertListResponse,
             request_options=request_options or default_request_options(),
@@ -584,7 +584,7 @@ class AsyncAlertClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/billing/alerts/{id}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.BillingAlert,
             request_options=request_options or default_request_options(),
@@ -655,7 +655,7 @@ class AsyncAlertClient:
         return await self._base_client.request(
             method="POST",
             path="/v1/billing/alerts",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.BillingAlert,
             request_options=request_options or default_request_options(),
@@ -708,7 +708,7 @@ class AsyncAlertClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/billing/alerts/{id}/activate",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.BillingAlert,
             request_options=request_options or default_request_options(),
@@ -761,7 +761,7 @@ class AsyncAlertClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/billing/alerts/{id}/archive",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.BillingAlert,
             request_options=request_options or default_request_options(),
@@ -814,7 +814,7 @@ class AsyncAlertClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/billing/alerts/{id}/deactivate",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.BillingAlert,
             request_options=request_options or default_request_options(),

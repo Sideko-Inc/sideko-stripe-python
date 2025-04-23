@@ -63,7 +63,7 @@ class ShippingClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/test_helpers/issuing/cards/{card}/shipping/deliver",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.IssuingCard,
             request_options=request_options or default_request_options(),
@@ -117,7 +117,7 @@ class ShippingClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/test_helpers/issuing/cards/{card}/shipping/fail",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.IssuingCard,
             request_options=request_options or default_request_options(),
@@ -171,7 +171,7 @@ class ShippingClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/test_helpers/issuing/cards/{card}/shipping/return",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.IssuingCard,
             request_options=request_options or default_request_options(),
@@ -225,7 +225,7 @@ class ShippingClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/test_helpers/issuing/cards/{card}/shipping/ship",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.IssuingCard,
             request_options=request_options or default_request_options(),
@@ -279,7 +279,7 @@ class ShippingClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/test_helpers/issuing/cards/{card}/shipping/submit",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.IssuingCard,
             request_options=request_options or default_request_options(),
@@ -338,7 +338,7 @@ class AsyncShippingClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/test_helpers/issuing/cards/{card}/shipping/deliver",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.IssuingCard,
             request_options=request_options or default_request_options(),
@@ -392,7 +392,7 @@ class AsyncShippingClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/test_helpers/issuing/cards/{card}/shipping/fail",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.IssuingCard,
             request_options=request_options or default_request_options(),
@@ -446,7 +446,7 @@ class AsyncShippingClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/test_helpers/issuing/cards/{card}/shipping/return",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.IssuingCard,
             request_options=request_options or default_request_options(),
@@ -500,7 +500,7 @@ class AsyncShippingClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/test_helpers/issuing/cards/{card}/shipping/ship",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.IssuingCard,
             request_options=request_options or default_request_options(),
@@ -554,7 +554,7 @@ class AsyncShippingClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/test_helpers/issuing/cards/{card}/shipping/submit",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.IssuingCard,
             request_options=request_options or default_request_options(),

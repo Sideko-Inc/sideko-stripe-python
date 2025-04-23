@@ -149,7 +149,7 @@ class PersonalizationDesignClient:
         return self._base_client.request(
             method="GET",
             path="/v1/issuing/personalization_designs",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.IssuingPersonalizationDesignListResponse,
             request_options=request_options or default_request_options(),
@@ -203,7 +203,7 @@ class PersonalizationDesignClient:
         return self._base_client.request(
             method="GET",
             path=f"/v1/issuing/personalization_designs/{personalization_design}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.IssuingPersonalizationDesign,
             request_options=request_options or default_request_options(),
@@ -315,7 +315,7 @@ class PersonalizationDesignClient:
         return self._base_client.request(
             method="POST",
             path="/v1/issuing/personalization_designs",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.IssuingPersonalizationDesign,
             request_options=request_options or default_request_options(),
@@ -391,7 +391,7 @@ class PersonalizationDesignClient:
         return self._base_client.request(
             method="POST",
             path=f"/v1/issuing/personalization_designs/{personalization_design}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.IssuingPersonalizationDesign,
             request_options=request_options or default_request_options(),
@@ -532,7 +532,7 @@ class AsyncPersonalizationDesignClient:
         return await self._base_client.request(
             method="GET",
             path="/v1/issuing/personalization_designs",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.IssuingPersonalizationDesignListResponse,
             request_options=request_options or default_request_options(),
@@ -586,7 +586,7 @@ class AsyncPersonalizationDesignClient:
         return await self._base_client.request(
             method="GET",
             path=f"/v1/issuing/personalization_designs/{personalization_design}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             query_params=_query,
             cast_to=models.IssuingPersonalizationDesign,
             request_options=request_options or default_request_options(),
@@ -698,7 +698,7 @@ class AsyncPersonalizationDesignClient:
         return await self._base_client.request(
             method="POST",
             path="/v1/issuing/personalization_designs",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.IssuingPersonalizationDesign,
             request_options=request_options or default_request_options(),
@@ -776,7 +776,7 @@ class AsyncPersonalizationDesignClient:
         return await self._base_client.request(
             method="POST",
             path=f"/v1/issuing/personalization_designs/{personalization_design}",
-            auth_names=["basicAuth", "bearerAuth"],
+            auth_names=["bearerAuth"],
             data=_data,
             cast_to=models.IssuingPersonalizationDesign,
             request_options=request_options or default_request_options(),
