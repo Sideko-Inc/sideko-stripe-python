@@ -1,3 +1,4 @@
+import io
 import pydantic
 import pytest
 
@@ -27,7 +28,7 @@ def test_create_200_success_default():
     # tests calling sync method with example data
     client = Stripe(token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = client.file.create(
-        file=open("./file.txt", "rb"), purpose="account_requirement"
+        file=io.BytesIO(b"123"), purpose="account_requirement"
     )
     try:
         pydantic.TypeAdapter(models.File).validate_python(response)
@@ -59,7 +60,7 @@ async def test_await_create_200_success_default():
     # tests calling async method with example data
     client = AsyncStripe(token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = await client.file.create(
-        file=open("./file.txt", "rb"), purpose="account_requirement"
+        file=io.BytesIO(b"123"), purpose="account_requirement"
     )
     try:
         pydantic.TypeAdapter(models.File).validate_python(response)
